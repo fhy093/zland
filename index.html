@@ -1,0 +1,2490 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>丧尸领地玩家手册</title>
+<!--JQuery-->
+<script>
+/*! jQuery v1.7.2 jquery.com | jquery.org/license */
+(function(a,b){function cy(a){return f.isWindow(a)?a:a.nodeType===9?a.defaultView||a.parentWindow:!1}function cu(a){if(!cj[a]){var b=c.body,d=f("<"+a+">").appendTo(b),e=d.css("display");d.remove();if(e==="none"||e===""){ck||(ck=c.createElement("iframe"),ck.frameBorder=ck.width=ck.height=0),b.appendChild(ck);if(!cl||!ck.createElement)cl=(ck.contentWindow||ck.contentDocument).document,cl.write((f.support.boxModel?"<!doctype html>":"")+"<html><body>"),cl.close();d=cl.createElement(a),cl.body.appendChild(d),e=f.css(d,"display"),b.removeChild(ck)}cj[a]=e}return cj[a]}function ct(a,b){var c={};f.each(cp.concat.apply([],cp.slice(0,b)),function(){c[this]=a});return c}function cs(){cq=b}function cr(){setTimeout(cs,0);return cq=f.now()}function ci(){try{return new a.ActiveXObject("Microsoft.XMLHTTP")}catch(b){}}function ch(){try{return new a.XMLHttpRequest}catch(b){}}function cb(a,c){a.dataFilter&&(c=a.dataFilter(c,a.dataType));var d=a.dataTypes,e={},g,h,i=d.length,j,k=d[0],l,m,n,o,p;for(g=1;g<i;g++){if(g===1)for(h in a.converters)typeof h=="string"&&(e[h.toLowerCase()]=a.converters[h]);l=k,k=d[g];if(k==="*")k=l;else if(l!=="*"&&l!==k){m=l+" "+k,n=e[m]||e["* "+k];if(!n){p=b;for(o in e){j=o.split(" ");if(j[0]===l||j[0]==="*"){p=e[j[1]+" "+k];if(p){o=e[o],o===!0?n=p:p===!0&&(n=o);break}}}}!n&&!p&&f.error("No conversion from "+m.replace(" "," to ")),n!==!0&&(c=n?n(c):p(o(c)))}}return c}function ca(a,c,d){var e=a.contents,f=a.dataTypes,g=a.responseFields,h,i,j,k;for(i in g)i in d&&(c[g[i]]=d[i]);while(f[0]==="*")f.shift(),h===b&&(h=a.mimeType||c.getResponseHeader("content-type"));if(h)for(i in e)if(e[i]&&e[i].test(h)){f.unshift(i);break}if(f[0]in d)j=f[0];else{for(i in d){if(!f[0]||a.converters[i+" "+f[0]]){j=i;break}k||(k=i)}j=j||k}if(j){j!==f[0]&&f.unshift(j);return d[j]}}function b_(a,b,c,d){if(f.isArray(b))f.each(b,function(b,e){c||bD.test(a)?d(a,e):b_(a+"["+(typeof e=="object"?b:"")+"]",e,c,d)});else if(!c&&f.type(b)==="object")for(var e in b)b_(a+"["+e+"]",b[e],c,d);else d(a,b)}function b$(a,c){var d,e,g=f.ajaxSettings.flatOptions||{};for(d in c)c[d]!==b&&((g[d]?a:e||(e={}))[d]=c[d]);e&&f.extend(!0,a,e)}function bZ(a,c,d,e,f,g){f=f||c.dataTypes[0],g=g||{},g[f]=!0;var h=a[f],i=0,j=h?h.length:0,k=a===bS,l;for(;i<j&&(k||!l);i++)l=h[i](c,d,e),typeof l=="string"&&(!k||g[l]?l=b:(c.dataTypes.unshift(l),l=bZ(a,c,d,e,l,g)));(k||!l)&&!g["*"]&&(l=bZ(a,c,d,e,"*",g));return l}function bY(a){return function(b,c){typeof b!="string"&&(c=b,b="*");if(f.isFunction(c)){var d=b.toLowerCase().split(bO),e=0,g=d.length,h,i,j;for(;e<g;e++)h=d[e],j=/^\+/.test(h),j&&(h=h.substr(1)||"*"),i=a[h]=a[h]||[],i[j?"unshift":"push"](c)}}}function bB(a,b,c){var d=b==="width"?a.offsetWidth:a.offsetHeight,e=b==="width"?1:0,g=4;if(d>0){if(c!=="border")for(;e<g;e+=2)c||(d-=parseFloat(f.css(a,"padding"+bx[e]))||0),c==="margin"?d+=parseFloat(f.css(a,c+bx[e]))||0:d-=parseFloat(f.css(a,"border"+bx[e]+"Width"))||0;return d+"px"}d=by(a,b);if(d<0||d==null)d=a.style[b];if(bt.test(d))return d;d=parseFloat(d)||0;if(c)for(;e<g;e+=2)d+=parseFloat(f.css(a,"padding"+bx[e]))||0,c!=="padding"&&(d+=parseFloat(f.css(a,"border"+bx[e]+"Width"))||0),c==="margin"&&(d+=parseFloat(f.css(a,c+bx[e]))||0);return d+"px"}function bo(a){var b=c.createElement("div");bh.appendChild(b),b.innerHTML=a.outerHTML;return b.firstChild}function bn(a){var b=(a.nodeName||"").toLowerCase();b==="input"?bm(a):b!=="script"&&typeof a.getElementsByTagName!="undefined"&&f.grep(a.getElementsByTagName("input"),bm)}function bm(a){if(a.type==="checkbox"||a.type==="radio")a.defaultChecked=a.checked}function bl(a){return typeof a.getElementsByTagName!="undefined"?a.getElementsByTagName("*"):typeof a.querySelectorAll!="undefined"?a.querySelectorAll("*"):[]}function bk(a,b){var c;b.nodeType===1&&(b.clearAttributes&&b.clearAttributes(),b.mergeAttributes&&b.mergeAttributes(a),c=b.nodeName.toLowerCase(),c==="object"?b.outerHTML=a.outerHTML:c!=="input"||a.type!=="checkbox"&&a.type!=="radio"?c==="option"?b.selected=a.defaultSelected:c==="input"||c==="textarea"?b.defaultValue=a.defaultValue:c==="script"&&b.text!==a.text&&(b.text=a.text):(a.checked&&(b.defaultChecked=b.checked=a.checked),b.value!==a.value&&(b.value=a.value)),b.removeAttribute(f.expando),b.removeAttribute("_submit_attached"),b.removeAttribute("_change_attached"))}function bj(a,b){if(b.nodeType===1&&!!f.hasData(a)){var c,d,e,g=f._data(a),h=f._data(b,g),i=g.events;if(i){delete h.handle,h.events={};for(c in i)for(d=0,e=i[c].length;d<e;d++)f.event.add(b,c,i[c][d])}h.data&&(h.data=f.extend({},h.data))}}function bi(a,b){return f.nodeName(a,"table")?a.getElementsByTagName("tbody")[0]||a.appendChild(a.ownerDocument.createElement("tbody")):a}function U(a){var b=V.split("|"),c=a.createDocumentFragment();if(c.createElement)while(b.length)c.createElement(b.pop());return c}function T(a,b,c){b=b||0;if(f.isFunction(b))return f.grep(a,function(a,d){var e=!!b.call(a,d,a);return e===c});if(b.nodeType)return f.grep(a,function(a,d){return a===b===c});if(typeof b=="string"){var d=f.grep(a,function(a){return a.nodeType===1});if(O.test(b))return f.filter(b,d,!c);b=f.filter(b,d)}return f.grep(a,function(a,d){return f.inArray(a,b)>=0===c})}function S(a){return!a||!a.parentNode||a.parentNode.nodeType===11}function K(){return!0}function J(){return!1}function n(a,b,c){var d=b+"defer",e=b+"queue",g=b+"mark",h=f._data(a,d);h&&(c==="queue"||!f._data(a,e))&&(c==="mark"||!f._data(a,g))&&setTimeout(function(){!f._data(a,e)&&!f._data(a,g)&&(f.removeData(a,d,!0),h.fire())},0)}function m(a){for(var b in a){if(b==="data"&&f.isEmptyObject(a[b]))continue;if(b!=="toJSON")return!1}return!0}function l(a,c,d){if(d===b&&a.nodeType===1){var e="data-"+c.replace(k,"-$1").toLowerCase();d=a.getAttribute(e);if(typeof d=="string"){try{d=d==="true"?!0:d==="false"?!1:d==="null"?null:f.isNumeric(d)?+d:j.test(d)?f.parseJSON(d):d}catch(g){}f.data(a,c,d)}else d=b}return d}function h(a){var b=g[a]={},c,d;a=a.split(/\s+/);for(c=0,d=a.length;c<d;c++)b[a[c]]=!0;return b}var c=a.document,d=a.navigator,e=a.location,f=function(){function J(){if(!e.isReady){try{c.documentElement.doScroll("left")}catch(a){setTimeout(J,1);return}e.ready()}}var e=function(a,b){return new e.fn.init(a,b,h)},f=a.jQuery,g=a.$,h,i=/^(?:[^#<]*(<[\w\W]+>)[^>]*$|#([\w\-]*)$)/,j=/\S/,k=/^\s+/,l=/\s+$/,m=/^<(\w+)\s*\/?>(?:<\/\1>)?$/,n=/^[\],:{}\s]*$/,o=/\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g,p=/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g,q=/(?:^|:|,)(?:\s*\[)+/g,r=/(webkit)[ \/]([\w.]+)/,s=/(opera)(?:.*version)?[ \/]([\w.]+)/,t=/(msie) ([\w.]+)/,u=/(mozilla)(?:.*? rv:([\w.]+))?/,v=/-([a-z]|[0-9])/ig,w=/^-ms-/,x=function(a,b){return(b+"").toUpperCase()},y=d.userAgent,z,A,B,C=Object.prototype.toString,D=Object.prototype.hasOwnProperty,E=Array.prototype.push,F=Array.prototype.slice,G=String.prototype.trim,H=Array.prototype.indexOf,I={};e.fn=e.prototype={constructor:e,init:function(a,d,f){var g,h,j,k;if(!a)return this;if(a.nodeType){this.context=this[0]=a,this.length=1;return this}if(a==="body"&&!d&&c.body){this.context=c,this[0]=c.body,this.selector=a,this.length=1;return this}if(typeof a=="string"){a.charAt(0)!=="<"||a.charAt(a.length-1)!==">"||a.length<3?g=i.exec(a):g=[null,a,null];if(g&&(g[1]||!d)){if(g[1]){d=d instanceof e?d[0]:d,k=d?d.ownerDocument||d:c,j=m.exec(a),j?e.isPlainObject(d)?(a=[c.createElement(j[1])],e.fn.attr.call(a,d,!0)):a=[k.createElement(j[1])]:(j=e.buildFragment([g[1]],[k]),a=(j.cacheable?e.clone(j.fragment):j.fragment).childNodes);return e.merge(this,a)}h=c.getElementById(g[2]);if(h&&h.parentNode){if(h.id!==g[2])return f.find(a);this.length=1,this[0]=h}this.context=c,this.selector=a;return this}return!d||d.jquery?(d||f).find(a):this.constructor(d).find(a)}if(e.isFunction(a))return f.ready(a);a.selector!==b&&(this.selector=a.selector,this.context=a.context);return e.makeArray(a,this)},selector:"",jquery:"1.7.2",length:0,size:function(){return this.length},toArray:function(){return F.call(this,0)},get:function(a){return a==null?this.toArray():a<0?this[this.length+a]:this[a]},pushStack:function(a,b,c){var d=this.constructor();e.isArray(a)?E.apply(d,a):e.merge(d,a),d.prevObject=this,d.context=this.context,b==="find"?d.selector=this.selector+(this.selector?" ":"")+c:b&&(d.selector=this.selector+"."+b+"("+c+")");return d},each:function(a,b){return e.each(this,a,b)},ready:function(a){e.bindReady(),A.add(a);return this},eq:function(a){a=+a;return a===-1?this.slice(a):this.slice(a,a+1)},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},slice:function(){return this.pushStack(F.apply(this,arguments),"slice",F.call(arguments).join(","))},map:function(a){return this.pushStack(e.map(this,function(b,c){return a.call(b,c,b)}))},end:function(){return this.prevObject||this.constructor(null)},push:E,sort:[].sort,splice:[].splice},e.fn.init.prototype=e.fn,e.extend=e.fn.extend=function(){var a,c,d,f,g,h,i=arguments[0]||{},j=1,k=arguments.length,l=!1;typeof i=="boolean"&&(l=i,i=arguments[1]||{},j=2),typeof i!="object"&&!e.isFunction(i)&&(i={}),k===j&&(i=this,--j);for(;j<k;j++)if((a=arguments[j])!=null)for(c in a){d=i[c],f=a[c];if(i===f)continue;l&&f&&(e.isPlainObject(f)||(g=e.isArray(f)))?(g?(g=!1,h=d&&e.isArray(d)?d:[]):h=d&&e.isPlainObject(d)?d:{},i[c]=e.extend(l,h,f)):f!==b&&(i[c]=f)}return i},e.extend({noConflict:function(b){a.$===e&&(a.$=g),b&&a.jQuery===e&&(a.jQuery=f);return e},isReady:!1,readyWait:1,holdReady:function(a){a?e.readyWait++:e.ready(!0)},ready:function(a){if(a===!0&&!--e.readyWait||a!==!0&&!e.isReady){if(!c.body)return setTimeout(e.ready,1);e.isReady=!0;if(a!==!0&&--e.readyWait>0)return;A.fireWith(c,[e]),e.fn.trigger&&e(c).trigger("ready").off("ready")}},bindReady:function(){if(!A){A=e.Callbacks("once memory");if(c.readyState==="complete")return setTimeout(e.ready,1);if(c.addEventListener)c.addEventListener("DOMContentLoaded",B,!1),a.addEventListener("load",e.ready,!1);else if(c.attachEvent){c.attachEvent("onreadystatechange",B),a.attachEvent("onload",e.ready);var b=!1;try{b=a.frameElement==null}catch(d){}c.documentElement.doScroll&&b&&J()}}},isFunction:function(a){return e.type(a)==="function"},isArray:Array.isArray||function(a){return e.type(a)==="array"},isWindow:function(a){return a!=null&&a==a.window},isNumeric:function(a){return!isNaN(parseFloat(a))&&isFinite(a)},type:function(a){return a==null?String(a):I[C.call(a)]||"object"},isPlainObject:function(a){if(!a||e.type(a)!=="object"||a.nodeType||e.isWindow(a))return!1;try{if(a.constructor&&!D.call(a,"constructor")&&!D.call(a.constructor.prototype,"isPrototypeOf"))return!1}catch(c){return!1}var d;for(d in a);return d===b||D.call(a,d)},isEmptyObject:function(a){for(var b in a)return!1;return!0},error:function(a){throw new Error(a)},parseJSON:function(b){if(typeof b!="string"||!b)return null;b=e.trim(b);if(a.JSON&&a.JSON.parse)return a.JSON.parse(b);if(n.test(b.replace(o,"@").replace(p,"]").replace(q,"")))return(new Function("return "+b))();e.error("Invalid JSON: "+b)},parseXML:function(c){if(typeof c!="string"||!c)return null;var d,f;try{a.DOMParser?(f=new DOMParser,d=f.parseFromString(c,"text/xml")):(d=new ActiveXObject("Microsoft.XMLDOM"),d.async="false",d.loadXML(c))}catch(g){d=b}(!d||!d.documentElement||d.getElementsByTagName("parsererror").length)&&e.error("Invalid XML: "+c);return d},noop:function(){},globalEval:function(b){b&&j.test(b)&&(a.execScript||function(b){a.eval.call(a,b)})(b)},camelCase:function(a){return a.replace(w,"ms-").replace(v,x)},nodeName:function(a,b){return a.nodeName&&a.nodeName.toUpperCase()===b.toUpperCase()},each:function(a,c,d){var f,g=0,h=a.length,i=h===b||e.isFunction(a);if(d){if(i){for(f in a)if(c.apply(a[f],d)===!1)break}else for(;g<h;)if(c.apply(a[g++],d)===!1)break}else if(i){for(f in a)if(c.call(a[f],f,a[f])===!1)break}else for(;g<h;)if(c.call(a[g],g,a[g++])===!1)break;return a},trim:G?function(a){return a==null?"":G.call(a)}:function(a){return a==null?"":(a+"").replace(k,"").replace(l,"")},makeArray:function(a,b){var c=b||[];if(a!=null){var d=e.type(a);a.length==null||d==="string"||d==="function"||d==="regexp"||e.isWindow(a)?E.call(c,a):e.merge(c,a)}return c},inArray:function(a,b,c){var d;if(b){if(H)return H.call(b,a,c);d=b.length,c=c?c<0?Math.max(0,d+c):c:0;for(;c<d;c++)if(c in b&&b[c]===a)return c}return-1},merge:function(a,c){var d=a.length,e=0;if(typeof c.length=="number")for(var f=c.length;e<f;e++)a[d++]=c[e];else while(c[e]!==b)a[d++]=c[e++];a.length=d;return a},grep:function(a,b,c){var d=[],e;c=!!c;for(var f=0,g=a.length;f<g;f++)e=!!b(a[f],f),c!==e&&d.push(a[f]);return d},map:function(a,c,d){var f,g,h=[],i=0,j=a.length,k=a instanceof e||j!==b&&typeof j=="number"&&(j>0&&a[0]&&a[j-1]||j===0||e.isArray(a));if(k)for(;i<j;i++)f=c(a[i],i,d),f!=null&&(h[h.length]=f);else for(g in a)f=c(a[g],g,d),f!=null&&(h[h.length]=f);return h.concat.apply([],h)},guid:1,proxy:function(a,c){if(typeof c=="string"){var d=a[c];c=a,a=d}if(!e.isFunction(a))return b;var f=F.call(arguments,2),g=function(){return a.apply(c,f.concat(F.call(arguments)))};g.guid=a.guid=a.guid||g.guid||e.guid++;return g},access:function(a,c,d,f,g,h,i){var j,k=d==null,l=0,m=a.length;if(d&&typeof d=="object"){for(l in d)e.access(a,c,l,d[l],1,h,f);g=1}else if(f!==b){j=i===b&&e.isFunction(f),k&&(j?(j=c,c=function(a,b,c){return j.call(e(a),c)}):(c.call(a,f),c=null));if(c)for(;l<m;l++)c(a[l],d,j?f.call(a[l],l,c(a[l],d)):f,i);g=1}return g?a:k?c.call(a):m?c(a[0],d):h},now:function(){return(new Date).getTime()},uaMatch:function(a){a=a.toLowerCase();var b=r.exec(a)||s.exec(a)||t.exec(a)||a.indexOf("compatible")<0&&u.exec(a)||[];return{browser:b[1]||"",version:b[2]||"0"}},sub:function(){function a(b,c){return new a.fn.init(b,c)}e.extend(!0,a,this),a.superclass=this,a.fn=a.prototype=this(),a.fn.constructor=a,a.sub=this.sub,a.fn.init=function(d,f){f&&f instanceof e&&!(f instanceof a)&&(f=a(f));return e.fn.init.call(this,d,f,b)},a.fn.init.prototype=a.fn;var b=a(c);return a},browser:{}}),e.each("Boolean Number String Function Array Date RegExp Object".split(" "),function(a,b){I["[object "+b+"]"]=b.toLowerCase()}),z=e.uaMatch(y),z.browser&&(e.browser[z.browser]=!0,e.browser.version=z.version),e.browser.webkit&&(e.browser.safari=!0),j.test(" ")&&(k=/^[\s\xA0]+/,l=/[\s\xA0]+$/),h=e(c),c.addEventListener?B=function(){c.removeEventListener("DOMContentLoaded",B,!1),e.ready()}:c.attachEvent&&(B=function(){c.readyState==="complete"&&(c.detachEvent("onreadystatechange",B),e.ready())});return e}(),g={};f.Callbacks=function(a){a=a?g[a]||h(a):{};var c=[],d=[],e,i,j,k,l,m,n=function(b){var d,e,g,h,i;for(d=0,e=b.length;d<e;d++)g=b[d],h=f.type(g),h==="array"?n(g):h==="function"&&(!a.unique||!p.has(g))&&c.push(g)},o=function(b,f){f=f||[],e=!a.memory||[b,f],i=!0,j=!0,m=k||0,k=0,l=c.length;for(;c&&m<l;m++)if(c[m].apply(b,f)===!1&&a.stopOnFalse){e=!0;break}j=!1,c&&(a.once?e===!0?p.disable():c=[]:d&&d.length&&(e=d.shift(),p.fireWith(e[0],e[1])))},p={add:function(){if(c){var a=c.length;n(arguments),j?l=c.length:e&&e!==!0&&(k=a,o(e[0],e[1]))}return this},remove:function(){if(c){var b=arguments,d=0,e=b.length;for(;d<e;d++)for(var f=0;f<c.length;f++)if(b[d]===c[f]){j&&f<=l&&(l--,f<=m&&m--),c.splice(f--,1);if(a.unique)break}}return this},has:function(a){if(c){var b=0,d=c.length;for(;b<d;b++)if(a===c[b])return!0}return!1},empty:function(){c=[];return this},disable:function(){c=d=e=b;return this},disabled:function(){return!c},lock:function(){d=b,(!e||e===!0)&&p.disable();return this},locked:function(){return!d},fireWith:function(b,c){d&&(j?a.once||d.push([b,c]):(!a.once||!e)&&o(b,c));return this},fire:function(){p.fireWith(this,arguments);return this},fired:function(){return!!i}};return p};var i=[].slice;f.extend({Deferred:function(a){var b=f.Callbacks("once memory"),c=f.Callbacks("once memory"),d=f.Callbacks("memory"),e="pending",g={resolve:b,reject:c,notify:d},h={done:b.add,fail:c.add,progress:d.add,state:function(){return e},isResolved:b.fired,isRejected:c.fired,then:function(a,b,c){i.done(a).fail(b).progress(c);return this},always:function(){i.done.apply(i,arguments).fail.apply(i,arguments);return this},pipe:function(a,b,c){return f.Deferred(function(d){f.each({done:[a,"resolve"],fail:[b,"reject"],progress:[c,"notify"]},function(a,b){var c=b[0],e=b[1],g;f.isFunction(c)?i[a](function(){g=c.apply(this,arguments),g&&f.isFunction(g.promise)?g.promise().then(d.resolve,d.reject,d.notify):d[e+"With"](this===i?d:this,[g])}):i[a](d[e])})}).promise()},promise:function(a){if(a==null)a=h;else for(var b in h)a[b]=h[b];return a}},i=h.promise({}),j;for(j in g)i[j]=g[j].fire,i[j+"With"]=g[j].fireWith;i.done(function(){e="resolved"},c.disable,d.lock).fail(function(){e="rejected"},b.disable,d.lock),a&&a.call(i,i);return i},when:function(a){function m(a){return function(b){e[a]=arguments.length>1?i.call(arguments,0):b,j.notifyWith(k,e)}}function l(a){return function(c){b[a]=arguments.length>1?i.call(arguments,0):c,--g||j.resolveWith(j,b)}}var b=i.call(arguments,0),c=0,d=b.length,e=Array(d),g=d,h=d,j=d<=1&&a&&f.isFunction(a.promise)?a:f.Deferred(),k=j.promise();if(d>1){for(;c<d;c++)b[c]&&b[c].promise&&f.isFunction(b[c].promise)?b[c].promise().then(l(c),j.reject,m(c)):--g;g||j.resolveWith(j,b)}else j!==a&&j.resolveWith(j,d?[a]:[]);return k}}),f.support=function(){var b,d,e,g,h,i,j,k,l,m,n,o,p=c.createElement("div"),q=c.documentElement;p.setAttribute("className","t"),p.innerHTML="   <link/><table></table><a href='/a' style='top:1px;float:left;opacity:.55;'>a</a><input type='checkbox'/>",d=p.getElementsByTagName("*"),e=p.getElementsByTagName("a")[0];if(!d||!d.length||!e)return{};g=c.createElement("select"),h=g.appendChild(c.createElement("option")),i=p.getElementsByTagName("input")[0],b={leadingWhitespace:p.firstChild.nodeType===3,tbody:!p.getElementsByTagName("tbody").length,htmlSerialize:!!p.getElementsByTagName("link").length,style:/top/.test(e.getAttribute("style")),hrefNormalized:e.getAttribute("href")==="/a",opacity:/^0.55/.test(e.style.opacity),cssFloat:!!e.style.cssFloat,checkOn:i.value==="on",optSelected:h.selected,getSetAttribute:p.className!=="t",enctype:!!c.createElement("form").enctype,html5Clone:c.createElement("nav").cloneNode(!0).outerHTML!=="<:nav></:nav>",submitBubbles:!0,changeBubbles:!0,focusinBubbles:!1,deleteExpando:!0,noCloneEvent:!0,inlineBlockNeedsLayout:!1,shrinkWrapBlocks:!1,reliableMarginRight:!0,pixelMargin:!0},f.boxModel=b.boxModel=c.compatMode==="CSS1Compat",i.checked=!0,b.noCloneChecked=i.cloneNode(!0).checked,g.disabled=!0,b.optDisabled=!h.disabled;try{delete p.test}catch(r){b.deleteExpando=!1}!p.addEventListener&&p.attachEvent&&p.fireEvent&&(p.attachEvent("onclick",function(){b.noCloneEvent=!1}),p.cloneNode(!0).fireEvent("onclick")),i=c.createElement("input"),i.value="t",i.setAttribute("type","radio"),b.radioValue=i.value==="t",i.setAttribute("checked","checked"),i.setAttribute("name","t"),p.appendChild(i),j=c.createDocumentFragment(),j.appendChild(p.lastChild),b.checkClone=j.cloneNode(!0).cloneNode(!0).lastChild.checked,b.appendChecked=i.checked,j.removeChild(i),j.appendChild(p);if(p.attachEvent)for(n in{submit:1,change:1,focusin:1})m="on"+n,o=m in p,o||(p.setAttribute(m,"return;"),o=typeof p[m]=="function"),b[n+"Bubbles"]=o;j.removeChild(p),j=g=h=p=i=null,f(function(){var d,e,g,h,i,j,l,m,n,q,r,s,t,u=c.getElementsByTagName("body")[0];!u||(m=1,t="padding:0;margin:0;border:",r="position:absolute;top:0;left:0;width:1px;height:1px;",s=t+"0;visibility:hidden;",n="style='"+r+t+"5px solid #000;",q="<div "+n+"display:block;'><div style='"+t+"0;display:block;overflow:hidden;'></div></div>"+"<table "+n+"' cellpadding='0' cellspacing='0'>"+"<tr><td></td></tr></table>",d=c.createElement("div"),d.style.cssText=s+"width:0;height:0;position:static;top:0;margin-top:"+m+"px",u.insertBefore(d,u.firstChild),p=c.createElement("div"),d.appendChild(p),p.innerHTML="<table><tr><td style='"+t+"0;display:none'></td><td>t</td></tr></table>",k=p.getElementsByTagName("td"),o=k[0].offsetHeight===0,k[0].style.display="",k[1].style.display="none",b.reliableHiddenOffsets=o&&k[0].offsetHeight===0,a.getComputedStyle&&(p.innerHTML="",l=c.createElement("div"),l.style.width="0",l.style.marginRight="0",p.style.width="2px",p.appendChild(l),b.reliableMarginRight=(parseInt((a.getComputedStyle(l,null)||{marginRight:0}).marginRight,10)||0)===0),typeof p.style.zoom!="undefined"&&(p.innerHTML="",p.style.width=p.style.padding="1px",p.style.border=0,p.style.overflow="hidden",p.style.display="inline",p.style.zoom=1,b.inlineBlockNeedsLayout=p.offsetWidth===3,p.style.display="block",p.style.overflow="visible",p.innerHTML="<div style='width:5px;'></div>",b.shrinkWrapBlocks=p.offsetWidth!==3),p.style.cssText=r+s,p.innerHTML=q,e=p.firstChild,g=e.firstChild,i=e.nextSibling.firstChild.firstChild,j={doesNotAddBorder:g.offsetTop!==5,doesAddBorderForTableAndCells:i.offsetTop===5},g.style.position="fixed",g.style.top="20px",j.fixedPosition=g.offsetTop===20||g.offsetTop===15,g.style.position=g.style.top="",e.style.overflow="hidden",e.style.position="relative",j.subtractsBorderForOverflowNotVisible=g.offsetTop===-5,j.doesNotIncludeMarginInBodyOffset=u.offsetTop!==m,a.getComputedStyle&&(p.style.marginTop="1%",b.pixelMargin=(a.getComputedStyle(p,null)||{marginTop:0}).marginTop!=="1%"),typeof d.style.zoom!="undefined"&&(d.style.zoom=1),u.removeChild(d),l=p=d=null,f.extend(b,j))});return b}();var j=/^(?:\{.*\}|\[.*\])$/,k=/([A-Z])/g;f.extend({cache:{},uuid:0,expando:"jQuery"+(f.fn.jquery+Math.random()).replace(/\D/g,""),noData:{embed:!0,object:"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000",applet:!0},hasData:function(a){a=a.nodeType?f.cache[a[f.expando]]:a[f.expando];return!!a&&!m(a)},data:function(a,c,d,e){if(!!f.acceptData(a)){var g,h,i,j=f.expando,k=typeof c=="string",l=a.nodeType,m=l?f.cache:a,n=l?a[j]:a[j]&&j,o=c==="events";if((!n||!m[n]||!o&&!e&&!m[n].data)&&k&&d===b)return;n||(l?a[j]=n=++f.uuid:n=j),m[n]||(m[n]={},l||(m[n].toJSON=f.noop));if(typeof c=="object"||typeof c=="function")e?m[n]=f.extend(m[n],c):m[n].data=f.extend(m[n].data,c);g=h=m[n],e||(h.data||(h.data={}),h=h.data),d!==b&&(h[f.camelCase(c)]=d);if(o&&!h[c])return g.events;k?(i=h[c],i==null&&(i=h[f.camelCase(c)])):i=h;return i}},removeData:function(a,b,c){if(!!f.acceptData(a)){var d,e,g,h=f.expando,i=a.nodeType,j=i?f.cache:a,k=i?a[h]:h;if(!j[k])return;if(b){d=c?j[k]:j[k].data;if(d){f.isArray(b)||(b in d?b=[b]:(b=f.camelCase(b),b in d?b=[b]:b=b.split(" ")));for(e=0,g=b.length;e<g;e++)delete d[b[e]];if(!(c?m:f.isEmptyObject)(d))return}}if(!c){delete j[k].data;if(!m(j[k]))return}f.support.deleteExpando||!j.setInterval?delete j[k]:j[k]=null,i&&(f.support.deleteExpando?delete a[h]:a.removeAttribute?a.removeAttribute(h):a[h]=null)}},_data:function(a,b,c){return f.data(a,b,c,!0)},acceptData:function(a){if(a.nodeName){var b=f.noData[a.nodeName.toLowerCase()];if(b)return b!==!0&&a.getAttribute("classid")===b}return!0}}),f.fn.extend({data:function(a,c){var d,e,g,h,i,j=this[0],k=0,m=null;if(a===b){if(this.length){m=f.data(j);if(j.nodeType===1&&!f._data(j,"parsedAttrs")){g=j.attributes;for(i=g.length;k<i;k++)h=g[k].name,h.indexOf("data-")===0&&(h=f.camelCase(h.substring(5)),l(j,h,m[h]));f._data(j,"parsedAttrs",!0)}}return m}if(typeof a=="object")return this.each(function(){f.data(this,a)});d=a.split(".",2),d[1]=d[1]?"."+d[1]:"",e=d[1]+"!";return f.access(this,function(c){if(c===b){m=this.triggerHandler("getData"+e,[d[0]]),m===b&&j&&(m=f.data(j,a),m=l(j,a,m));return m===b&&d[1]?this.data(d[0]):m}d[1]=c,this.each(function(){var b=f(this);b.triggerHandler("setData"+e,d),f.data(this,a,c),b.triggerHandler("changeData"+e,d)})},null,c,arguments.length>1,null,!1)},removeData:function(a){return this.each(function(){f.removeData(this,a)})}}),f.extend({_mark:function(a,b){a&&(b=(b||"fx")+"mark",f._data(a,b,(f._data(a,b)||0)+1))},_unmark:function(a,b,c){a!==!0&&(c=b,b=a,a=!1);if(b){c=c||"fx";var d=c+"mark",e=a?0:(f._data(b,d)||1)-1;e?f._data(b,d,e):(f.removeData(b,d,!0),n(b,c,"mark"))}},queue:function(a,b,c){var d;if(a){b=(b||"fx")+"queue",d=f._data(a,b),c&&(!d||f.isArray(c)?d=f._data(a,b,f.makeArray(c)):d.push(c));return d||[]}},dequeue:function(a,b){b=b||"fx";var c=f.queue(a,b),d=c.shift(),e={};d==="inprogress"&&(d=c.shift()),d&&(b==="fx"&&c.unshift("inprogress"),f._data(a,b+".run",e),d.call(a,function(){f.dequeue(a,b)},e)),c.length||(f.removeData(a,b+"queue "+b+".run",!0),n(a,b,"queue"))}}),f.fn.extend({queue:function(a,c){var d=2;typeof a!="string"&&(c=a,a="fx",d--);if(arguments.length<d)return f.queue(this[0],a);return c===b?this:this.each(function(){var b=f.queue(this,a,c);a==="fx"&&b[0]!=="inprogress"&&f.dequeue(this,a)})},dequeue:function(a){return this.each(function(){f.dequeue(this,a)})},delay:function(a,b){a=f.fx?f.fx.speeds[a]||a:a,b=b||"fx";return this.queue(b,function(b,c){var d=setTimeout(b,a);c.stop=function(){clearTimeout(d)}})},clearQueue:function(a){return this.queue(a||"fx",[])},promise:function(a,c){function m(){--h||d.resolveWith(e,[e])}typeof a!="string"&&(c=a,a=b),a=a||"fx";var d=f.Deferred(),e=this,g=e.length,h=1,i=a+"defer",j=a+"queue",k=a+"mark",l;while(g--)if(l=f.data(e[g],i,b,!0)||(f.data(e[g],j,b,!0)||f.data(e[g],k,b,!0))&&f.data(e[g],i,f.Callbacks("once memory"),!0))h++,l.add(m);m();return d.promise(c)}});var o=/[\n\t\r]/g,p=/\s+/,q=/\r/g,r=/^(?:button|input)$/i,s=/^(?:button|input|object|select|textarea)$/i,t=/^a(?:rea)?$/i,u=/^(?:autofocus|autoplay|async|checked|controls|defer|disabled|hidden|loop|multiple|open|readonly|required|scoped|selected)$/i,v=f.support.getSetAttribute,w,x,y;f.fn.extend({attr:function(a,b){return f.access(this,f.attr,a,b,arguments.length>1)},removeAttr:function(a){return this.each(function(){f.removeAttr(this,a)})},prop:function(a,b){return f.access(this,f.prop,a,b,arguments.length>1)},removeProp:function(a){a=f.propFix[a]||a;return this.each(function(){try{this[a]=b,delete this[a]}catch(c){}})},addClass:function(a){var b,c,d,e,g,h,i;if(f.isFunction(a))return this.each(function(b){f(this).addClass(a.call(this,b,this.className))});if(a&&typeof a=="string"){b=a.split(p);for(c=0,d=this.length;c<d;c++){e=this[c];if(e.nodeType===1)if(!e.className&&b.length===1)e.className=a;else{g=" "+e.className+" ";for(h=0,i=b.length;h<i;h++)~g.indexOf(" "+b[h]+" ")||(g+=b[h]+" ");e.className=f.trim(g)}}}return this},removeClass:function(a){var c,d,e,g,h,i,j;if(f.isFunction(a))return this.each(function(b){f(this).removeClass(a.call(this,b,this.className))});if(a&&typeof a=="string"||a===b){c=(a||"").split(p);for(d=0,e=this.length;d<e;d++){g=this[d];if(g.nodeType===1&&g.className)if(a){h=(" "+g.className+" ").replace(o," ");for(i=0,j=c.length;i<j;i++)h=h.replace(" "+c[i]+" "," ");g.className=f.trim(h)}else g.className=""}}return this},toggleClass:function(a,b){var c=typeof a,d=typeof b=="boolean";if(f.isFunction(a))return this.each(function(c){f(this).toggleClass(a.call(this,c,this.className,b),b)});return this.each(function(){if(c==="string"){var e,g=0,h=f(this),i=b,j=a.split(p);while(e=j[g++])i=d?i:!h.hasClass(e),h[i?"addClass":"removeClass"](e)}else if(c==="undefined"||c==="boolean")this.className&&f._data(this,"__className__",this.className),this.className=this.className||a===!1?"":f._data(this,"__className__")||""})},hasClass:function(a){var b=" "+a+" ",c=0,d=this.length;for(;c<d;c++)if(this[c].nodeType===1&&(" "+this[c].className+" ").replace(o," ").indexOf(b)>-1)return!0;return!1},val:function(a){var c,d,e,g=this[0];{if(!!arguments.length){e=f.isFunction(a);return this.each(function(d){var g=f(this),h;if(this.nodeType===1){e?h=a.call(this,d,g.val()):h=a,h==null?h="":typeof h=="number"?h+="":f.isArray(h)&&(h=f.map(h,function(a){return a==null?"":a+""})),c=f.valHooks[this.type]||f.valHooks[this.nodeName.toLowerCase()];if(!c||!("set"in c)||c.set(this,h,"value")===b)this.value=h}})}if(g){c=f.valHooks[g.type]||f.valHooks[g.nodeName.toLowerCase()];if(c&&"get"in c&&(d=c.get(g,"value"))!==b)return d;d=g.value;return typeof d=="string"?d.replace(q,""):d==null?"":d}}}}),f.extend({valHooks:{option:{get:function(a){var b=a.attributes.value;return!b||b.specified?a.value:a.text}},select:{get:function(a){var b,c,d,e,g=a.selectedIndex,h=[],i=a.options,j=a.type==="select-one";if(g<0)return null;c=j?g:0,d=j?g+1:i.length;for(;c<d;c++){e=i[c];if(e.selected&&(f.support.optDisabled?!e.disabled:e.getAttribute("disabled")===null)&&(!e.parentNode.disabled||!f.nodeName(e.parentNode,"optgroup"))){b=f(e).val();if(j)return b;h.push(b)}}if(j&&!h.length&&i.length)return f(i[g]).val();return h},set:function(a,b){var c=f.makeArray(b);f(a).find("option").each(function(){this.selected=f.inArray(f(this).val(),c)>=0}),c.length||(a.selectedIndex=-1);return c}}},attrFn:{val:!0,css:!0,html:!0,text:!0,data:!0,width:!0,height:!0,offset:!0},attr:function(a,c,d,e){var g,h,i,j=a.nodeType;if(!!a&&j!==3&&j!==8&&j!==2){if(e&&c in f.attrFn)return f(a)[c](d);if(typeof a.getAttribute=="undefined")return f.prop(a,c,d);i=j!==1||!f.isXMLDoc(a),i&&(c=c.toLowerCase(),h=f.attrHooks[c]||(u.test(c)?x:w));if(d!==b){if(d===null){f.removeAttr(a,c);return}if(h&&"set"in h&&i&&(g=h.set(a,d,c))!==b)return g;a.setAttribute(c,""+d);return d}if(h&&"get"in h&&i&&(g=h.get(a,c))!==null)return g;g=a.getAttribute(c);return g===null?b:g}},removeAttr:function(a,b){var c,d,e,g,h,i=0;if(b&&a.nodeType===1){d=b.toLowerCase().split(p),g=d.length;for(;i<g;i++)e=d[i],e&&(c=f.propFix[e]||e,h=u.test(e),h||f.attr(a,e,""),a.removeAttribute(v?e:c),h&&c in a&&(a[c]=!1))}},attrHooks:{type:{set:function(a,b){if(r.test(a.nodeName)&&a.parentNode)f.error("type property can't be changed");else if(!f.support.radioValue&&b==="radio"&&f.nodeName(a,"input")){var c=a.value;a.setAttribute("type",b),c&&(a.value=c);return b}}},value:{get:function(a,b){if(w&&f.nodeName(a,"button"))return w.get(a,b);return b in a?a.value:null},set:function(a,b,c){if(w&&f.nodeName(a,"button"))return w.set(a,b,c);a.value=b}}},propFix:{tabindex:"tabIndex",readonly:"readOnly","for":"htmlFor","class":"className",maxlength:"maxLength",cellspacing:"cellSpacing",cellpadding:"cellPadding",rowspan:"rowSpan",colspan:"colSpan",usemap:"useMap",frameborder:"frameBorder",contenteditable:"contentEditable"},prop:function(a,c,d){var e,g,h,i=a.nodeType;if(!!a&&i!==3&&i!==8&&i!==2){h=i!==1||!f.isXMLDoc(a),h&&(c=f.propFix[c]||c,g=f.propHooks[c]);return d!==b?g&&"set"in g&&(e=g.set(a,d,c))!==b?e:a[c]=d:g&&"get"in g&&(e=g.get(a,c))!==null?e:a[c]}},propHooks:{tabIndex:{get:function(a){var c=a.getAttributeNode("tabindex");return c&&c.specified?parseInt(c.value,10):s.test(a.nodeName)||t.test(a.nodeName)&&a.href?0:b}}}}),f.attrHooks.tabindex=f.propHooks.tabIndex,x={get:function(a,c){var d,e=f.prop(a,c);return e===!0||typeof e!="boolean"&&(d=a.getAttributeNode(c))&&d.nodeValue!==!1?c.toLowerCase():b},set:function(a,b,c){var d;b===!1?f.removeAttr(a,c):(d=f.propFix[c]||c,d in a&&(a[d]=!0),a.setAttribute(c,c.toLowerCase()));return c}},v||(y={name:!0,id:!0,coords:!0},w=f.valHooks.button={get:function(a,c){var d;d=a.getAttributeNode(c);return d&&(y[c]?d.nodeValue!=="":d.specified)?d.nodeValue:b},set:function(a,b,d){var e=a.getAttributeNode(d);e||(e=c.createAttribute(d),a.setAttributeNode(e));return e.nodeValue=b+""}},f.attrHooks.tabindex.set=w.set,f.each(["width","height"],function(a,b){f.attrHooks[b]=f.extend(f.attrHooks[b],{set:function(a,c){if(c===""){a.setAttribute(b,"auto");return c}}})}),f.attrHooks.contenteditable={get:w.get,set:function(a,b,c){b===""&&(b="false"),w.set(a,b,c)}}),f.support.hrefNormalized||f.each(["href","src","width","height"],function(a,c){f.attrHooks[c]=f.extend(f.attrHooks[c],{get:function(a){var d=a.getAttribute(c,2);return d===null?b:d}})}),f.support.style||(f.attrHooks.style={get:function(a){return a.style.cssText.toLowerCase()||b},set:function(a,b){return a.style.cssText=""+b}}),f.support.optSelected||(f.propHooks.selected=f.extend(f.propHooks.selected,{get:function(a){var b=a.parentNode;b&&(b.selectedIndex,b.parentNode&&b.parentNode.selectedIndex);return null}})),f.support.enctype||(f.propFix.enctype="encoding"),f.support.checkOn||f.each(["radio","checkbox"],function(){f.valHooks[this]={get:function(a){return a.getAttribute("value")===null?"on":a.value}}}),f.each(["radio","checkbox"],function(){f.valHooks[this]=f.extend(f.valHooks[this],{set:function(a,b){if(f.isArray(b))return a.checked=f.inArray(f(a).val(),b)>=0}})});var z=/^(?:textarea|input|select)$/i,A=/^([^\.]*)?(?:\.(.+))?$/,B=/(?:^|\s)hover(\.\S+)?\b/,C=/^key/,D=/^(?:mouse|contextmenu)|click/,E=/^(?:focusinfocus|focusoutblur)$/,F=/^(\w*)(?:#([\w\-]+))?(?:\.([\w\-]+))?$/,G=function(
+a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^|\\s)"+b[3]+"(?:\\s|$)"));return b},H=function(a,b){var c=a.attributes||{};return(!b[1]||a.nodeName.toLowerCase()===b[1])&&(!b[2]||(c.id||{}).value===b[2])&&(!b[3]||b[3].test((c["class"]||{}).value))},I=function(a){return f.event.special.hover?a:a.replace(B,"mouseenter$1 mouseleave$1")};f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3||a.nodeType===8||!c||!d||!(h=f._data(a)))){d.handler&&(p=d,d=p.handler,g=p.selector),d.guid||(d.guid=f.guid++),j=h.events,j||(h.events=j={}),i=h.handle,i||(h.handle=i=function(a){return typeof f!="undefined"&&(!a||f.event.triggered!==a.type)?f.event.dispatch.apply(i.elem,arguments):b},i.elem=a),c=f.trim(I(c)).split(" ");for(k=0;k<c.length;k++){l=A.exec(c[k])||[],m=l[1],n=(l[2]||"").split(".").sort(),s=f.event.special[m]||{},m=(g?s.delegateType:s.bindType)||m,s=f.event.special[m]||{},o=f.extend({type:m,origType:l[1],data:e,handler:d,guid:d.guid,selector:g,quick:g&&G(g),namespace:n.join(".")},p),r=j[m];if(!r){r=j[m]=[],r.delegateCount=0;if(!s.setup||s.setup.call(a,e,n,i)===!1)a.addEventListener?a.addEventListener(m,i,!1):a.attachEvent&&a.attachEvent("on"+m,i)}s.add&&(s.add.call(a,o),o.handler.guid||(o.handler.guid=d.guid)),g?r.splice(r.delegateCount++,0,o):r.push(o),f.event.global[m]=!0}a=null}},global:{},remove:function(a,b,c,d,e){var g=f.hasData(a)&&f._data(a),h,i,j,k,l,m,n,o,p,q,r,s;if(!!g&&!!(o=g.events)){b=f.trim(I(b||"")).split(" ");for(h=0;h<b.length;h++){i=A.exec(b[h])||[],j=k=i[1],l=i[2];if(!j){for(j in o)f.event.remove(a,j+b[h],c,d,!0);continue}p=f.event.special[j]||{},j=(d?p.delegateType:p.bindType)||j,r=o[j]||[],m=r.length,l=l?new RegExp("(^|\\.)"+l.split(".").sort().join("\\.(?:.*\\.)?")+"(\\.|$)"):null;for(n=0;n<r.length;n++)s=r[n],(e||k===s.origType)&&(!c||c.guid===s.guid)&&(!l||l.test(s.namespace))&&(!d||d===s.selector||d==="**"&&s.selector)&&(r.splice(n--,1),s.selector&&r.delegateCount--,p.remove&&p.remove.call(a,s));r.length===0&&m!==r.length&&((!p.teardown||p.teardown.call(a,l)===!1)&&f.removeEvent(a,j,g.handle),delete o[j])}f.isEmptyObject(o)&&(q=g.handle,q&&(q.elem=null),f.removeData(a,["events","handle"],!0))}},customEvent:{getData:!0,setData:!0,changeData:!0},trigger:function(c,d,e,g){if(!e||e.nodeType!==3&&e.nodeType!==8){var h=c.type||c,i=[],j,k,l,m,n,o,p,q,r,s;if(E.test(h+f.event.triggered))return;h.indexOf("!")>=0&&(h=h.slice(0,-1),k=!0),h.indexOf(".")>=0&&(i=h.split("."),h=i.shift(),i.sort());if((!e||f.event.customEvent[h])&&!f.event.global[h])return;c=typeof c=="object"?c[f.expando]?c:new f.Event(h,c):new f.Event(h),c.type=h,c.isTrigger=!0,c.exclusive=k,c.namespace=i.join("."),c.namespace_re=c.namespace?new RegExp("(^|\\.)"+i.join("\\.(?:.*\\.)?")+"(\\.|$)"):null,o=h.indexOf(":")<0?"on"+h:"";if(!e){j=f.cache;for(l in j)j[l].events&&j[l].events[h]&&f.event.trigger(c,d,j[l].handle.elem,!0);return}c.result=b,c.target||(c.target=e),d=d!=null?f.makeArray(d):[],d.unshift(c),p=f.event.special[h]||{};if(p.trigger&&p.trigger.apply(e,d)===!1)return;r=[[e,p.bindType||h]];if(!g&&!p.noBubble&&!f.isWindow(e)){s=p.delegateType||h,m=E.test(s+h)?e:e.parentNode,n=null;for(;m;m=m.parentNode)r.push([m,s]),n=m;n&&n===e.ownerDocument&&r.push([n.defaultView||n.parentWindow||a,s])}for(l=0;l<r.length&&!c.isPropagationStopped();l++)m=r[l][0],c.type=r[l][1],q=(f._data(m,"events")||{})[c.type]&&f._data(m,"handle"),q&&q.apply(m,d),q=o&&m[o],q&&f.acceptData(m)&&q.apply(m,d)===!1&&c.preventDefault();c.type=h,!g&&!c.isDefaultPrevented()&&(!p._default||p._default.apply(e.ownerDocument,d)===!1)&&(h!=="click"||!f.nodeName(e,"a"))&&f.acceptData(e)&&o&&e[h]&&(h!=="focus"&&h!=="blur"||c.target.offsetWidth!==0)&&!f.isWindow(e)&&(n=e[o],n&&(e[o]=null),f.event.triggered=h,e[h](),f.event.triggered=b,n&&(e[o]=n));return c.result}},dispatch:function(c){c=f.event.fix(c||a.event);var d=(f._data(this,"events")||{})[c.type]||[],e=d.delegateCount,g=[].slice.call(arguments,0),h=!c.exclusive&&!c.namespace,i=f.event.special[c.type]||{},j=[],k,l,m,n,o,p,q,r,s,t,u;g[0]=c,c.delegateTarget=this;if(!i.preDispatch||i.preDispatch.call(this,c)!==!1){if(e&&(!c.button||c.type!=="click")){n=f(this),n.context=this.ownerDocument||this;for(m=c.target;m!=this;m=m.parentNode||this)if(m.disabled!==!0){p={},r=[],n[0]=m;for(k=0;k<e;k++)s=d[k],t=s.selector,p[t]===b&&(p[t]=s.quick?H(m,s.quick):n.is(t)),p[t]&&r.push(s);r.length&&j.push({elem:m,matches:r})}}d.length>e&&j.push({elem:this,matches:d.slice(e)});for(k=0;k<j.length&&!c.isPropagationStopped();k++){q=j[k],c.currentTarget=q.elem;for(l=0;l<q.matches.length&&!c.isImmediatePropagationStopped();l++){s=q.matches[l];if(h||!c.namespace&&!s.namespace||c.namespace_re&&c.namespace_re.test(s.namespace))c.data=s.data,c.handleObj=s,o=((f.event.special[s.origType]||{}).handle||s.handler).apply(q.elem,g),o!==b&&(c.result=o,o===!1&&(c.preventDefault(),c.stopPropagation()))}}i.postDispatch&&i.postDispatch.call(this,c);return c.result}},props:"attrChange attrName relatedNode srcElement altKey bubbles cancelable ctrlKey currentTarget eventPhase metaKey relatedTarget shiftKey target timeStamp view which".split(" "),fixHooks:{},keyHooks:{props:"char charCode key keyCode".split(" "),filter:function(a,b){a.which==null&&(a.which=b.charCode!=null?b.charCode:b.keyCode);return a}},mouseHooks:{props:"button buttons clientX clientY fromElement offsetX offsetY pageX pageY screenX screenY toElement".split(" "),filter:function(a,d){var e,f,g,h=d.button,i=d.fromElement;a.pageX==null&&d.clientX!=null&&(e=a.target.ownerDocument||c,f=e.documentElement,g=e.body,a.pageX=d.clientX+(f&&f.scrollLeft||g&&g.scrollLeft||0)-(f&&f.clientLeft||g&&g.clientLeft||0),a.pageY=d.clientY+(f&&f.scrollTop||g&&g.scrollTop||0)-(f&&f.clientTop||g&&g.clientTop||0)),!a.relatedTarget&&i&&(a.relatedTarget=i===a.target?d.toElement:i),!a.which&&h!==b&&(a.which=h&1?1:h&2?3:h&4?2:0);return a}},fix:function(a){if(a[f.expando])return a;var d,e,g=a,h=f.event.fixHooks[a.type]||{},i=h.props?this.props.concat(h.props):this.props;a=f.Event(g);for(d=i.length;d;)e=i[--d],a[e]=g[e];a.target||(a.target=g.srcElement||c),a.target.nodeType===3&&(a.target=a.target.parentNode),a.metaKey===b&&(a.metaKey=a.ctrlKey);return h.filter?h.filter(a,g):a},special:{ready:{setup:f.bindReady},load:{noBubble:!0},focus:{delegateType:"focusin"},blur:{delegateType:"focusout"},beforeunload:{setup:function(a,b,c){f.isWindow(this)&&(this.onbeforeunload=c)},teardown:function(a,b){this.onbeforeunload===b&&(this.onbeforeunload=null)}}},simulate:function(a,b,c,d){var e=f.extend(new f.Event,c,{type:a,isSimulated:!0,originalEvent:{}});d?f.event.trigger(e,null,b):f.event.dispatch.call(b,e),e.isDefaultPrevented()&&c.preventDefault()}},f.event.handle=f.event.dispatch,f.removeEvent=c.removeEventListener?function(a,b,c){a.removeEventListener&&a.removeEventListener(b,c,!1)}:function(a,b,c){a.detachEvent&&a.detachEvent("on"+b,c)},f.Event=function(a,b){if(!(this instanceof f.Event))return new f.Event(a,b);a&&a.type?(this.originalEvent=a,this.type=a.type,this.isDefaultPrevented=a.defaultPrevented||a.returnValue===!1||a.getPreventDefault&&a.getPreventDefault()?K:J):this.type=a,b&&f.extend(this,b),this.timeStamp=a&&a.timeStamp||f.now(),this[f.expando]=!0},f.Event.prototype={preventDefault:function(){this.isDefaultPrevented=K;var a=this.originalEvent;!a||(a.preventDefault?a.preventDefault():a.returnValue=!1)},stopPropagation:function(){this.isPropagationStopped=K;var a=this.originalEvent;!a||(a.stopPropagation&&a.stopPropagation(),a.cancelBubble=!0)},stopImmediatePropagation:function(){this.isImmediatePropagationStopped=K,this.stopPropagation()},isDefaultPrevented:J,isPropagationStopped:J,isImmediatePropagationStopped:J},f.each({mouseenter:"mouseover",mouseleave:"mouseout"},function(a,b){f.event.special[a]={delegateType:b,bindType:b,handle:function(a){var c=this,d=a.relatedTarget,e=a.handleObj,g=e.selector,h;if(!d||d!==c&&!f.contains(c,d))a.type=e.origType,h=e.handler.apply(this,arguments),a.type=b;return h}}}),f.support.submitBubbles||(f.event.special.submit={setup:function(){if(f.nodeName(this,"form"))return!1;f.event.add(this,"click._submit keypress._submit",function(a){var c=a.target,d=f.nodeName(c,"input")||f.nodeName(c,"button")?c.form:b;d&&!d._submit_attached&&(f.event.add(d,"submit._submit",function(a){a._submit_bubble=!0}),d._submit_attached=!0)})},postDispatch:function(a){a._submit_bubble&&(delete a._submit_bubble,this.parentNode&&!a.isTrigger&&f.event.simulate("submit",this.parentNode,a,!0))},teardown:function(){if(f.nodeName(this,"form"))return!1;f.event.remove(this,"._submit")}}),f.support.changeBubbles||(f.event.special.change={setup:function(){if(z.test(this.nodeName)){if(this.type==="checkbox"||this.type==="radio")f.event.add(this,"propertychange._change",function(a){a.originalEvent.propertyName==="checked"&&(this._just_changed=!0)}),f.event.add(this,"click._change",function(a){this._just_changed&&!a.isTrigger&&(this._just_changed=!1,f.event.simulate("change",this,a,!0))});return!1}f.event.add(this,"beforeactivate._change",function(a){var b=a.target;z.test(b.nodeName)&&!b._change_attached&&(f.event.add(b,"change._change",function(a){this.parentNode&&!a.isSimulated&&!a.isTrigger&&f.event.simulate("change",this.parentNode,a,!0)}),b._change_attached=!0)})},handle:function(a){var b=a.target;if(this!==b||a.isSimulated||a.isTrigger||b.type!=="radio"&&b.type!=="checkbox")return a.handleObj.handler.apply(this,arguments)},teardown:function(){f.event.remove(this,"._change");return z.test(this.nodeName)}}),f.support.focusinBubbles||f.each({focus:"focusin",blur:"focusout"},function(a,b){var d=0,e=function(a){f.event.simulate(b,a.target,f.event.fix(a),!0)};f.event.special[b]={setup:function(){d++===0&&c.addEventListener(a,e,!0)},teardown:function(){--d===0&&c.removeEventListener(a,e,!0)}}}),f.fn.extend({on:function(a,c,d,e,g){var h,i;if(typeof a=="object"){typeof c!="string"&&(d=d||c,c=b);for(i in a)this.on(i,c,d,a[i],g);return this}d==null&&e==null?(e=c,d=c=b):e==null&&(typeof c=="string"?(e=d,d=b):(e=d,d=c,c=b));if(e===!1)e=J;else if(!e)return this;g===1&&(h=e,e=function(a){f().off(a);return h.apply(this,arguments)},e.guid=h.guid||(h.guid=f.guid++));return this.each(function(){f.event.add(this,a,e,d,c)})},one:function(a,b,c,d){return this.on(a,b,c,d,1)},off:function(a,c,d){if(a&&a.preventDefault&&a.handleObj){var e=a.handleObj;f(a.delegateTarget).off(e.namespace?e.origType+"."+e.namespace:e.origType,e.selector,e.handler);return this}if(typeof a=="object"){for(var g in a)this.off(g,c,a[g]);return this}if(c===!1||typeof c=="function")d=c,c=b;d===!1&&(d=J);return this.each(function(){f.event.remove(this,a,d,c)})},bind:function(a,b,c){return this.on(a,null,b,c)},unbind:function(a,b){return this.off(a,null,b)},live:function(a,b,c){f(this.context).on(a,this.selector,b,c);return this},die:function(a,b){f(this.context).off(a,this.selector||"**",b);return this},delegate:function(a,b,c,d){return this.on(b,a,c,d)},undelegate:function(a,b,c){return arguments.length==1?this.off(a,"**"):this.off(b,a,c)},trigger:function(a,b){return this.each(function(){f.event.trigger(a,b,this)})},triggerHandler:function(a,b){if(this[0])return f.event.trigger(a,b,this[0],!0)},toggle:function(a){var b=arguments,c=a.guid||f.guid++,d=0,e=function(c){var e=(f._data(this,"lastToggle"+a.guid)||0)%d;f._data(this,"lastToggle"+a.guid,e+1),c.preventDefault();return b[e].apply(this,arguments)||!1};e.guid=c;while(d<b.length)b[d++].guid=c;return this.click(e)},hover:function(a,b){return this.mouseenter(a).mouseleave(b||a)}}),f.each("blur focus focusin focusout load resize scroll unload click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup error contextmenu".split(" "),function(a,b){f.fn[b]=function(a,c){c==null&&(c=a,a=null);return arguments.length>0?this.on(b,null,a,c):this.trigger(b)},f.attrFn&&(f.attrFn[b]=!0),C.test(b)&&(f.event.fixHooks[b]=f.event.keyHooks),D.test(b)&&(f.event.fixHooks[b]=f.event.mouseHooks)}),function(){function x(a,b,c,e,f,g){for(var h=0,i=e.length;h<i;h++){var j=e[h];if(j){var k=!1;j=j[a];while(j){if(j[d]===c){k=e[j.sizset];break}if(j.nodeType===1){g||(j[d]=c,j.sizset=h);if(typeof b!="string"){if(j===b){k=!0;break}}else if(m.filter(b,[j]).length>0){k=j;break}}j=j[a]}e[h]=k}}}function w(a,b,c,e,f,g){for(var h=0,i=e.length;h<i;h++){var j=e[h];if(j){var k=!1;j=j[a];while(j){if(j[d]===c){k=e[j.sizset];break}j.nodeType===1&&!g&&(j[d]=c,j.sizset=h);if(j.nodeName.toLowerCase()===b){k=j;break}j=j[a]}e[h]=k}}}var a=/((?:\((?:\([^()]+\)|[^()]+)+\)|\[(?:\[[^\[\]]*\]|['"][^'"]*['"]|[^\[\]'"]+)+\]|\\.|[^ >+~,(\[\\]+)+|[>+~])(\s*,\s*)?((?:.|\r|\n)*)/g,d="sizcache"+(Math.random()+"").replace(".",""),e=0,g=Object.prototype.toString,h=!1,i=!0,j=/\\/g,k=/\r\n/g,l=/\W/;[0,0].sort(function(){i=!1;return 0});var m=function(b,d,e,f){e=e||[],d=d||c;var h=d;if(d.nodeType!==1&&d.nodeType!==9)return[];if(!b||typeof b!="string")return e;var i,j,k,l,n,q,r,t,u=!0,v=m.isXML(d),w=[],x=b;do{a.exec(""),i=a.exec(x);if(i){x=i[3],w.push(i[1]);if(i[2]){l=i[3];break}}}while(i);if(w.length>1&&p.exec(b))if(w.length===2&&o.relative[w[0]])j=y(w[0]+w[1],d,f);else{j=o.relative[w[0]]?[d]:m(w.shift(),d);while(w.length)b=w.shift(),o.relative[b]&&(b+=w.shift()),j=y(b,j,f)}else{!f&&w.length>1&&d.nodeType===9&&!v&&o.match.ID.test(w[0])&&!o.match.ID.test(w[w.length-1])&&(n=m.find(w.shift(),d,v),d=n.expr?m.filter(n.expr,n.set)[0]:n.set[0]);if(d){n=f?{expr:w.pop(),set:s(f)}:m.find(w.pop(),w.length===1&&(w[0]==="~"||w[0]==="+")&&d.parentNode?d.parentNode:d,v),j=n.expr?m.filter(n.expr,n.set):n.set,w.length>0?k=s(j):u=!1;while(w.length)q=w.pop(),r=q,o.relative[q]?r=w.pop():q="",r==null&&(r=d),o.relative[q](k,r,v)}else k=w=[]}k||(k=j),k||m.error(q||b);if(g.call(k)==="[object Array]")if(!u)e.push.apply(e,k);else if(d&&d.nodeType===1)for(t=0;k[t]!=null;t++)k[t]&&(k[t]===!0||k[t].nodeType===1&&m.contains(d,k[t]))&&e.push(j[t]);else for(t=0;k[t]!=null;t++)k[t]&&k[t].nodeType===1&&e.push(j[t]);else s(k,e);l&&(m(l,h,e,f),m.uniqueSort(e));return e};m.uniqueSort=function(a){if(u){h=i,a.sort(u);if(h)for(var b=1;b<a.length;b++)a[b]===a[b-1]&&a.splice(b--,1)}return a},m.matches=function(a,b){return m(a,null,null,b)},m.matchesSelector=function(a,b){return m(b,null,null,[a]).length>0},m.find=function(a,b,c){var d,e,f,g,h,i;if(!a)return[];for(e=0,f=o.order.length;e<f;e++){h=o.order[e];if(g=o.leftMatch[h].exec(a)){i=g[1],g.splice(1,1);if(i.substr(i.length-1)!=="\\"){g[1]=(g[1]||"").replace(j,""),d=o.find[h](g,b,c);if(d!=null){a=a.replace(o.match[h],"");break}}}}d||(d=typeof b.getElementsByTagName!="undefined"?b.getElementsByTagName("*"):[]);return{set:d,expr:a}},m.filter=function(a,c,d,e){var f,g,h,i,j,k,l,n,p,q=a,r=[],s=c,t=c&&c[0]&&m.isXML(c[0]);while(a&&c.length){for(h in o.filter)if((f=o.leftMatch[h].exec(a))!=null&&f[2]){k=o.filter[h],l=f[1],g=!1,f.splice(1,1);if(l.substr(l.length-1)==="\\")continue;s===r&&(r=[]);if(o.preFilter[h]){f=o.preFilter[h](f,s,d,r,e,t);if(!f)g=i=!0;else if(f===!0)continue}if(f)for(n=0;(j=s[n])!=null;n++)j&&(i=k(j,f,n,s),p=e^i,d&&i!=null?p?g=!0:s[n]=!1:p&&(r.push(j),g=!0));if(i!==b){d||(s=r),a=a.replace(o.match[h],"");if(!g)return[];break}}if(a===q)if(g==null)m.error(a);else break;q=a}return s},m.error=function(a){throw new Error("Syntax error, unrecognized expression: "+a)};var n=m.getText=function(a){var b,c,d=a.nodeType,e="";if(d){if(d===1||d===9||d===11){if(typeof a.textContent=="string")return a.textContent;if(typeof a.innerText=="string")return a.innerText.replace(k,"");for(a=a.firstChild;a;a=a.nextSibling)e+=n(a)}else if(d===3||d===4)return a.nodeValue}else for(b=0;c=a[b];b++)c.nodeType!==8&&(e+=n(c));return e},o=m.selectors={order:["ID","NAME","TAG"],match:{ID:/#((?:[\w\u00c0-\uFFFF\-]|\\.)+)/,CLASS:/\.((?:[\w\u00c0-\uFFFF\-]|\\.)+)/,NAME:/\[name=['"]*((?:[\w\u00c0-\uFFFF\-]|\\.)+)['"]*\]/,ATTR:/\[\s*((?:[\w\u00c0-\uFFFF\-]|\\.)+)\s*(?:(\S?=)\s*(?:(['"])(.*?)\3|(#?(?:[\w\u00c0-\uFFFF\-]|\\.)*)|)|)\s*\]/,TAG:/^((?:[\w\u00c0-\uFFFF\*\-]|\\.)+)/,CHILD:/:(only|nth|last|first)-child(?:\(\s*(even|odd|(?:[+\-]?\d+|(?:[+\-]?\d*)?n\s*(?:[+\-]\s*\d+)?))\s*\))?/,POS:/:(nth|eq|gt|lt|first|last|even|odd)(?:\((\d*)\))?(?=[^\-]|$)/,PSEUDO:/:((?:[\w\u00c0-\uFFFF\-]|\\.)+)(?:\((['"]?)((?:\([^\)]+\)|[^\(\)]*)+)\2\))?/},leftMatch:{},attrMap:{"class":"className","for":"htmlFor"},attrHandle:{href:function(a){return a.getAttribute("href")},type:function(a){return a.getAttribute("type")}},relative:{"+":function(a,b){var c=typeof b=="string",d=c&&!l.test(b),e=c&&!d;d&&(b=b.toLowerCase());for(var f=0,g=a.length,h;f<g;f++)if(h=a[f]){while((h=h.previousSibling)&&h.nodeType!==1);a[f]=e||h&&h.nodeName.toLowerCase()===b?h||!1:h===b}e&&m.filter(b,a,!0)},">":function(a,b){var c,d=typeof b=="string",e=0,f=a.length;if(d&&!l.test(b)){b=b.toLowerCase();for(;e<f;e++){c=a[e];if(c){var g=c.parentNode;a[e]=g.nodeName.toLowerCase()===b?g:!1}}}else{for(;e<f;e++)c=a[e],c&&(a[e]=d?c.parentNode:c.parentNode===b);d&&m.filter(b,a,!0)}},"":function(a,b,c){var d,f=e++,g=x;typeof b=="string"&&!l.test(b)&&(b=b.toLowerCase(),d=b,g=w),g("parentNode",b,f,a,d,c)},"~":function(a,b,c){var d,f=e++,g=x;typeof b=="string"&&!l.test(b)&&(b=b.toLowerCase(),d=b,g=w),g("previousSibling",b,f,a,d,c)}},find:{ID:function(a,b,c){if(typeof b.getElementById!="undefined"&&!c){var d=b.getElementById(a[1]);return d&&d.parentNode?[d]:[]}},NAME:function(a,b){if(typeof b.getElementsByName!="undefined"){var c=[],d=b.getElementsByName(a[1]);for(var e=0,f=d.length;e<f;e++)d[e].getAttribute("name")===a[1]&&c.push(d[e]);return c.length===0?null:c}},TAG:function(a,b){if(typeof b.getElementsByTagName!="undefined")return b.getElementsByTagName(a[1])}},preFilter:{CLASS:function(a,b,c,d,e,f){a=" "+a[1].replace(j,"")+" ";if(f)return a;for(var g=0,h;(h=b[g])!=null;g++)h&&(e^(h.className&&(" "+h.className+" ").replace(/[\t\n\r]/g," ").indexOf(a)>=0)?c||d.push(h):c&&(b[g]=!1));return!1},ID:function(a){return a[1].replace(j,"")},TAG:function(a,b){return a[1].replace(j,"").toLowerCase()},CHILD:function(a){if(a[1]==="nth"){a[2]||m.error(a[0]),a[2]=a[2].replace(/^\+|\s*/g,"");var b=/(-?)(\d*)(?:n([+\-]?\d*))?/.exec(a[2]==="even"&&"2n"||a[2]==="odd"&&"2n+1"||!/\D/.test(a[2])&&"0n+"+a[2]||a[2]);a[2]=b[1]+(b[2]||1)-0,a[3]=b[3]-0}else a[2]&&m.error(a[0]);a[0]=e++;return a},ATTR:function(a,b,c,d,e,f){var g=a[1]=a[1].replace(j,"");!f&&o.attrMap[g]&&(a[1]=o.attrMap[g]),a[4]=(a[4]||a[5]||"").replace(j,""),a[2]==="~="&&(a[4]=" "+a[4]+" ");return a},PSEUDO:function(b,c,d,e,f){if(b[1]==="not")if((a.exec(b[3])||"").length>1||/^\w/.test(b[3]))b[3]=m(b[3],null,null,c);else{var g=m.filter(b[3],c,d,!0^f);d||e.push.apply(e,g);return!1}else if(o.match.POS.test(b[0])||o.match.CHILD.test(b[0]))return!0;return b},POS:function(a){a.unshift(!0);return a}},filters:{enabled:function(a){return a.disabled===!1&&a.type!=="hidden"},disabled:function(a){return a.disabled===!0},checked:function(a){return a.checked===!0},selected:function(a){a.parentNode&&a.parentNode.selectedIndex;return a.selected===!0},parent:function(a){return!!a.firstChild},empty:function(a){return!a.firstChild},has:function(a,b,c){return!!m(c[3],a).length},header:function(a){return/h\d/i.test(a.nodeName)},text:function(a){var b=a.getAttribute("type"),c=a.type;return a.nodeName.toLowerCase()==="input"&&"text"===c&&(b===c||b===null)},radio:function(a){return a.nodeName.toLowerCase()==="input"&&"radio"===a.type},checkbox:function(a){return a.nodeName.toLowerCase()==="input"&&"checkbox"===a.type},file:function(a){return a.nodeName.toLowerCase()==="input"&&"file"===a.type},password:function(a){return a.nodeName.toLowerCase()==="input"&&"password"===a.type},submit:function(a){var b=a.nodeName.toLowerCase();return(b==="input"||b==="button")&&"submit"===a.type},image:function(a){return a.nodeName.toLowerCase()==="input"&&"image"===a.type},reset:function(a){var b=a.nodeName.toLowerCase();return(b==="input"||b==="button")&&"reset"===a.type},button:function(a){var b=a.nodeName.toLowerCase();return b==="input"&&"button"===a.type||b==="button"},input:function(a){return/input|select|textarea|button/i.test(a.nodeName)},focus:function(a){return a===a.ownerDocument.activeElement}},setFilters:{first:function(a,b){return b===0},last:function(a,b,c,d){return b===d.length-1},even:function(a,b){return b%2===0},odd:function(a,b){return b%2===1},lt:function(a,b,c){return b<c[3]-0},gt:function(a,b,c){return b>c[3]-0},nth:function(a,b,c){return c[3]-0===b},eq:function(a,b,c){return c[3]-0===b}},filter:{PSEUDO:function(a,b,c,d){var e=b[1],f=o.filters[e];if(f)return f(a,c,b,d);if(e==="contains")return(a.textContent||a.innerText||n([a])||"").indexOf(b[3])>=0;if(e==="not"){var g=b[3];for(var h=0,i=g.length;h<i;h++)if(g[h]===a)return!1;return!0}m.error(e)},CHILD:function(a,b){var c,e,f,g,h,i,j,k=b[1],l=a;switch(k){case"only":case"first":while(l=l.previousSibling)if(l.nodeType===1)return!1;if(k==="first")return!0;l=a;case"last":while(l=l.nextSibling)if(l.nodeType===1)return!1;return!0;case"nth":c=b[2],e=b[3];if(c===1&&e===0)return!0;f=b[0],g=a.parentNode;if(g&&(g[d]!==f||!a.nodeIndex)){i=0;for(l=g.firstChild;l;l=l.nextSibling)l.nodeType===1&&(l.nodeIndex=++i);g[d]=f}j=a.nodeIndex-e;return c===0?j===0:j%c===0&&j/c>=0}},ID:function(a,b){return a.nodeType===1&&a.getAttribute("id")===b},TAG:function(a,b){return b==="*"&&a.nodeType===1||!!a.nodeName&&a.nodeName.toLowerCase()===b},CLASS:function(a,b){return(" "+(a.className||a.getAttribute("class"))+" ").indexOf(b)>-1},ATTR:function(a,b){var c=b[1],d=m.attr?m.attr(a,c):o.attrHandle[c]?o.attrHandle[c](a):a[c]!=null?a[c]:a.getAttribute(c),e=d+"",f=b[2],g=b[4];return d==null?f==="!=":!f&&m.attr?d!=null:f==="="?e===g:f==="*="?e.indexOf(g)>=0:f==="~="?(" "+e+" ").indexOf(g)>=0:g?f==="!="?e!==g:f==="^="?e.indexOf(g)===0:f==="$="?e.substr(e.length-g.length)===g:f==="|="?e===g||e.substr(0,g.length+1)===g+"-":!1:e&&d!==!1},POS:function(a,b,c,d){var e=b[2],f=o.setFilters[e];if(f)return f(a,c,b,d)}}},p=o.match.POS,q=function(a,b){return"\\"+(b-0+1)};for(var r in o.match)o.match[r]=new RegExp(o.match[r].source+/(?![^\[]*\])(?![^\(]*\))/.source),o.leftMatch[r]=new RegExp(/(^(?:.|\r|\n)*?)/.source+o.match[r].source.replace(/\\(\d+)/g,q));o.match.globalPOS=p;var s=function(a,b){a=Array.prototype.slice.call(a,0);if(b){b.push.apply(b,a);return b}return a};try{Array.prototype.slice.call(c.documentElement.childNodes,0)[0].nodeType}catch(t){s=function(a,b){var c=0,d=b||[];if(g.call(a)==="[object Array]")Array.prototype.push.apply(d,a);else if(typeof a.length=="number")for(var e=a.length;c<e;c++)d.push(a[c]);else for(;a[c];c++)d.push(a[c]);return d}}var u,v;c.documentElement.compareDocumentPosition?u=function(a,b){if(a===b){h=!0;return 0}if(!a.compareDocumentPosition||!b.compareDocumentPosition)return a.compareDocumentPosition?-1:1;return a.compareDocumentPosition(b)&4?-1:1}:(u=function(a,b){if(a===b){h=!0;return 0}if(a.sourceIndex&&b.sourceIndex)return a.sourceIndex-b.sourceIndex;var c,d,e=[],f=[],g=a.parentNode,i=b.parentNode,j=g;if(g===i)return v(a,b);if(!g)return-1;if(!i)return 1;while(j)e.unshift(j),j=j.parentNode;j=i;while(j)f.unshift(j),j=j.parentNode;c=e.length,d=f.length;for(var k=0;k<c&&k<d;k++)if(e[k]!==f[k])return v(e[k],f[k]);return k===c?v(a,f[k],-1):v(e[k],b,1)},v=function(a,b,c){if(a===b)return c;var d=a.nextSibling;while(d){if(d===b)return-1;d=d.nextSibling}return 1}),function(){var a=c.createElement("div"),d="script"+(new Date).getTime(),e=c.documentElement;a.innerHTML="<a name='"+d+"'/>",e.insertBefore(a,e.firstChild),c.getElementById(d)&&(o.find.ID=function(a,c,d){if(typeof c.getElementById!="undefined"&&!d){var e=c.getElementById(a[1]);return e?e.id===a[1]||typeof e.getAttributeNode!="undefined"&&e.getAttributeNode("id").nodeValue===a[1]?[e]:b:[]}},o.filter.ID=function(a,b){var c=typeof a.getAttributeNode!="undefined"&&a.getAttributeNode("id");return a.nodeType===1&&c&&c.nodeValue===b}),e.removeChild(a),e=a=null}(),function(){var a=c.createElement("div");a.appendChild(c.createComment("")),a.getElementsByTagName("*").length>0&&(o.find.TAG=function(a,b){var c=b.getElementsByTagName(a[1]);if(a[1]==="*"){var d=[];for(var e=0;c[e];e++)c[e].nodeType===1&&d.push(c[e]);c=d}return c}),a.innerHTML="<a href='#'></a>",a.firstChild&&typeof a.firstChild.getAttribute!="undefined"&&a.firstChild.getAttribute("href")!=="#"&&(o.attrHandle.href=function(a){return a.getAttribute("href",2)}),a=null}(),c.querySelectorAll&&function(){var a=m,b=c.createElement("div"),d="__sizzle__";b.innerHTML="<p class='TEST'></p>";if(!b.querySelectorAll||b.querySelectorAll(".TEST").length!==0){m=function(b,e,f,g){e=e||c;if(!g&&!m.isXML(e)){var h=/^(\w+$)|^\.([\w\-]+$)|^#([\w\-]+$)/.exec(b);if(h&&(e.nodeType===1||e.nodeType===9)){if(h[1])return s(e.getElementsByTagName(b),f);if(h[2]&&o.find.CLASS&&e.getElementsByClassName)return s(e.getElementsByClassName(h[2]),f)}if(e.nodeType===9){if(b==="body"&&e.body)return s([e.body],f);if(h&&h[3]){var i=e.getElementById(h[3]);if(!i||!i.parentNode)return s([],f);if(i.id===h[3])return s([i],f)}try{return s(e.querySelectorAll(b),f)}catch(j){}}else if(e.nodeType===1&&e.nodeName.toLowerCase()!=="object"){var k=e,l=e.getAttribute("id"),n=l||d,p=e.parentNode,q=/^\s*[+~]/.test(b);l?n=n.replace(/'/g,"\\$&"):e.setAttribute("id",n),q&&p&&(e=e.parentNode);try{if(!q||p)return s(e.querySelectorAll("[id='"+n+"'] "+b),f)}catch(r){}finally{l||k.removeAttribute("id")}}}return a(b,e,f,g)};for(var e in a)m[e]=a[e];b=null}}(),function(){var a=c.documentElement,b=a.matchesSelector||a.mozMatchesSelector||a.webkitMatchesSelector||a.msMatchesSelector;if(b){var d=!b.call(c.createElement("div"),"div"),e=!1;try{b.call(c.documentElement,"[test!='']:sizzle")}catch(f){e=!0}m.matchesSelector=function(a,c){c=c.replace(/\=\s*([^'"\]]*)\s*\]/g,"='$1']");if(!m.isXML(a))try{if(e||!o.match.PSEUDO.test(c)&&!/!=/.test(c)){var f=b.call(a,c);if(f||!d||a.document&&a.document.nodeType!==11)return f}}catch(g){}return m(c,null,null,[a]).length>0}}}(),function(){var a=c.createElement("div");a.innerHTML="<div class='test e'></div><div class='test'></div>";if(!!a.getElementsByClassName&&a.getElementsByClassName("e").length!==0){a.lastChild.className="e";if(a.getElementsByClassName("e").length===1)return;o.order.splice(1,0,"CLASS"),o.find.CLASS=function(a,b,c){if(typeof b.getElementsByClassName!="undefined"&&!c)return b.getElementsByClassName(a[1])},a=null}}(),c.documentElement.contains?m.contains=function(a,b){return a!==b&&(a.contains?a.contains(b):!0)}:c.documentElement.compareDocumentPosition?m.contains=function(a,b){return!!(a.compareDocumentPosition(b)&16)}:m.contains=function(){return!1},m.isXML=function(a){var b=(a?a.ownerDocument||a:0).documentElement;return b?b.nodeName!=="HTML":!1};var y=function(a,b,c){var d,e=[],f="",g=b.nodeType?[b]:b;while(d=o.match.PSEUDO.exec(a))f+=d[0],a=a.replace(o.match.PSEUDO,"");a=o.relative[a]?a+"*":a;for(var h=0,i=g.length;h<i;h++)m(a,g[h],e,c);return m.filter(f,e)};m.attr=f.attr,m.selectors.attrMap={},f.find=m,f.expr=m.selectors,f.expr[":"]=f.expr.filters,f.unique=m.uniqueSort,f.text=m.getText,f.isXMLDoc=m.isXML,f.contains=m.contains}();var L=/Until$/,M=/^(?:parents|prevUntil|prevAll)/,N=/,/,O=/^.[^:#\[\.,]*$/,P=Array.prototype.slice,Q=f.expr.match.globalPOS,R={children:!0,contents:!0,next:!0,prev:!0};f.fn.extend({find:function(a){var b=this,c,d;if(typeof a!="string")return f(a).filter(function(){for(c=0,d=b.length;c<d;c++)if(f.contains(b[c],this))return!0});var e=this.pushStack("","find",a),g,h,i;for(c=0,d=this.length;c<d;c++){g=e.length,f.find(a,this[c],e);if(c>0)for(h=g;h<e.length;h++)for(i=0;i<g;i++)if(e[i]===e[h]){e.splice(h--,1);break}}return e},has:function(a){var b=f(a);return this.filter(function(){for(var a=0,c=b.length;a<c;a++)if(f.contains(this,b[a]))return!0})},not:function(a){return this.pushStack(T(this,a,!1),"not",a)},filter:function(a){return this.pushStack(T(this,a,!0),"filter",a)},is:function(a){return!!a&&(typeof a=="string"?Q.test(a)?f(a,this.context).index(this[0])>=0:f.filter(a,this).length>0:this.filter(a).length>0)},closest:function(a,b){var c=[],d,e,g=this[0];if(f.isArray(a)){var h=1;while(g&&g.ownerDocument&&g!==b){for(d=0;d<a.length;d++)f(g).is(a[d])&&c.push({selector:a[d],elem:g,level:h});g=g.parentNode,h++}return c}var i=Q.test(a)||typeof a!="string"?f(a,b||this.context):0;for(d=0,e=this.length;d<e;d++){g=this[d];while(g){if(i?i.index(g)>-1:f.find.matchesSelector(g,a)){c.push(g);break}g=g.parentNode;if(!g||!g.ownerDocument||g===b||g.nodeType===11)break}}c=c.length>1?f.unique(c):c;return this.pushStack(c,"closest",a)},index:function(a){if(!a)return this[0]&&this[0].parentNode?this.prevAll().length:-1;if(typeof a=="string")return f.inArray(this[0],f(a));return f.inArray(a.jquery?a[0]:a,this)},add:function(a,b){var c=typeof a=="string"?f(a,b):f.makeArray(a&&a.nodeType?[a]:a),d=f.merge(this.get(),c);return this.pushStack(S(c[0])||S(d[0])?d:f.unique(d))},andSelf:function(){return this.add(this.prevObject)}}),f.each({parent:function(a){var b=a.parentNode;return b&&b.nodeType!==11?b:null},parents:function(a){return f.dir(a,"parentNode")},parentsUntil:function(a,b,c){return f.dir(a,"parentNode",c)},next:function(a){return f.nth(a,2,"nextSibling")},prev:function(a){return f.nth(a,2,"previousSibling")},nextAll:function(a){return f.dir(a,"nextSibling")},prevAll:function(a){return f.dir(a,"previousSibling")},nextUntil:function(a,b,c){return f.dir(a,"nextSibling",c)},prevUntil:function(a,b,c){return f.dir(a,"previousSibling",c)},siblings:function(a){return f.sibling((a.parentNode||{}).firstChild,a)},children:function(a){return f.sibling(a.firstChild)},contents:function(a){return f.nodeName(a,"iframe")?a.contentDocument||a.contentWindow.document:f.makeArray(a.childNodes)}},function(a,b){f.fn[a]=function(c,d){var e=f.map(this,b,c);L.test(a)||(d=c),d&&typeof d=="string"&&(e=f.filter(d,e)),e=this.length>1&&!R[a]?f.unique(e):e,(this.length>1||N.test(d))&&M.test(a)&&(e=e.reverse());return this.pushStack(e,a,P.call(arguments).join(","))}}),f.extend({filter:function(a,b,c){c&&(a=":not("+a+")");return b.length===1?f.find.matchesSelector(b[0],a)?[b[0]]:[]:f.find.matches(a,b)},dir:function(a,c,d){var e=[],g=a[c];while(g&&g.nodeType!==9&&(d===b||g.nodeType!==1||!f(g).is(d)))g.nodeType===1&&e.push(g),g=g[c];return e},nth:function(a,b,c,d){b=b||1;var e=0;for(;a;a=a[c])if(a.nodeType===1&&++e===b)break;return a},sibling:function(a,b){var c=[];for(;a;a=a.nextSibling)a.nodeType===1&&a!==b&&c.push(a);return c}});var V="abbr|article|aside|audio|bdi|canvas|data|datalist|details|figcaption|figure|footer|header|hgroup|mark|meter|nav|output|progress|section|summary|time|video",W=/ jQuery\d+="(?:\d+|null)"/g,X=/^\s+/,Y=/<(?!area|br|col|embed|hr|img|input|link|meta|param)(([\w:]+)[^>]*)\/>/ig,Z=/<([\w:]+)/,$=/<tbody/i,_=/<|&#?\w+;/,ba=/<(?:script|style)/i,bb=/<(?:script|object|embed|option|style)/i,bc=new RegExp("<(?:"+V+")[\\s/>]","i"),bd=/checked\s*(?:[^=]|=\s*.checked.)/i,be=/\/(java|ecma)script/i,bf=/^\s*<!(?:\[CDATA\[|\-\-)/,bg={option:[1,"<select multiple='multiple'>","</select>"],legend:[1,"<fieldset>","</fieldset>"],thead:[1,"<table>","</table>"],tr:[2,"<table><tbody>","</tbody></table>"],td:[3,"<table><tbody><tr>","</tr></tbody></table>"],col:[2,"<table><tbody></tbody><colgroup>","</colgroup></table>"],area:[1,"<map>","</map>"],_default:[0,"",""]},bh=U(c);bg.optgroup=bg.option,bg.tbody=bg.tfoot=bg.colgroup=bg.caption=bg.thead,bg.th=bg.td,f.support.htmlSerialize||(bg._default=[1,"div<div>","</div>"]),f.fn.extend({text:function(a){return f.access(this,function(a){return a===b?f.text(this):this.empty().append((this[0]&&this[0].ownerDocument||c).createTextNode(a))},null,a,arguments.length)},wrapAll:function(a){if(f.isFunction(a))return this.each(function(b){f(this).wrapAll(a.call(this,b))});if(this[0]){var b=f(a,this[0].ownerDocument).eq(0).clone(!0);this[0].parentNode&&b.insertBefore(this[0]),b.map(function(){var a=this;while(a.firstChild&&a.firstChild.nodeType===1)a=a.firstChild;return a}).append(this)}return this},wrapInner:function(a){if(f.isFunction(a))return this.each(function(b){f(this).wrapInner(a.call(this,b))});return this.each(function(){var b=f(this),c=b.contents();c.length?c.wrapAll(a):b.append(a)})},wrap:function(a){var b=f.isFunction(a);return this.each(function(c){f(this).wrapAll(b?a.call(this,c):a)})},unwrap:function(){return this.parent().each(function(){f.nodeName(this,"body")||f(this).replaceWith(this.childNodes)}).end()},append:function(){return this.domManip(arguments,!0,function(a){this.nodeType===1&&this.appendChild(a)})},prepend:function(){return this.domManip(arguments,!0,function(a){this.nodeType===1&&this.insertBefore(a,this.firstChild)})},before:function(){if(this[0]&&this[0].parentNode)return this.domManip(arguments,!1,function(a){this.parentNode.insertBefore(a,this)});if(arguments.length){var a=f
+.clean(arguments);a.push.apply(a,this.toArray());return this.pushStack(a,"before",arguments)}},after:function(){if(this[0]&&this[0].parentNode)return this.domManip(arguments,!1,function(a){this.parentNode.insertBefore(a,this.nextSibling)});if(arguments.length){var a=this.pushStack(this,"after",arguments);a.push.apply(a,f.clean(arguments));return a}},remove:function(a,b){for(var c=0,d;(d=this[c])!=null;c++)if(!a||f.filter(a,[d]).length)!b&&d.nodeType===1&&(f.cleanData(d.getElementsByTagName("*")),f.cleanData([d])),d.parentNode&&d.parentNode.removeChild(d);return this},empty:function(){for(var a=0,b;(b=this[a])!=null;a++){b.nodeType===1&&f.cleanData(b.getElementsByTagName("*"));while(b.firstChild)b.removeChild(b.firstChild)}return this},clone:function(a,b){a=a==null?!1:a,b=b==null?a:b;return this.map(function(){return f.clone(this,a,b)})},html:function(a){return f.access(this,function(a){var c=this[0]||{},d=0,e=this.length;if(a===b)return c.nodeType===1?c.innerHTML.replace(W,""):null;if(typeof a=="string"&&!ba.test(a)&&(f.support.leadingWhitespace||!X.test(a))&&!bg[(Z.exec(a)||["",""])[1].toLowerCase()]){a=a.replace(Y,"<$1></$2>");try{for(;d<e;d++)c=this[d]||{},c.nodeType===1&&(f.cleanData(c.getElementsByTagName("*")),c.innerHTML=a);c=0}catch(g){}}c&&this.empty().append(a)},null,a,arguments.length)},replaceWith:function(a){if(this[0]&&this[0].parentNode){if(f.isFunction(a))return this.each(function(b){var c=f(this),d=c.html();c.replaceWith(a.call(this,b,d))});typeof a!="string"&&(a=f(a).detach());return this.each(function(){var b=this.nextSibling,c=this.parentNode;f(this).remove(),b?f(b).before(a):f(c).append(a)})}return this.length?this.pushStack(f(f.isFunction(a)?a():a),"replaceWith",a):this},detach:function(a){return this.remove(a,!0)},domManip:function(a,c,d){var e,g,h,i,j=a[0],k=[];if(!f.support.checkClone&&arguments.length===3&&typeof j=="string"&&bd.test(j))return this.each(function(){f(this).domManip(a,c,d,!0)});if(f.isFunction(j))return this.each(function(e){var g=f(this);a[0]=j.call(this,e,c?g.html():b),g.domManip(a,c,d)});if(this[0]){i=j&&j.parentNode,f.support.parentNode&&i&&i.nodeType===11&&i.childNodes.length===this.length?e={fragment:i}:e=f.buildFragment(a,this,k),h=e.fragment,h.childNodes.length===1?g=h=h.firstChild:g=h.firstChild;if(g){c=c&&f.nodeName(g,"tr");for(var l=0,m=this.length,n=m-1;l<m;l++)d.call(c?bi(this[l],g):this[l],e.cacheable||m>1&&l<n?f.clone(h,!0,!0):h)}k.length&&f.each(k,function(a,b){b.src?f.ajax({type:"GET",global:!1,url:b.src,async:!1,dataType:"script"}):f.globalEval((b.text||b.textContent||b.innerHTML||"").replace(bf,"/*$0*/")),b.parentNode&&b.parentNode.removeChild(b)})}return this}}),f.buildFragment=function(a,b,d){var e,g,h,i,j=a[0];b&&b[0]&&(i=b[0].ownerDocument||b[0]),i.createDocumentFragment||(i=c),a.length===1&&typeof j=="string"&&j.length<512&&i===c&&j.charAt(0)==="<"&&!bb.test(j)&&(f.support.checkClone||!bd.test(j))&&(f.support.html5Clone||!bc.test(j))&&(g=!0,h=f.fragments[j],h&&h!==1&&(e=h)),e||(e=i.createDocumentFragment(),f.clean(a,i,e,d)),g&&(f.fragments[j]=h?e:1);return{fragment:e,cacheable:g}},f.fragments={},f.each({appendTo:"append",prependTo:"prepend",insertBefore:"before",insertAfter:"after",replaceAll:"replaceWith"},function(a,b){f.fn[a]=function(c){var d=[],e=f(c),g=this.length===1&&this[0].parentNode;if(g&&g.nodeType===11&&g.childNodes.length===1&&e.length===1){e[b](this[0]);return this}for(var h=0,i=e.length;h<i;h++){var j=(h>0?this.clone(!0):this).get();f(e[h])[b](j),d=d.concat(j)}return this.pushStack(d,a,e.selector)}}),f.extend({clone:function(a,b,c){var d,e,g,h=f.support.html5Clone||f.isXMLDoc(a)||!bc.test("<"+a.nodeName+">")?a.cloneNode(!0):bo(a);if((!f.support.noCloneEvent||!f.support.noCloneChecked)&&(a.nodeType===1||a.nodeType===11)&&!f.isXMLDoc(a)){bk(a,h),d=bl(a),e=bl(h);for(g=0;d[g];++g)e[g]&&bk(d[g],e[g])}if(b){bj(a,h);if(c){d=bl(a),e=bl(h);for(g=0;d[g];++g)bj(d[g],e[g])}}d=e=null;return h},clean:function(a,b,d,e){var g,h,i,j=[];b=b||c,typeof b.createElement=="undefined"&&(b=b.ownerDocument||b[0]&&b[0].ownerDocument||c);for(var k=0,l;(l=a[k])!=null;k++){typeof l=="number"&&(l+="");if(!l)continue;if(typeof l=="string")if(!_.test(l))l=b.createTextNode(l);else{l=l.replace(Y,"<$1></$2>");var m=(Z.exec(l)||["",""])[1].toLowerCase(),n=bg[m]||bg._default,o=n[0],p=b.createElement("div"),q=bh.childNodes,r;b===c?bh.appendChild(p):U(b).appendChild(p),p.innerHTML=n[1]+l+n[2];while(o--)p=p.lastChild;if(!f.support.tbody){var s=$.test(l),t=m==="table"&&!s?p.firstChild&&p.firstChild.childNodes:n[1]==="<table>"&&!s?p.childNodes:[];for(i=t.length-1;i>=0;--i)f.nodeName(t[i],"tbody")&&!t[i].childNodes.length&&t[i].parentNode.removeChild(t[i])}!f.support.leadingWhitespace&&X.test(l)&&p.insertBefore(b.createTextNode(X.exec(l)[0]),p.firstChild),l=p.childNodes,p&&(p.parentNode.removeChild(p),q.length>0&&(r=q[q.length-1],r&&r.parentNode&&r.parentNode.removeChild(r)))}var u;if(!f.support.appendChecked)if(l[0]&&typeof (u=l.length)=="number")for(i=0;i<u;i++)bn(l[i]);else bn(l);l.nodeType?j.push(l):j=f.merge(j,l)}if(d){g=function(a){return!a.type||be.test(a.type)};for(k=0;j[k];k++){h=j[k];if(e&&f.nodeName(h,"script")&&(!h.type||be.test(h.type)))e.push(h.parentNode?h.parentNode.removeChild(h):h);else{if(h.nodeType===1){var v=f.grep(h.getElementsByTagName("script"),g);j.splice.apply(j,[k+1,0].concat(v))}d.appendChild(h)}}}return j},cleanData:function(a){var b,c,d=f.cache,e=f.event.special,g=f.support.deleteExpando;for(var h=0,i;(i=a[h])!=null;h++){if(i.nodeName&&f.noData[i.nodeName.toLowerCase()])continue;c=i[f.expando];if(c){b=d[c];if(b&&b.events){for(var j in b.events)e[j]?f.event.remove(i,j):f.removeEvent(i,j,b.handle);b.handle&&(b.handle.elem=null)}g?delete i[f.expando]:i.removeAttribute&&i.removeAttribute(f.expando),delete d[c]}}}});var bp=/alpha\([^)]*\)/i,bq=/opacity=([^)]*)/,br=/([A-Z]|^ms)/g,bs=/^[\-+]?(?:\d*\.)?\d+$/i,bt=/^-?(?:\d*\.)?\d+(?!px)[^\d\s]+$/i,bu=/^([\-+])=([\-+.\de]+)/,bv=/^margin/,bw={position:"absolute",visibility:"hidden",display:"block"},bx=["Top","Right","Bottom","Left"],by,bz,bA;f.fn.css=function(a,c){return f.access(this,function(a,c,d){return d!==b?f.style(a,c,d):f.css(a,c)},a,c,arguments.length>1)},f.extend({cssHooks:{opacity:{get:function(a,b){if(b){var c=by(a,"opacity");return c===""?"1":c}return a.style.opacity}}},cssNumber:{fillOpacity:!0,fontWeight:!0,lineHeight:!0,opacity:!0,orphans:!0,widows:!0,zIndex:!0,zoom:!0},cssProps:{"float":f.support.cssFloat?"cssFloat":"styleFloat"},style:function(a,c,d,e){if(!!a&&a.nodeType!==3&&a.nodeType!==8&&!!a.style){var g,h,i=f.camelCase(c),j=a.style,k=f.cssHooks[i];c=f.cssProps[i]||i;if(d===b){if(k&&"get"in k&&(g=k.get(a,!1,e))!==b)return g;return j[c]}h=typeof d,h==="string"&&(g=bu.exec(d))&&(d=+(g[1]+1)*+g[2]+parseFloat(f.css(a,c)),h="number");if(d==null||h==="number"&&isNaN(d))return;h==="number"&&!f.cssNumber[i]&&(d+="px");if(!k||!("set"in k)||(d=k.set(a,d))!==b)try{j[c]=d}catch(l){}}},css:function(a,c,d){var e,g;c=f.camelCase(c),g=f.cssHooks[c],c=f.cssProps[c]||c,c==="cssFloat"&&(c="float");if(g&&"get"in g&&(e=g.get(a,!0,d))!==b)return e;if(by)return by(a,c)},swap:function(a,b,c){var d={},e,f;for(f in b)d[f]=a.style[f],a.style[f]=b[f];e=c.call(a);for(f in b)a.style[f]=d[f];return e}}),f.curCSS=f.css,c.defaultView&&c.defaultView.getComputedStyle&&(bz=function(a,b){var c,d,e,g,h=a.style;b=b.replace(br,"-$1").toLowerCase(),(d=a.ownerDocument.defaultView)&&(e=d.getComputedStyle(a,null))&&(c=e.getPropertyValue(b),c===""&&!f.contains(a.ownerDocument.documentElement,a)&&(c=f.style(a,b))),!f.support.pixelMargin&&e&&bv.test(b)&&bt.test(c)&&(g=h.width,h.width=c,c=e.width,h.width=g);return c}),c.documentElement.currentStyle&&(bA=function(a,b){var c,d,e,f=a.currentStyle&&a.currentStyle[b],g=a.style;f==null&&g&&(e=g[b])&&(f=e),bt.test(f)&&(c=g.left,d=a.runtimeStyle&&a.runtimeStyle.left,d&&(a.runtimeStyle.left=a.currentStyle.left),g.left=b==="fontSize"?"1em":f,f=g.pixelLeft+"px",g.left=c,d&&(a.runtimeStyle.left=d));return f===""?"auto":f}),by=bz||bA,f.each(["height","width"],function(a,b){f.cssHooks[b]={get:function(a,c,d){if(c)return a.offsetWidth!==0?bB(a,b,d):f.swap(a,bw,function(){return bB(a,b,d)})},set:function(a,b){return bs.test(b)?b+"px":b}}}),f.support.opacity||(f.cssHooks.opacity={get:function(a,b){return bq.test((b&&a.currentStyle?a.currentStyle.filter:a.style.filter)||"")?parseFloat(RegExp.$1)/100+"":b?"1":""},set:function(a,b){var c=a.style,d=a.currentStyle,e=f.isNumeric(b)?"alpha(opacity="+b*100+")":"",g=d&&d.filter||c.filter||"";c.zoom=1;if(b>=1&&f.trim(g.replace(bp,""))===""){c.removeAttribute("filter");if(d&&!d.filter)return}c.filter=bp.test(g)?g.replace(bp,e):g+" "+e}}),f(function(){f.support.reliableMarginRight||(f.cssHooks.marginRight={get:function(a,b){return f.swap(a,{display:"inline-block"},function(){return b?by(a,"margin-right"):a.style.marginRight})}})}),f.expr&&f.expr.filters&&(f.expr.filters.hidden=function(a){var b=a.offsetWidth,c=a.offsetHeight;return b===0&&c===0||!f.support.reliableHiddenOffsets&&(a.style&&a.style.display||f.css(a,"display"))==="none"},f.expr.filters.visible=function(a){return!f.expr.filters.hidden(a)}),f.each({margin:"",padding:"",border:"Width"},function(a,b){f.cssHooks[a+b]={expand:function(c){var d,e=typeof c=="string"?c.split(" "):[c],f={};for(d=0;d<4;d++)f[a+bx[d]+b]=e[d]||e[d-2]||e[0];return f}}});var bC=/%20/g,bD=/\[\]$/,bE=/\r?\n/g,bF=/#.*$/,bG=/^(.*?):[ \t]*([^\r\n]*)\r?$/mg,bH=/^(?:color|date|datetime|datetime-local|email|hidden|month|number|password|range|search|tel|text|time|url|week)$/i,bI=/^(?:about|app|app\-storage|.+\-extension|file|res|widget):$/,bJ=/^(?:GET|HEAD)$/,bK=/^\/\//,bL=/\?/,bM=/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,bN=/^(?:select|textarea)/i,bO=/\s+/,bP=/([?&])_=[^&]*/,bQ=/^([\w\+\.\-]+:)(?:\/\/([^\/?#:]*)(?::(\d+))?)?/,bR=f.fn.load,bS={},bT={},bU,bV,bW=["*/"]+["*"];try{bU=e.href}catch(bX){bU=c.createElement("a"),bU.href="",bU=bU.href}bV=bQ.exec(bU.toLowerCase())||[],f.fn.extend({load:function(a,c,d){if(typeof a!="string"&&bR)return bR.apply(this,arguments);if(!this.length)return this;var e=a.indexOf(" ");if(e>=0){var g=a.slice(e,a.length);a=a.slice(0,e)}var h="GET";c&&(f.isFunction(c)?(d=c,c=b):typeof c=="object"&&(c=f.param(c,f.ajaxSettings.traditional),h="POST"));var i=this;f.ajax({url:a,type:h,dataType:"html",data:c,complete:function(a,b,c){c=a.responseText,a.isResolved()&&(a.done(function(a){c=a}),i.html(g?f("<div>").append(c.replace(bM,"")).find(g):c)),d&&i.each(d,[c,b,a])}});return this},serialize:function(){return f.param(this.serializeArray())},serializeArray:function(){return this.map(function(){return this.elements?f.makeArray(this.elements):this}).filter(function(){return this.name&&!this.disabled&&(this.checked||bN.test(this.nodeName)||bH.test(this.type))}).map(function(a,b){var c=f(this).val();return c==null?null:f.isArray(c)?f.map(c,function(a,c){return{name:b.name,value:a.replace(bE,"\r\n")}}):{name:b.name,value:c.replace(bE,"\r\n")}}).get()}}),f.each("ajaxStart ajaxStop ajaxComplete ajaxError ajaxSuccess ajaxSend".split(" "),function(a,b){f.fn[b]=function(a){return this.on(b,a)}}),f.each(["get","post"],function(a,c){f[c]=function(a,d,e,g){f.isFunction(d)&&(g=g||e,e=d,d=b);return f.ajax({type:c,url:a,data:d,success:e,dataType:g})}}),f.extend({getScript:function(a,c){return f.get(a,b,c,"script")},getJSON:function(a,b,c){return f.get(a,b,c,"json")},ajaxSetup:function(a,b){b?b$(a,f.ajaxSettings):(b=a,a=f.ajaxSettings),b$(a,b);return a},ajaxSettings:{url:bU,isLocal:bI.test(bV[1]),global:!0,type:"GET",contentType:"application/x-www-form-urlencoded; charset=UTF-8",processData:!0,async:!0,accepts:{xml:"application/xml, text/xml",html:"text/html",text:"text/plain",json:"application/json, text/javascript","*":bW},contents:{xml:/xml/,html:/html/,json:/json/},responseFields:{xml:"responseXML",text:"responseText"},converters:{"* text":a.String,"text html":!0,"text json":f.parseJSON,"text xml":f.parseXML},flatOptions:{context:!0,url:!0}},ajaxPrefilter:bY(bS),ajaxTransport:bY(bT),ajax:function(a,c){function w(a,c,l,m){if(s!==2){s=2,q&&clearTimeout(q),p=b,n=m||"",v.readyState=a>0?4:0;var o,r,u,w=c,x=l?ca(d,v,l):b,y,z;if(a>=200&&a<300||a===304){if(d.ifModified){if(y=v.getResponseHeader("Last-Modified"))f.lastModified[k]=y;if(z=v.getResponseHeader("Etag"))f.etag[k]=z}if(a===304)w="notmodified",o=!0;else try{r=cb(d,x),w="success",o=!0}catch(A){w="parsererror",u=A}}else{u=w;if(!w||a)w="error",a<0&&(a=0)}v.status=a,v.statusText=""+(c||w),o?h.resolveWith(e,[r,w,v]):h.rejectWith(e,[v,w,u]),v.statusCode(j),j=b,t&&g.trigger("ajax"+(o?"Success":"Error"),[v,d,o?r:u]),i.fireWith(e,[v,w]),t&&(g.trigger("ajaxComplete",[v,d]),--f.active||f.event.trigger("ajaxStop"))}}typeof a=="object"&&(c=a,a=b),c=c||{};var d=f.ajaxSetup({},c),e=d.context||d,g=e!==d&&(e.nodeType||e instanceof f)?f(e):f.event,h=f.Deferred(),i=f.Callbacks("once memory"),j=d.statusCode||{},k,l={},m={},n,o,p,q,r,s=0,t,u,v={readyState:0,setRequestHeader:function(a,b){if(!s){var c=a.toLowerCase();a=m[c]=m[c]||a,l[a]=b}return this},getAllResponseHeaders:function(){return s===2?n:null},getResponseHeader:function(a){var c;if(s===2){if(!o){o={};while(c=bG.exec(n))o[c[1].toLowerCase()]=c[2]}c=o[a.toLowerCase()]}return c===b?null:c},overrideMimeType:function(a){s||(d.mimeType=a);return this},abort:function(a){a=a||"abort",p&&p.abort(a),w(0,a);return this}};h.promise(v),v.success=v.done,v.error=v.fail,v.complete=i.add,v.statusCode=function(a){if(a){var b;if(s<2)for(b in a)j[b]=[j[b],a[b]];else b=a[v.status],v.then(b,b)}return this},d.url=((a||d.url)+"").replace(bF,"").replace(bK,bV[1]+"//"),d.dataTypes=f.trim(d.dataType||"*").toLowerCase().split(bO),d.crossDomain==null&&(r=bQ.exec(d.url.toLowerCase()),d.crossDomain=!(!r||r[1]==bV[1]&&r[2]==bV[2]&&(r[3]||(r[1]==="http:"?80:443))==(bV[3]||(bV[1]==="http:"?80:443)))),d.data&&d.processData&&typeof d.data!="string"&&(d.data=f.param(d.data,d.traditional)),bZ(bS,d,c,v);if(s===2)return!1;t=d.global,d.type=d.type.toUpperCase(),d.hasContent=!bJ.test(d.type),t&&f.active++===0&&f.event.trigger("ajaxStart");if(!d.hasContent){d.data&&(d.url+=(bL.test(d.url)?"&":"?")+d.data,delete d.data),k=d.url;if(d.cache===!1){var x=f.now(),y=d.url.replace(bP,"$1_="+x);d.url=y+(y===d.url?(bL.test(d.url)?"&":"?")+"_="+x:"")}}(d.data&&d.hasContent&&d.contentType!==!1||c.contentType)&&v.setRequestHeader("Content-Type",d.contentType),d.ifModified&&(k=k||d.url,f.lastModified[k]&&v.setRequestHeader("If-Modified-Since",f.lastModified[k]),f.etag[k]&&v.setRequestHeader("If-None-Match",f.etag[k])),v.setRequestHeader("Accept",d.dataTypes[0]&&d.accepts[d.dataTypes[0]]?d.accepts[d.dataTypes[0]]+(d.dataTypes[0]!=="*"?", "+bW+"; q=0.01":""):d.accepts["*"]);for(u in d.headers)v.setRequestHeader(u,d.headers[u]);if(d.beforeSend&&(d.beforeSend.call(e,v,d)===!1||s===2)){v.abort();return!1}for(u in{success:1,error:1,complete:1})v[u](d[u]);p=bZ(bT,d,c,v);if(!p)w(-1,"No Transport");else{v.readyState=1,t&&g.trigger("ajaxSend",[v,d]),d.async&&d.timeout>0&&(q=setTimeout(function(){v.abort("timeout")},d.timeout));try{s=1,p.send(l,w)}catch(z){if(s<2)w(-1,z);else throw z}}return v},param:function(a,c){var d=[],e=function(a,b){b=f.isFunction(b)?b():b,d[d.length]=encodeURIComponent(a)+"="+encodeURIComponent(b)};c===b&&(c=f.ajaxSettings.traditional);if(f.isArray(a)||a.jquery&&!f.isPlainObject(a))f.each(a,function(){e(this.name,this.value)});else for(var g in a)b_(g,a[g],c,e);return d.join("&").replace(bC,"+")}}),f.extend({active:0,lastModified:{},etag:{}});var cc=f.now(),cd=/(\=)\?(&|$)|\?\?/i;f.ajaxSetup({jsonp:"callback",jsonpCallback:function(){return f.expando+"_"+cc++}}),f.ajaxPrefilter("json jsonp",function(b,c,d){var e=typeof b.data=="string"&&/^application\/x\-www\-form\-urlencoded/.test(b.contentType);if(b.dataTypes[0]==="jsonp"||b.jsonp!==!1&&(cd.test(b.url)||e&&cd.test(b.data))){var g,h=b.jsonpCallback=f.isFunction(b.jsonpCallback)?b.jsonpCallback():b.jsonpCallback,i=a[h],j=b.url,k=b.data,l="$1"+h+"$2";b.jsonp!==!1&&(j=j.replace(cd,l),b.url===j&&(e&&(k=k.replace(cd,l)),b.data===k&&(j+=(/\?/.test(j)?"&":"?")+b.jsonp+"="+h))),b.url=j,b.data=k,a[h]=function(a){g=[a]},d.always(function(){a[h]=i,g&&f.isFunction(i)&&a[h](g[0])}),b.converters["script json"]=function(){g||f.error(h+" was not called");return g[0]},b.dataTypes[0]="json";return"script"}}),f.ajaxSetup({accepts:{script:"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript"},contents:{script:/javascript|ecmascript/},converters:{"text script":function(a){f.globalEval(a);return a}}}),f.ajaxPrefilter("script",function(a){a.cache===b&&(a.cache=!1),a.crossDomain&&(a.type="GET",a.global=!1)}),f.ajaxTransport("script",function(a){if(a.crossDomain){var d,e=c.head||c.getElementsByTagName("head")[0]||c.documentElement;return{send:function(f,g){d=c.createElement("script"),d.async="async",a.scriptCharset&&(d.charset=a.scriptCharset),d.src=a.url,d.onload=d.onreadystatechange=function(a,c){if(c||!d.readyState||/loaded|complete/.test(d.readyState))d.onload=d.onreadystatechange=null,e&&d.parentNode&&e.removeChild(d),d=b,c||g(200,"success")},e.insertBefore(d,e.firstChild)},abort:function(){d&&d.onload(0,1)}}}});var ce=a.ActiveXObject?function(){for(var a in cg)cg[a](0,1)}:!1,cf=0,cg;f.ajaxSettings.xhr=a.ActiveXObject?function(){return!this.isLocal&&ch()||ci()}:ch,function(a){f.extend(f.support,{ajax:!!a,cors:!!a&&"withCredentials"in a})}(f.ajaxSettings.xhr()),f.support.ajax&&f.ajaxTransport(function(c){if(!c.crossDomain||f.support.cors){var d;return{send:function(e,g){var h=c.xhr(),i,j;c.username?h.open(c.type,c.url,c.async,c.username,c.password):h.open(c.type,c.url,c.async);if(c.xhrFields)for(j in c.xhrFields)h[j]=c.xhrFields[j];c.mimeType&&h.overrideMimeType&&h.overrideMimeType(c.mimeType),!c.crossDomain&&!e["X-Requested-With"]&&(e["X-Requested-With"]="XMLHttpRequest");try{for(j in e)h.setRequestHeader(j,e[j])}catch(k){}h.send(c.hasContent&&c.data||null),d=function(a,e){var j,k,l,m,n;try{if(d&&(e||h.readyState===4)){d=b,i&&(h.onreadystatechange=f.noop,ce&&delete cg[i]);if(e)h.readyState!==4&&h.abort();else{j=h.status,l=h.getAllResponseHeaders(),m={},n=h.responseXML,n&&n.documentElement&&(m.xml=n);try{m.text=h.responseText}catch(a){}try{k=h.statusText}catch(o){k=""}!j&&c.isLocal&&!c.crossDomain?j=m.text?200:404:j===1223&&(j=204)}}}catch(p){e||g(-1,p)}m&&g(j,k,m,l)},!c.async||h.readyState===4?d():(i=++cf,ce&&(cg||(cg={},f(a).unload(ce)),cg[i]=d),h.onreadystatechange=d)},abort:function(){d&&d(0,1)}}}});var cj={},ck,cl,cm=/^(?:toggle|show|hide)$/,cn=/^([+\-]=)?([\d+.\-]+)([a-z%]*)$/i,co,cp=[["height","marginTop","marginBottom","paddingTop","paddingBottom"],["width","marginLeft","marginRight","paddingLeft","paddingRight"],["opacity"]],cq;f.fn.extend({show:function(a,b,c){var d,e;if(a||a===0)return this.animate(ct("show",3),a,b,c);for(var g=0,h=this.length;g<h;g++)d=this[g],d.style&&(e=d.style.display,!f._data(d,"olddisplay")&&e==="none"&&(e=d.style.display=""),(e===""&&f.css(d,"display")==="none"||!f.contains(d.ownerDocument.documentElement,d))&&f._data(d,"olddisplay",cu(d.nodeName)));for(g=0;g<h;g++){d=this[g];if(d.style){e=d.style.display;if(e===""||e==="none")d.style.display=f._data(d,"olddisplay")||""}}return this},hide:function(a,b,c){if(a||a===0)return this.animate(ct("hide",3),a,b,c);var d,e,g=0,h=this.length;for(;g<h;g++)d=this[g],d.style&&(e=f.css(d,"display"),e!=="none"&&!f._data(d,"olddisplay")&&f._data(d,"olddisplay",e));for(g=0;g<h;g++)this[g].style&&(this[g].style.display="none");return this},_toggle:f.fn.toggle,toggle:function(a,b,c){var d=typeof a=="boolean";f.isFunction(a)&&f.isFunction(b)?this._toggle.apply(this,arguments):a==null||d?this.each(function(){var b=d?a:f(this).is(":hidden");f(this)[b?"show":"hide"]()}):this.animate(ct("toggle",3),a,b,c);return this},fadeTo:function(a,b,c,d){return this.filter(":hidden").css("opacity",0).show().end().animate({opacity:b},a,c,d)},animate:function(a,b,c,d){function g(){e.queue===!1&&f._mark(this);var b=f.extend({},e),c=this.nodeType===1,d=c&&f(this).is(":hidden"),g,h,i,j,k,l,m,n,o,p,q;b.animatedProperties={};for(i in a){g=f.camelCase(i),i!==g&&(a[g]=a[i],delete a[i]);if((k=f.cssHooks[g])&&"expand"in k){l=k.expand(a[g]),delete a[g];for(i in l)i in a||(a[i]=l[i])}}for(g in a){h=a[g],f.isArray(h)?(b.animatedProperties[g]=h[1],h=a[g]=h[0]):b.animatedProperties[g]=b.specialEasing&&b.specialEasing[g]||b.easing||"swing";if(h==="hide"&&d||h==="show"&&!d)return b.complete.call(this);c&&(g==="height"||g==="width")&&(b.overflow=[this.style.overflow,this.style.overflowX,this.style.overflowY],f.css(this,"display")==="inline"&&f.css(this,"float")==="none"&&(!f.support.inlineBlockNeedsLayout||cu(this.nodeName)==="inline"?this.style.display="inline-block":this.style.zoom=1))}b.overflow!=null&&(this.style.overflow="hidden");for(i in a)j=new f.fx(this,b,i),h=a[i],cm.test(h)?(q=f._data(this,"toggle"+i)||(h==="toggle"?d?"show":"hide":0),q?(f._data(this,"toggle"+i,q==="show"?"hide":"show"),j[q]()):j[h]()):(m=cn.exec(h),n=j.cur(),m?(o=parseFloat(m[2]),p=m[3]||(f.cssNumber[i]?"":"px"),p!=="px"&&(f.style(this,i,(o||1)+p),n=(o||1)/j.cur()*n,f.style(this,i,n+p)),m[1]&&(o=(m[1]==="-="?-1:1)*o+n),j.custom(n,o,p)):j.custom(n,h,""));return!0}var e=f.speed(b,c,d);if(f.isEmptyObject(a))return this.each(e.complete,[!1]);a=f.extend({},a);return e.queue===!1?this.each(g):this.queue(e.queue,g)},stop:function(a,c,d){typeof a!="string"&&(d=c,c=a,a=b),c&&a!==!1&&this.queue(a||"fx",[]);return this.each(function(){function h(a,b,c){var e=b[c];f.removeData(a,c,!0),e.stop(d)}var b,c=!1,e=f.timers,g=f._data(this);d||f._unmark(!0,this);if(a==null)for(b in g)g[b]&&g[b].stop&&b.indexOf(".run")===b.length-4&&h(this,g,b);else g[b=a+".run"]&&g[b].stop&&h(this,g,b);for(b=e.length;b--;)e[b].elem===this&&(a==null||e[b].queue===a)&&(d?e[b](!0):e[b].saveState(),c=!0,e.splice(b,1));(!d||!c)&&f.dequeue(this,a)})}}),f.each({slideDown:ct("show",1),slideUp:ct("hide",1),slideToggle:ct("toggle",1),fadeIn:{opacity:"show"},fadeOut:{opacity:"hide"},fadeToggle:{opacity:"toggle"}},function(a,b){f.fn[a]=function(a,c,d){return this.animate(b,a,c,d)}}),f.extend({speed:function(a,b,c){var d=a&&typeof a=="object"?f.extend({},a):{complete:c||!c&&b||f.isFunction(a)&&a,duration:a,easing:c&&b||b&&!f.isFunction(b)&&b};d.duration=f.fx.off?0:typeof d.duration=="number"?d.duration:d.duration in f.fx.speeds?f.fx.speeds[d.duration]:f.fx.speeds._default;if(d.queue==null||d.queue===!0)d.queue="fx";d.old=d.complete,d.complete=function(a){f.isFunction(d.old)&&d.old.call(this),d.queue?f.dequeue(this,d.queue):a!==!1&&f._unmark(this)};return d},easing:{linear:function(a){return a},swing:function(a){return-Math.cos(a*Math.PI)/2+.5}},timers:[],fx:function(a,b,c){this.options=b,this.elem=a,this.prop=c,b.orig=b.orig||{}}}),f.fx.prototype={update:function(){this.options.step&&this.options.step.call(this.elem,this.now,this),(f.fx.step[this.prop]||f.fx.step._default)(this)},cur:function(){if(this.elem[this.prop]!=null&&(!this.elem.style||this.elem.style[this.prop]==null))return this.elem[this.prop];var a,b=f.css(this.elem,this.prop);return isNaN(a=parseFloat(b))?!b||b==="auto"?0:b:a},custom:function(a,c,d){function h(a){return e.step(a)}var e=this,g=f.fx;this.startTime=cq||cr(),this.end=c,this.now=this.start=a,this.pos=this.state=0,this.unit=d||this.unit||(f.cssNumber[this.prop]?"":"px"),h.queue=this.options.queue,h.elem=this.elem,h.saveState=function(){f._data(e.elem,"fxshow"+e.prop)===b&&(e.options.hide?f._data(e.elem,"fxshow"+e.prop,e.start):e.options.show&&f._data(e.elem,"fxshow"+e.prop,e.end))},h()&&f.timers.push(h)&&!co&&(co=setInterval(g.tick,g.interval))},show:function(){var a=f._data(this.elem,"fxshow"+this.prop);this.options.orig[this.prop]=a||f.style(this.elem,this.prop),this.options.show=!0,a!==b?this.custom(this.cur(),a):this.custom(this.prop==="width"||this.prop==="height"?1:0,this.cur()),f(this.elem).show()},hide:function(){this.options.orig[this.prop]=f._data(this.elem,"fxshow"+this.prop)||f.style(this.elem,this.prop),this.options.hide=!0,this.custom(this.cur(),0)},step:function(a){var b,c,d,e=cq||cr(),g=!0,h=this.elem,i=this.options;if(a||e>=i.duration+this.startTime){this.now=this.end,this.pos=this.state=1,this.update(),i.animatedProperties[this.prop]=!0;for(b in i.animatedProperties)i.animatedProperties[b]!==!0&&(g=!1);if(g){i.overflow!=null&&!f.support.shrinkWrapBlocks&&f.each(["","X","Y"],function(a,b){h.style["overflow"+b]=i.overflow[a]}),i.hide&&f(h).hide();if(i.hide||i.show)for(b in i.animatedProperties)f.style(h,b,i.orig[b]),f.removeData(h,"fxshow"+b,!0),f.removeData(h,"toggle"+b,!0);d=i.complete,d&&(i.complete=!1,d.call(h))}return!1}i.duration==Infinity?this.now=e:(c=e-this.startTime,this.state=c/i.duration,this.pos=f.easing[i.animatedProperties[this.prop]](this.state,c,0,1,i.duration),this.now=this.start+(this.end-this.start)*this.pos),this.update();return!0}},f.extend(f.fx,{tick:function(){var a,b=f.timers,c=0;for(;c<b.length;c++)a=b[c],!a()&&b[c]===a&&b.splice(c--,1);b.length||f.fx.stop()},interval:13,stop:function(){clearInterval(co),co=null},speeds:{slow:600,fast:200,_default:400},step:{opacity:function(a){f.style(a.elem,"opacity",a.now)},_default:function(a){a.elem.style&&a.elem.style[a.prop]!=null?a.elem.style[a.prop]=a.now+a.unit:a.elem[a.prop]=a.now}}}),f.each(cp.concat.apply([],cp),function(a,b){b.indexOf("margin")&&(f.fx.step[b]=function(a){f.style(a.elem,b,Math.max(0,a.now)+a.unit)})}),f.expr&&f.expr.filters&&(f.expr.filters.animated=function(a){return f.grep(f.timers,function(b){return a===b.elem}).length});var cv,cw=/^t(?:able|d|h)$/i,cx=/^(?:body|html)$/i;"getBoundingClientRect"in c.documentElement?cv=function(a,b,c,d){try{d=a.getBoundingClientRect()}catch(e){}if(!d||!f.contains(c,a))return d?{top:d.top,left:d.left}:{top:0,left:0};var g=b.body,h=cy(b),i=c.clientTop||g.clientTop||0,j=c.clientLeft||g.clientLeft||0,k=h.pageYOffset||f.support.boxModel&&c.scrollTop||g.scrollTop,l=h.pageXOffset||f.support.boxModel&&c.scrollLeft||g.scrollLeft,m=d.top+k-i,n=d.left+l-j;return{top:m,left:n}}:cv=function(a,b,c){var d,e=a.offsetParent,g=a,h=b.body,i=b.defaultView,j=i?i.getComputedStyle(a,null):a.currentStyle,k=a.offsetTop,l=a.offsetLeft;while((a=a.parentNode)&&a!==h&&a!==c){if(f.support.fixedPosition&&j.position==="fixed")break;d=i?i.getComputedStyle(a,null):a.currentStyle,k-=a.scrollTop,l-=a.scrollLeft,a===e&&(k+=a.offsetTop,l+=a.offsetLeft,f.support.doesNotAddBorder&&(!f.support.doesAddBorderForTableAndCells||!cw.test(a.nodeName))&&(k+=parseFloat(d.borderTopWidth)||0,l+=parseFloat(d.borderLeftWidth)||0),g=e,e=a.offsetParent),f.support.subtractsBorderForOverflowNotVisible&&d.overflow!=="visible"&&(k+=parseFloat(d.borderTopWidth)||0,l+=parseFloat(d.borderLeftWidth)||0),j=d}if(j.position==="relative"||j.position==="static")k+=h.offsetTop,l+=h.offsetLeft;f.support.fixedPosition&&j.position==="fixed"&&(k+=Math.max(c.scrollTop,h.scrollTop),l+=Math.max(c.scrollLeft,h.scrollLeft));return{top:k,left:l}},f.fn.offset=function(a){if(arguments.length)return a===b?this:this.each(function(b){f.offset.setOffset(this,a,b)});var c=this[0],d=c&&c.ownerDocument;if(!d)return null;if(c===d.body)return f.offset.bodyOffset(c);return cv(c,d,d.documentElement)},f.offset={bodyOffset:function(a){var b=a.offsetTop,c=a.offsetLeft;f.support.doesNotIncludeMarginInBodyOffset&&(b+=parseFloat(f.css(a,"marginTop"))||0,c+=parseFloat(f.css(a,"marginLeft"))||0);return{top:b,left:c}},setOffset:function(a,b,c){var d=f.css(a,"position");d==="static"&&(a.style.position="relative");var e=f(a),g=e.offset(),h=f.css(a,"top"),i=f.css(a,"left"),j=(d==="absolute"||d==="fixed")&&f.inArray("auto",[h,i])>-1,k={},l={},m,n;j?(l=e.position(),m=l.top,n=l.left):(m=parseFloat(h)||0,n=parseFloat(i)||0),f.isFunction(b)&&(b=b.call(a,c,g)),b.top!=null&&(k.top=b.top-g.top+m),b.left!=null&&(k.left=b.left-g.left+n),"using"in b?b.using.call(a,k):e.css(k)}},f.fn.extend({position:function(){if(!this[0])return null;var a=this[0],b=this.offsetParent(),c=this.offset(),d=cx.test(b[0].nodeName)?{top:0,left:0}:b.offset();c.top-=parseFloat(f.css(a,"marginTop"))||0,c.left-=parseFloat(f.css(a,"marginLeft"))||0,d.top+=parseFloat(f.css(b[0],"borderTopWidth"))||0,d.left+=parseFloat(f.css(b[0],"borderLeftWidth"))||0;return{top:c.top-d.top,left:c.left-d.left}},offsetParent:function(){return this.map(function(){var a=this.offsetParent||c.body;while(a&&!cx.test(a.nodeName)&&f.css(a,"position")==="static")a=a.offsetParent;return a})}}),f.each({scrollLeft:"pageXOffset",scrollTop:"pageYOffset"},function(a,c){var d=/Y/.test(c);f.fn[a]=function(e){return f.access(this,function(a,e,g){var h=cy(a);if(g===b)return h?c in h?h[c]:f.support.boxModel&&h.document.documentElement[e]||h.document.body[e]:a[e];h?h.scrollTo(d?f(h).scrollLeft():g,d?g:f(h).scrollTop()):a[e]=g},a,e,arguments.length,null)}}),f.each({Height:"height",Width:"width"},function(a,c){var d="client"+a,e="scroll"+a,g="offset"+a;f.fn["inner"+a]=function(){var a=this[0];return a?a.style?parseFloat(f.css(a,c,"padding")):this[c]():null},f.fn["outer"+a]=function(a){var b=this[0];return b?b.style?parseFloat(f.css(b,c,a?"margin":"border")):this[c]():null},f.fn[c]=function(a){return f.access(this,function(a,c,h){var i,j,k,l;if(f.isWindow(a)){i=a.document,j=i.documentElement[d];return f.support.boxModel&&j||i.body&&i.body[d]||j}if(a.nodeType===9){i=a.documentElement;if(i[d]>=i[e])return i[d];return Math.max(a.body[e],i[e],a.body[g],i[g])}if(h===b){k=f.css(a,c),l=parseFloat(k);return f.isNumeric(l)?l:k}f(a).css(c,h)},c,a,arguments.length,null)}}),a.jQuery=a.$=f,typeof define=="function"&&define.amd&&define.amd.jQuery&&define("jquery",[],function(){return f})})(window);
+</script>
+<!--Inner Script-->
+<script>
+"use strict";
+// Fullscreen Images
+$(function() {
+    $('.img_big').click(function() {
+        $('#fullscreen_pic').attr('src',$(this).attr('src'));
+        $('#fullscreen').fadeIn(100);
+        let top = $(document).scrollTop();
+        $(document).bind("scroll", function() {
+            $(document).scrollTop(top); 
+        });
+    });
+    $('#fullscreen').click(function() {
+        $('#fullscreen').fadeOut(100);
+        $(document).unbind("scroll");
+    });
+});
+// Pages
+$(function() {
+    $('.nav_li').click(function() {
+        $('.nav_li').removeClass('nav_li_selected');
+        $(this).addClass('nav_li_selected');
+        $('section').hide();
+        $('#sec_' + $(this).attr('page')).show();
+        $(document).scrollTop(0);
+    });
+});
+// Top
+$(function() {
+    $("#top").click(function() {
+        $(document).scrollTop(0);
+    });
+});
+// Initialization
+$(function() {
+    $('.fullscreen').attr('style', 'background: rgba(0, 0, 0, 0.5);');
+    $('.fullscreen').hide();
+    $('.nav_li')[0].click();
+});
+</script>
+<!--Inner Stylesheet-->
+<style>
+/* Layout */
+html {
+    font-family: "Microsoft YaHei UI", "Microsoft YaHei", "SimSun", "Calibri", sans-serif;
+}
+body {
+    margin: 0;
+    background-color: #777;
+}
+.wrapper {
+    max-width: 880px;
+    margin: auto;
+    position: relative;
+}
+.nav {
+    position: fixed;
+    top: 20vh;
+    left: 0;
+    background: transparent;
+    z-index: 25;
+}
+.nav_ul {
+    padding: 0;
+    margin: 0;
+    display: block;
+    background: transparent;
+}
+.nav_li {
+    display: block;
+    padding: 0.5em 1em 0.5em 1em;
+    text-align: center;
+    background: black;
+    color: white;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    min-width: 100px;
+    max-width: 100px;
+    -webkit-transition: min-width 0.2s;
+    -moz-transition: min-width 0.2s;
+    -ms-transition: min-width 0.2s;
+    transition: min-width 0.2s;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.nav_li:hover {
+    min-width: 120px;
+}
+.nav_li_selected {
+    background: rgb(50, 50, 200);
+    background: linear-gradient(135deg, transparent 0, rgb(50, 50, 200) 0) top left, 
+                linear-gradient(-135deg, transparent 15px, rgb(50, 50, 200) 0) top right, 
+                linear-gradient(-45deg, transparent 15px, rgb(50, 50, 200) 0) bottom right, 
+                linear-gradient(45deg, transparent 0, rgb(50, 50, 200) 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    color: white;
+    min-width: 140px;
+}
+.nav_li_selected:hover {
+    background: rgb(50, 50, 200);
+    background: linear-gradient(135deg, transparent 0, rgb(50, 50, 200) 0) top left, 
+                linear-gradient(-135deg, transparent 15px, rgb(50, 50, 200) 0) top right, 
+                linear-gradient(-45deg, transparent 15px, rgb(50, 50, 200) 0) bottom right, 
+                linear-gradient(45deg, transparent 0, rgb(50, 50, 200) 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    color: white;
+    min-width: 140px;
+}
+.main {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: white;
+    color: #222;
+    min-height: 20em;
+    margin-top: 4em;
+    padding-top: 2em;
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    box-shadow: 0 0 40px #000000;
+}
+section {
+    margin-bottom: 3em;
+    line-height: 1.8em;
+}
+h1 {
+    font-weight: 500;
+    font-size: 1.8em;
+    line-height: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+p {
+    text-indent: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+hr {
+    border: 0;
+    height: 3px;
+    background: rgb(50, 50, 200);
+}
+ul {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+.img_big {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+a:link {
+    color: rgb(50, 50, 200);
+    text-decoration: underline;
+}
+
+a:visited {
+    color: rgb(50, 50, 200);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: rgb(50, 50, 200);
+    text-decoration: none;
+}
+
+a:active {
+    color: rgb(50, 50, 200);
+    text-decoration: underline;
+}
+
+.footer {
+    font-family: Consolas, monospace;
+    font-size: 0.8em;
+    color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 2em;
+    text-align: right;
+    line-height: 1.5em;
+}
+.top_button {
+    position: fixed;
+    z-index: 30;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    background: transparent;
+    transition: background-color 0.2s, color 0.2s;
+    color: transparent;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.top_button:hover {
+    background: rgb(50, 50, 200);
+    color: white;
+}
+.fullscreen {
+    position: fixed;
+    background: transparent;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 50;
+    cursor: pointer;
+}
+.fullscreen_pic {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    margin: auto;
+    top: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+}
+/* Styles */
+.hint {
+    margin-top: -0.5em;
+    font-size: 0.8em;
+    color: #888888;
+    text-indent: 0;
+}
+.code {
+    font-family: Consolas, monospace;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 3px;
+    line-height: 1.5em;
+    margin: 0.5em;
+    padding: 1em;
+    white-space: pre;
+    text-indent: 0;
+}
+.bar {
+    border-left: 5px solid rgb(50, 50, 200);
+    padding-left: 1em;
+    text-indent: 0;
+}
+.box {
+    font-family: Consolas, monospace;
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    color: rgb(50, 50, 200);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 3px;
+    line-height: 1.5em;
+    padding: 0 0.2em 0 0.2em;
+    margin: 0 0.2em 0 0.2em;
+    white-space: pre;
+    text-indent: 0;
+}
+.colored {
+    color: rgb(50, 50, 200);
+}
+.card {
+    padding: 1em;
+    margin: 1em;
+    display: block;
+    text-indent: 0;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.big {
+    font-size: 1.5em;
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+    <nav class="nav">
+        <ul class="nav_ul">
+            <li class="nav_li" page="welcome">欢迎首页
+            <li class="nav_li" page="usage">使用说明
+            <li class="nav_li" page="compatibility">兼容设置
+            <li class="nav_li" page="brief">任务简报
+            <li class="nav_li" page="data">单位档案
+            <li class="nav_li" page="tips">通关提示
+            <li class="nav_li" page="problem">更新维护
+            <li class="nav_li" page="about">关于
+            <li class="nav_li" page="qt">歧途任务说明
+        </ul>
+    </nav>
+    <main class="main">
+        <section id="sec_test">
+            <div class="bar">
+                <h1>需要允许JavaScript脚本</h1>
+                <span class="hint">只有JavaScript没被允许的时候才会被显示出来的章节</span>
+            </div>
+            <p>
+                如果你看到了这个章节（内部编码为<span class="box">sec_test</span>）的话，说明你没有允许JavaScript脚本。请允许本页面内的JavaScript脚本以获得最佳浏览体验。
+            </p>
+        </section>
+        <section id="sec_welcome">
+            <div class="bar">
+                <h1>《丧尸领地》测试版</h1>
+                <span class="hint">一款生化生存任务的精品Mod</span>
+            </div>
+            <p>
+                <center class="colored" style="font-family: Consolas, monospace; font-size: 1.5em;">您将进入丧尸领地...</center>
+            </p>
+            <p>
+                这是《丧尸领地》的玩家手册。手册目录位于网页的左侧边栏，希望这篇文档能够帮助你解答游戏中遇到的绝大多数问题。祝游戏愉快！
+            </p>
+            <img class="img_big" src="./img/zland.jpg" />
+            <div class="code">游戏名称：《丧尸领地》
+英文名称：《Zland》
+游戏类别：生存任务
+游戏制作：丰采(B站ID：fhy093)</div>
+            <p>
+                制作灵感来自生化危机和孤胆枪手，此游戏赶工做出来，可能存在很多BUG，仅供QQ群成员内部测试，严禁发布在网上，最终请以作者本人发布的正式版为准。希望大家能够喜欢！
+            </p>
+            <p>
+                游戏下载及更新：
+            </p>
+            <p>
+                <strong>1.加丧尸领地粉丝QQ群<a target="_blank" href="https://shang.qq.com/wpa/qunwpa?idkey=e47dac4d2827af44af560b60cd56bc651c826a39295a49bdb4a92058e5a19e3d">825398333</a>（QQ群文件）。
+            </p>
+            <p>2.前往作者个人主页<a target="_blank" href="http://fhy093.ys168.com">fhy093.ys168.com</a>（百度网盘）。</strong>
+            </p>
+            <br>
+        </section>
+        <section id="sec_usage">
+            <p>
+                丧尸领地<span class="box">使用说明</span>目录：
+            </p>
+            <p>
+                <ul>
+                    <li><a href="#sec_usage_1">游戏安装说明</a></li>
+                    <li><a href="#sec_usage_2">游戏额外设置</a></li>
+                    <li><a href="#sec_usage_3">游戏速度调节</a></li>
+                    <li><a href="#sec_usage_4">游戏分辨率设置</a></li>
+                </ul>
+            </p>
+            <br>
+            <p>
+                这部分是有关游戏使用方法的章节。如果你是新人，请<span class="colored">严格的按照此章节列出的步骤来使用</span>。在游戏安装出现问题的时候，到这里来寻找答案是明智的选择。
+            </p>
+            <br>
+            <div class="bar" id="sec_usage_1">
+                <h1>游戏安装说明</h1>
+                <span class="hint">如何安装丧尸领地</span>
+            </div>
+            <p>《丧尸领地》是一款绿色游戏，安装前先关闭所有杀毒软件。解压后在游戏根目录找到<span class="box">Reg.exe</span>并运行以注册游戏。然后找到<span class="box">丧尸领地.exe</span>并把兼容性改为XP、设置为以管理员身份运行，然后直接运行<span class="box">丧尸领地.exe</span>即可。
+            </p>
+            <p>
+                XP系统用户需删除ddraw.dll文件后才能正常游戏。
+            </p>
+            <p>
+               游戏安装教程：<a target="_blank" href="https://www.bilibili.com/video/av29581282">https://www.bilibili.com/video/av29581282</a> 
+            </p>
+            <p>如果以上方法失败，可以利用窗口化完美解决问题，但只能窗口化游戏，方法见下文中的“游戏额外设置”。
+            </p>
+            <div class="bar" id="sec_usage_2">
+                <h1>游戏额外设置</h1>
+                <span class="hint">开始游戏前的额外游戏设置功能
+</span>
+            </div>
+            <p>
+                《丧尸领地》在游戏根目录有额外的游戏设置功能，在游戏根目录里可以找到以下这些文件，双击后可以开启对应的功能。
+            </p>
+            <div class="code">1-孤胆枪手界面.bat
+2-丧尸领地界面.bat
+3-游戏窗口化.bat</div>
+            <div class="bar" id="sec_usage_3">
+                <h1>游戏速度调节</h1>
+                <span class="hint">如何调节任务中的游戏速度</span>
+            </div>
+            <p>
+               本任务细节较多，不推荐使用调速的方式进行游戏。
+            </p>
+            <p>
+                进入游戏开始任务后，按“Esc”键，切换到游戏选项界面，屏幕中央的“游戏速度”选项可以调节游戏速度。默认游戏速度为4，最快可以调节为6。
+            </p>
+            <p>
+                各游戏速度对应的游戏帧率：
+            </p>
+            <div class="code">游戏速度0  10帧/秒
+游戏速度1  12帧/秒
+游戏速度2  15帧/秒
+游戏速度3  20帧/秒
+游戏速度4  30帧/秒
+游戏速度5  60帧/秒
+游戏速度6  60+帧/秒（按CPU最大运算能力）
+
+在任务进行中，当出现鼠标指针后，按“;”键可以显示游戏实时帧率。</div>
+            <div class="bar" id="sec_usage_4">
+                <h1>游戏分辨率设置</h1>
+                <span class="hint">如何任意更改游戏的显示分辨率</span>
+            </div>
+            <p>
+                对于绝大多数用户来说游戏分辨率是可以直接在游戏选项里修改的，但是个别Win10用户可能无法在游戏选项里修改。《丧尸领地》的默认游戏分辨率是<span class="box">1280×720</span>，极少数用户电脑显示器的最大分辩率可能达不到，从而导致无法正常游戏。而窗口化以后也有让窗口满屏的需求，这就需要我们手动调节游戏分辨率。所以，有必要介绍一下手动修改分辨率的方法。
+            </p>
+            <p>
+                找到游戏文件夹下的<span class="box">ra2md.ini</span>，用记事本打开，在其中查找<span class="box">[Video]</span>，可以看到以下内容：
+            </p>
+            <div class="code">[Video]
+ScreenWidth=1280
+ScreenHeight=720
+StretchMovies=no
+VideoBackBuffer=no
+AllowHiResModes=yes
+AllowVRAMSidebar=no</div>
+            <p>
+                这里的<span class="box">ScreenWidth=</span>指定了宽度，<span class="box">ScreenHeight=</span>指定了高度，比如上面那段代码就确定游戏分辨率为1280×720。如果是全屏运行，设为自己的屏幕分辨率刚刚好；但是在窗口化运行时，要注意，不能简单的把这个分辨率设为你的屏幕分辨率，纵向要减去窗口标题栏高度（一般为26）、任务栏高度（Windows 10一般为40）、下边框宽度（3），横向要减去窗口左右边框宽度（各为3）才行。比如作者的电脑屏幕最大分辨率是1920×1080的，作者需要设置的分辨率就是：
+            </p>
+            <p>
+                宽度：屏幕宽度1920-2×窗口边框宽度3=1914
+            </p>
+            <p>
+                高度：屏幕宽度1080-窗口标题栏高度26-任务栏高度40-下边框宽度3=1011
+            </p>
+            <p>
+                所以我应该把<span class="box">ScreenWidth=</span>设为1914，<span class="box">ScreenHeight=</span>设为1011。改完记得保存文件。
+            </p>
+            <div style="border: 1px solid #DDDDDD; margin: 0.5em; padding: 0.5em; padding-left: 2.5em;">
+                窗口化游戏的分辨率计算器<br>
+                屏幕宽度：<input class="cal_input" id="cal_width" type="number" min="800" value="1920" max="4096" style="ime-mode:disabled; width: 5em;" /><br>
+                屏幕高度：<input class="cal_input" id="cal_height" type="number" min="600" value="1080" max="4096" style="ime-mode:disabled; width: 5em;" /><br>
+                计算结果：<span id="cal_result"><span class="box">ScreenWidth=1914</span>, <span class="box">ScreenHeight=1011</span></span>
+                <script>
+                    $(function() {
+                        $('.cal_input').on('input propertychange', function() {
+                            $("#cal_result").html('<span class="box">ScreenWidth=' + (parseInt($('#cal_width').val()) - 6) + '</span>, <span class="box">ScreenHeight=' + (parseInt($('#cal_height').val()) - 69) + "</span>");
+                        });
+                    });
+                </script>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+        </section>
+        <section id="sec_compatibility">
+            <p>
+                丧尸领地<span class="box">兼容设置</span>目录：
+            </p>
+            <p>
+                <ul>
+                    <li><a href="#sec_compatibility_1">Windows XP</a></li>
+                    <li><a href="#sec_compatibility_2">Windows 7/8/10</a></li>
+                </ul>
+            </p>
+            <br>
+            <p>首先确保你已经按照“使用说明”章节的指引完成了丧尸领地的安装。如果出现问题再看以下章节。</p>
+            <div class="bar" id="sec_compatibility_1">
+                <h1>Windows XP</h1>
+                <span class="hint">Windows XP用户该如何设置兼容性</span>
+            </div>
+            <p>需要删除游戏根目录里的<span class="box">ddraw.dll</span>文件，然后应该就可以正常游戏了。如果出现弹框报错，请将img文件夹里的“stringtable00.csf”文件复制到根目录。</p>
+            <div class="bar" id="sec_compatibility_2">
+                <h1>Windows 7/8/10</h1>
+                <span class="hint">Windows 7/Windows 8/Windows 10用户该如何设置兼容性</span>
+            </div>
+            <p>《丧尸领地》已经预置<span class="box">ddraw.dll</span>渲染补丁。正常情况下，Windows 10用户直接启动“丧尸领地.exe”就能开始游戏。</p>
+            <br>
+            <p>如果无法正常游戏或者在游戏中遇到弹框，你需要修改位于游戏根目录里的<span class="box">丧尸领地.exe</span>的兼容性。在<span class="box">丧尸领地.exe</span>的“兼容性”选项卡做如下设置：</p>
+            <div class="code">勾选“<span class="colored">以兼容模式运行这个程序</span>”，并选择“<span class="colored">Windows XP（Service Pack 2）</span>”。
+勾选“<span class="colored">简化的颜色模式</span>”，并选择“<span class="colored">16位(65536色)</span>”（如果没有此选项请忽略）。
+勾选“<span class="colored">以管理员身份运行此程序</span>”
+如下图所示：
+ <img class="img_big" src="./img/compatibility_01.jpg" /></div>  
+            <p>
+                点击“确定”并退出。
+            </p>
+            <p>
+                此时Windows 7/Windows 8/Windows 10的用户就可以正常进行游戏了。
+            </p>
+            <br>
+            <br>
+        </section>
+        <section id="sec_brief">
+            <p>
+                丧尸领地<span class="box">任务简报</span>目录：
+            </p>
+            <p>
+                <ul>
+                    <li><a href="#sec_brief_1">丧尸领地第一章的任务简报</a></li>
+                    <li><a href="#sec_brief_2">丧尸领地第二章的任务简报</a></li>
+                    <li><a href="#sec_brief_3">丧尸领地第三章的任务简报</a></li>
+                </ul>
+            </p>
+            <br>
+            <div class="bar" id="sec_brief_1">
+                <h1>第一章：生化危机</h1>
+                <span class="hint">丧尸领地第一章的任务简报</span>
+            </div>
+               <h1>01-高速灾变</h1>
+            <p>地点：美国，浣熊市，76号高速公路</p>
+            <img class="img_big" src="./img/zland01.jpg"/>
+            <p>
+                1993年6月，美国，浣熊市，76号高速公路。
+            </p>
+            <p>
+              卡洛斯(Carlos)是一名海豹特战队员。休假期间，他想去看望同在部队服役的姐姐谭雅。但卡洛斯在去往谭雅部队驻地的高速路上遇到了一些大麻烦，路途似乎并不顺利，他能找到谭雅吗？ 
+            </p>
+            <p>
+                任务目标一：寻找求救者。
+            </p>
+            <p>
+                任务目标二：寻找谭雅的部队驻地。
+            </p>
+            <p>
+                提示：卡洛斯不能阵亡。
+            </p>
+            <h1>02-矿区遇险</h1>
+            <p>地点：美国，浣熊市，阿克雷山区矿洞</p>
+            <img class="img_big" src="./img/zland02.jpg"/>
+            <p>
+                卡洛斯历经艰险后，还是找到了军方。卡洛斯得知他的姐姐已经离开，去执行一项重要任务了。同时军方提出希望卡洛斯找到在矿区的失踪人员，并答应在卡洛斯回来后帮助他进城。
+            </p>
+            <p>
+                任务目标一：帮助找到军方失踪人员。
+            </p>
+            <p>
+                任务目标二：把失踪人员安全带回营地。
+            </p>
+            <p>
+                提示：卡洛斯和军方人员不能阵亡。。
+            </p>
+            <h1>03-无敌火炮</h1>
+            <p>地点：美国，浣熊市，76号高速公路</p>
+            <img class="img_big" src="./img/zland03.jpg"/>
+            <p>
+                营地指挥官为了答谢卡洛斯，送给了他一辆粉碎火炮坦克，这简直是如虎添翼！指挥官让卡洛斯继续前进，找到军方在市郊的前哨站，那里离城市只有一步之遥。卡洛斯再一次上路了，在去往城市的路上，艰难险阻肯定是避免不了的。
+            </p>
+            <p>
+                任务目标一：寻找军方前哨站。
+            </p>
+            <p>
+                任务目标二：前往浣熊市。
+            </p>
+            <p>
+                提示：卡洛斯和粉碎火炮不能阵亡。
+            </p>
+            <h1>04-危险警报</h1>
+            <p>地点：美国，纽约州，纽约市</p>
+            <img class="img_big" src="./img/zland04.jpg"/>
+            <p>
+                卡洛斯去浣熊市调查感染的来源了。然而纽约真的像前哨站指挥官说的那样一片祥和吗？
+            </p>
+            <p>
+                1993年7月，美国，纽约州，纽约市。
+            </p>
+            <p>
+                纽约市区炮火连绵，枪声不断，到处都是惨叫哀嚎，全市一片混乱。纽约的一处卫星通讯基地与五角大楼联络突然中断，那里可是纽约的防御中枢！上级派谭雅进入纽约，希望谭雅尽快与基地取得联系，若能恢复卫星基地的通讯或许可以挽救纽约这座死城！
+            </p>
+            <p>
+                任务目标一：坚守火车站，以便迎接谭雅少校。
+            </p>
+            <p>
+                任务目标二：与卫星基地取得联系。
+            </p>
+            <p>
+                任务目标三：清除纽约市区的所有丧尸。
+            </p>
+            <p>
+                提示：谭雅不能殉职。
+            </p>
+            <h1>05-丧尸围城</h1>
+            <p>地点：美国，华盛顿特区</p>
+            <img class="img_big" src="./img/zland05.jpg"/>
+            <p>1993年8月，美国，华盛顿特区</p>
+            <p>纽约市的卫星基地防御系统虽然恢复了运作，但是首都却接连告急。城市里突然出现一种可怕的生化传送装置，源源不断的丧尸从这里涌出。显然这是一场有计划的进攻。五角大楼方面紧急召回军队，集中兵力，誓死保卫首都。</p>
+            <p>任务目标一：保证五角大楼不被夷为平地。</p>
+            <p>任务目标二：若能摧毁所有传送装置，可以提前胜利。</p>
+            <p>提示：谭雅不能殉职。</p>
+            <h1>06-地铁惊魂</h1>
+            <p>地点：美国，浣熊市，市区</p>
+            <img class="img_big" src="./img/zland06.jpg"/>
+            <p>首都莫名出现的传送装置还是一个疑团，但好在首都得到了有效控制，谭雅可以暂时放松了。当谭雅听说卡洛斯只身一人去浣熊市里调查病毒时，就开始忐忑不安起来。谭雅最终决定，前往浣熊市与弟弟卡洛斯会合。</p>
+            <p>任务目标一：寻找卡洛斯。</p>
+            <p>任务目标二：离开丧尸城市。</p>
+            <p>提示：谭雅、卡洛斯和黑桃K都不能遇害。</p>
+            <h1>07-丧尸之城</h1>
+            <p>地点：美国，浣熊市，市区</p>
+            <img class="img_big" src="./img/zland07.jpg"/>
+            <p>军方听说了谭雅和卡洛斯在浣熊市的所见所闻后，决定调集军队，摧毁保护伞公司的生化实验设施。</p>
+            <p>任务目标一：摧毁所有生化实验设施。</p>
+            <p>提示：英雄单位不能遇害。</p>
+            <h1>08-灭犬行动</h1>
+            <p>地点：美国，阿拉斯加州，希望角</p>
+            <img class="img_big" src="./img/zland08.jpg"/>
+            <p>1994年11月——阿拉斯加希望角</p>
+            <p>浣熊市的生化实验设施被毁后，全国的丧尸疫情逐渐被军方有效地遏制下来。为了报复五角大楼，保护伞公司在华盛顿释放了数量更多、能力更强的丧尸。华盛顿苦苦支撑了一年后还是沦陷了，国家领导人和高级将领紧急逃亡到了阿拉斯加的军方基地，然而丧尸们似乎长了狗鼻子，零星的出现在了本不可能出现丧尸的高寒地区，如恶犬紧追不舍。谭雅怀疑这是一场阴谋...</p>
+            <p>任务目标一：建立一座雷达站。</p>
+            <p>任务目标二：摧毁阿拉斯加的生化实验基地。</p>
+            <p>提示：英雄单位、领导人和高级将领都不能遇害。</p>
+            <h1>09-海底世界</h1>
+            <p>地点：北冰洋，海底</p>
+            <img class="img_big" src="./img/zland09.jpg"/>
+            <p>在离阿拉斯加州不远的北冰洋海底，保护伞公司修建了一座大型海底生化实验基地。此处有重兵防守，并可能进行着一些闻所未闻的骇人实验。另外，我方获得情报，一处苏联海底基地被保护伞公司侵占。若能摧毁心灵信标，就可以将苏联潜海技术应用到我军当中。</p>
+            <p>任务目标一：摧毁心灵信标，以便获得苏联潜海技术。</p>
+            <p>任务目标二：消灭北洋海底的所有敌人。</p>
+            <h1>10-穿越时空</h1>
+            <p>地点：美国，加州，旧金山</p>
+            <img class="img_big" src="./img/zland10.jpg"/>
+            <p>1995年6月，美国，加州，旧金山。</p>
+            <p>病毒爆发的第二年，美国除了阿拉斯加高寒地区和一些零星岛屿，其他国土都已沦陷。在这危急关头，我方间谍获得了苏联军方的绝密史料。1985年8月，来自美国加州的旅行者在埃及旅游探险时误入了一座长期封闭的金字塔，随后失踪。一个月后他出现在了苏联乌克兰，导致了乌克兰大疫情。生化病毒的前身很可能来自于埃及古墓。病毒的数据已经在漫长岁月里销毁了，探寻真相的办法恐怕只有回到过去了。
+</p>
+            <p>任务目标一：摧毁心灵信标，解救时间机器旁的盟军守卫部队。</p>
+            <p>任务目标二：占领提供时间机器电力的发电厂。</p>
+            <p>任务目标三：确保时间机器正常充能。</p>
+            <p>提示：英雄单位不能遇害。</p>
+            <div class="bar" id="sec_brief_2">
+                <h1>第二章：病毒起源</h1>
+                <span class="hint">丧尸领地第二章的任务简报</span>
+            </div>
+            <h1>11-古墓探险</h1>
+            <p>地点：埃及</p>
+            <img class="img_big" src="./img/zland11.jpg"/>
+            <p>1985年8月，埃及。</p>
+            <p>利用时间机器，我们回到了1985年8月的时间点，我们果断前往埃及打算调查真相，但遭到了埃及军方和神秘武装的攻击。时间紧迫，请不惜一切代价进入金字塔内部！</p>
+            <p>任务目标一：进入金字塔内部，查明真相。</p>
+            <h1>12-失控实验（原“病毒天才”关卡已并入到此关）</h1>
+            <p>地点：苏联，乌克兰，普里皮亚季</p>
+            <img class="img_big" src="./img/zland12.jpg"/>
+            <p>我们来迟一步，旅行者已经离开埃及到达了乌克兰。</p>
+            <p>1985年9月，苏联，乌克兰，普里皮亚季。</p>
+            <p>普里皮亚季的一处酒店入住了一个奇怪的旅行者。后来他死于一种具有极强的传染能力的病毒，可以破坏宿主的神经系统，致死机理较复杂。医院内部把它命名为“D病毒”（D-Virus）。病毒研究所专家霍尔教授相信他的疫苗可以对抗这种病毒。然而病毒变异得太快，实验开始失控。</p>
+            <p>“D病毒”弥漫在市内，人们拼命地想要外逃。</p>
+            <p>尽管采取了宵禁，关闭公共场所，封锁出城的公路等手段，但市政府还是失败了。一开始警察还能维持秩序，但随着政府内部秩序的瓦解，局势继续朝着失控的方向发展。尽管市政府还试图组织有秩序地撤出，但是，既然大家都是要离开的，谁还会接受比别人后走呢？</p>
+            <p>“我们收到了霍尔教授的求救信号！”，霍尔教授被困在了病毒研究所的活体实验室里。教授是唯一可能研制出病毒疫苗的重要人员，请务必配合防化部队解救教授。</p>
+            <p>乌克兰的最高苏维埃召开了最后一次会议，市长简述完现状后在会上宣布辞职，会后整个高层一哄而散，纷纷乘着深夜逃离，留下民众在市内惶惶不可终日。</p>
+            <p>任务目标一：在最佳抢救时间内把病人送到医院。</p>
+            <p>任务目标二：把病毒样本送到病毒研究所。</p>
+            <p>任务目标三：前往乌克兰政府与市长取得联系。</p>
+            <p>任务目标四：找到霍尔教授。</p>
+            <p>任务目标五：带领教授到机场乘机逃离。</p>
+            <h1>13-核平世界</h1>
+            <p>地点：苏联，乌克兰，普里皮亚季</p>
+            <img class="img_big" src="./img/zland13.jpg"/>
+            <p>1986年4月，苏联，乌克兰，普里皮亚季。</p>
+            <p>教授仍然没有找到对抗病毒的方法。政府解散，制度崩溃，政府高层和警察局长悄悄地坐上了驶向出城高速的轿车。混乱的情况并不会持续太久。</p>
+            <p>“死亡可以解决一切问题，没有人就没有问题。”</p>
+            <p>苏联军方为了控制疫情在全国爆发，准备在城市投下核弹并引爆切尔诺贝利核电站。</p>
+            <p>任务目标一：与市中心取得联系。</p>
+            <p>任务目标二：保护运输船，确保平民和部队分批从港口撤离。</p>
+            <h1>14-玛雅遗迹</h1>
+            <p>地点：墨西哥，图仑</p>
+            <img class="img_big" src="./img/zland14.jpg"/>
+            <p>军方核平切尔诺贝利后，封锁消息，对外宣称切尔诺贝利核电站四号机组发生了核泄漏事故。此后苏联一直相安无事，然而教授的去向却杳无音信。最近，我们的情报人员分析得出，研制病毒疫苗的教授很可能就在美洲。</p>
+            <p>任务目标一：寻找直升机残骸。</p>
+            <p>任务目标二：寻找教授。</p>
+            <h1>15-浣熊危机</h1>
+            <p>地点：美国，浣熊市，市区</p>
+            <img class="img_big" src="./img/zland15.jpg"/>
+            <p>很遗憾！我们没能在美洲找到教授，却反而见识到了为保护伞公司工作的神秘人拉恩。目前拉恩已经抵达浣熊市，不用想都知道他想做些什么！</p>
+            <p>任务目标一：消灭浣熊市的所有军队。</p>
+            <h1>16-病毒克星</h1>
+            <p>地点：美国，浣熊市，市区</p>
+            <img class="img_big" src="./img/zland16.jpg"/>
+            <p>浣熊市危在旦夕，谭雅和鲍里斯抱着最后一线希望前往浣熊市寻找教授。别忘了，这是启动时间机器后的另一个时空，他们能在这个时空和黑桃K、卡洛斯相遇吗？</p>
+
+            <p>任务目标一：进入浣熊市动物园地洞。</p>
+            <p>任务目标二：寻找霍尔教授。</p>
+            <h1>17-传送风暴</h1>
+            <p>地点：苏联，莫斯科</p>
+            <img class="img_big" src="./img/zland17.jpg"/>
+            <p>我们成功地解救了教授，教授取得了阶段成果，研制出了抗病毒疫苗，但目前无法量产，人类再一次出现了战胜疫情的转机。然而保护伞公司启动了风暴计划，开始了对美国本土外的病毒传播，其首要目标就是苏联首都莫斯科。1994年5月，保护伞通过传送装置袭击了莫斯科。但这次与华盛顿不同，美苏将联合起来，我们的盟军战士已经免疫丧尸病毒，让我们决战莫斯科吧！</p>
+            <p>任务目标：清除莫斯科的保护伞势力。</p>
+            <h1>18-绝对防御</h1>
+            <p>地点：美国，航天发射中心</p>
+            <img class="img_big" src="./img/zland18.jpg"/>
+            <p>保护伞公司的风暴计划已经破产，现在已经穷途末路。不过从教授的口中得知，他们在月球和太空还有基地用于生化实验。我们计划发射飞船乘胜追击。胜利就在眼前，我们会顺利吗？</p>
+            <p>任务目标：确保登月飞船正常发射。</p>
+            <h1>Ex-飞向火星</h1>
+            <p>地点：火星</p>
+            <img class="img_big" src="./img/zlandex.jpg"/>
+            <p>保护伞公司在克林姆林宫遗留的资料里显示他们正打算逃离地球，去往月球以及火星。其中去往火星的火箭就位于莫斯科北部山区的苏联火箭发射中心，幸运的是我们收复了这里。沃尔科夫中尉将带领部队乘坐火箭去往火星一探究竟！</p>
+            <p>任务目标：消灭火星表面的所有敌人。</p>
+            <h1>19-陨坑追击</h1>
+            <p>地点：月球</p>
+            <img class="img_big" src="./img/zland19.jpg"/>
+            <p>不得不佩服保护伞的实力，他们的残余势力竟然逃到了月球。我们有一批精锐特种兵组成的登月小队已经离开地球进入太空！月球是不毛之地，如果我们没有充足补给，是不能打持久战的。不过听说月球好像有很多氦-3资源...</p>
+            <p>任务目标一：消灭月球表面的保护伞势力。</p>
+            <p>任务目标二：寻找怪物的来源。</p>
+            <h1>20-太空决战</h1>
+            <p>地点：外太空</p>
+            <img class="img_big" src="./img/zland20.jpg"/>
+            <p>保护伞公司之所以敢在地球肆无忌惮地做实验，是因为他们已经想好了退路。在太阳系外，他们建立了庞大的太空基地和部队，为防死灰复燃，务必全部消灭！</p>
+            <p>任务目标一：确保超时空传送仪正常启动。</p>
+            <p>任务目标二：消灭类地行星上的全部保护伞势力。</p>
+            <div class="bar" id="sec_brief_3">
+                <h1>第三章：额外任务</h1>
+                <span class="hint">丧尸领地第三章的任务简报</span>
+            </div>
+            <h1>爆破模式 - 地下研究所</h1>
+            <p>地点：未知</p>
+            <img class="img_big" src="./img/zland21.jpg"/>
+            <p>1993年6月初，保护伞公司某处用于生化实验的地下研究所意外泄露了病毒。上级派出一支特警小队打算一探究竟...</p>
+            <p>任务目标一：摧毁A、B、C三个区域的生化设施。</p>
+            <p>任务目标二：找到位于C区的出口。</p>
+            <p>本任务改编自穿越火线地图地下研究所。</p>
+            <h1>挑战模式 - 巨人城废墟</h1>
+            <p>地点：未知</p>
+            <img class="img_big" src="./img/zland22.jpg"/>
+            <p>巨人城曾是一座以“科技”、“工业”为傲的繁华都会。但就在一瞬间，整个巨人城淹没在了火海和灰烬之中——三小时前，破坏力惊人的巨大不明物体从天而降，将整座城市化作了一片炼狱。真相究竟如何？“巨人城空袭”的背后究竟是谁在操纵？一场世界范围内的生化大战是否已经拉开帷幕？所有的答案就在巨人城废墟中。世界联军派出GRX精英部队，进入巨人城废墟，这群战士肩负使命，要把这场空袭背后的真相带回联军总部。当然，他们首先要从生化怪物潮水般的疯狂进攻中活下来。</p>
+            <p>任务目标：消灭所有生化怪物。</p>
+            <h1>孤胆枪手 - 动员兵的逆袭</h1>
+            <p>地点：苏联，地下综合实验室</p>
+            <img class="img_big" src="./img/zland24.jpg"/>
+            <p>地下综合实验室周围出现了大量躁动的感染者，一支动员兵小队奉命调查，结果除了动员兵“吴仁权”以外，无人生还...</p>
+            <p>开局动员兵，装备全靠捡！</p>
+            <p>任务目标一：潜入地下综合实验室，查明隐藏在灾难背后的真正原因。</p>
+            <p>任务目标二：进入下综合实验室核心区域。</p>
+            <h1>孤胆枪手 - 第五号试验品</h1>
+            <p>地点：苏联，地下综合实验室</p>
+            <img class="img_big" src="./img/zland25.jpg"/>
+            <p>吴仁权来到了综合实验室地下二层，这里不仅存放着新式武器的样品，还有大量传送器不断传送着怪物...大量谜团等待去解开...</p>
+            <p>任务目标：摧毁怪物传送器并消灭全部怪物。</p>
+            <h1>挑战任务 - 孤胆英雄</h1>
+            <p>地点：美国，华盛顿特区</p>
+            <p>尚未开放，瑞德与布莱克前传的挑战任务。</p>
+            <p>任务目标一：前往白宫，确认杜根总统的状况。</p>
+            <p>任务目标二：前往通讯中心，呼叫支援。</p>
+            <p>任务目标三：再次前往白宫，援助杜根总统。</p>
+            <p>任务目标四：把杜根总统安全带到五角大楼附近。</p>
+            <h1>挑战任务 - 冻脑行动</h1>
+            <p>地点：苏联，乌拉尔山区</p>
+            <p>尚未开放，苏联本土遭遇僵尸危机的挑战任务。</p>
+            <p>任务目标：不计一切代价，保卫作战实验室。</p>
+            <h1>挑战任务 - 灭顶之灾</h1>
+            <p>地点：古巴，哈瓦那</p>
+            <p>尚未开放，哈瓦那遭遇飞碟攻击的挑战任务。</p>
+            <p>任务目标一：撤退，甩开飞碟母船的追击。</p>
+            <p>任务目标二：想办法击落飞碟母船。</p>
+            <h1>挑战任务 - 起源覆灭</h1>
+            <p>地点：墨西哥</p>
+            <p>尚未开放，阻止墨西哥毒贩和保护伞公司合作的挑战任务。</p>
+            <p>任务目标：摧毁墨西哥毒贩的地下研究所。</p>
+        </section>
+        <section id="sec_data">
+            <p>
+                丧尸领地<span class="box">单位档案</span>目录：
+            </p>
+            <p>
+                <ul>
+                    <li><a href="#sec_data_1">丧尸领地角色设定</a></li>
+                    <li><a href="#sec_data_2">丧尸领地丧尸图鉴</a></li>
+                    <li><a href="#sec_data_3">丧尸领地单位资料</a></li>
+                </ul>
+            </p>
+            <br>
+            <div class="bar" id="sec_data_1">
+                <h1>角色设定</h1>
+                <span class="hint">有关英雄单位的资料</span>
+            </div>
+            <p class="card">
+                <span class="colored big">卡洛斯(Carlos)</span><br>
+                海豹特战队员。休假期间，他想去看望同在部队服役的姐姐谭雅。但卡洛斯在去往谭雅部队驻地的高速路上遇到了一些大麻烦，驻地所在的城市里布满了生化怪物。险象环生之中，他终于找到了姐姐，与谭雅并肩作战抵抗丧尸，并一直寻找生化灾变的原因。<br>
+            <p class="card">
+                <span class="colored big">幸存者(Old man)</span><br>
+                生化灾变后，卡洛斯遇到的第一个活人，他的加特林吉普车给玩家带来了很深的印象。在找到军方之前，曾给了卡洛斯很多帮助。后来与卡洛斯在断桥分别，随后他的去向成了谜团，或许是作者故意设定的。<br>
+            </p>
+            <p class="card">
+                <span class="colored big">驻地指挥官</span><br>
+                赏罚分明的指挥官，在卡洛斯完成指挥官交代的营救被困小队任务后，指挥官送给了卡洛斯一辆前往浣熊市的粉碎火炮坦克。<br>
+            </p>
+            <p class="card">
+                <span class="colored big">前哨站指挥官</span><br>
+                为了防止丧尸的蔓延，进入浣熊市的一座必经桥梁被毁了。哨站指挥官为卡洛斯提供了一名维修桥梁的工程师，还告诉了谭雅的去向，但这份情报显然有误，直接导致了卡洛斯被困浣熊市。<br>
+            </p>
+            <p class="card">
+                <span class="colored big">谭雅(Tanya)</span><br>
+                卡洛斯的姐姐，少校军衔，美军王牌特工。生化灾变前，谭雅突然接到了来自五角大楼的命令，离开了驻地去执行一项特殊任务，与休假找谭雅的弟弟擦肩而过。谭雅的能力突出，重情重义。出色地完成了灾变后联系纽约卫星基地、保卫五角大楼的险急任务，为了救弟弟她不惜孤身一人闯入浣熊市。浣熊市的丧尸曾在姐弟的努力下一度得到控制，然而好景不长，美国终究进入了末世...<br>
+            </p>
+            <p class="card">
+                <span class="colored big">布莱克将军(General Black)</span><br>
+                浣熊市最高指挥官。由于病毒的爆发，布莱克被迫在地铁站建立控制中心，并指挥浣熊市的军队。在他的帮助下谭雅成功地找到了卡洛斯。<br>
+            </p>
+            <p class="card">
+                <span class="colored big">黑桃K(Spade K)</span><br>
+                战斗力爆表。谭雅解救卡洛斯的时候，意外地在地铁站附近的牛肉汉堡店遇到了一个怪人。他自称是卡洛斯的朋友，身边携带了五只猴子，他的真实身份一直是个迷。<br>
+            <p class="card">
+                <span class="colored big">保护伞公司(Umbrella Company)</span><br>
+               著名跨国公司，公司总部位于浣熊市。保护伞公司一直在秘密研发生化武器，曾一度得到过军方和恐怖势力的支持。但随着实验的失控，一场生化浩劫将注定不可避免的发生。<br>
+            <p class="card">
+                <span class="colored big">鲍里斯(Boris)</span><br>
+                苏联驻埃及陆军指挥官，他能坐上这个位置完全是因为他的个人能力，曾经屡立战功，被士兵亲切地称为“老鲍”。这样一个兵王却中了保护伞的奸计，成了保护伞公司的傀儡守护金字塔。后来幸好得到了谭雅的解救，谭雅与鲍里斯一直配合默契，成功地解决了苏联的生化病毒的爆发。关于两人的感情问题在军中一直有着各种议论，但两人至今也没有在公众场合宣布恋情。<br>
+            </p>
+            <p class="card">
+                <span class="colored big">教授霍尔(Dr. Hall)</span><br>
+                苏联病毒学博士，祖籍美国马萨诸塞州，没有人知道他的父辈为什么选择加入苏联国籍定居乌克兰，但可以肯定的是他有着高尚的医德。教授了解各种DNA/RNA病毒的属性，因根治冠状病毒曾获得过诺贝尔生理学或医学奖。普里皮亚季发生D病毒疫情后，一直致力于D病毒疫苗的研究，大量一手实验数据都掌握在他手里，军方和保护伞公司都想得到这样的病毒天才。<br>
+            </p>
+            <p class="card">
+                <span class="colored big">拉恩（Rahn） </span><br>
+                拉恩是保护伞公司的实际控制人，拥有着统治世界的野心。他持有能把人类变异为丧尸的轨道狙击枪，非常危险。保护伞公司最新研制成果“D-T病毒”可以使拉恩变化成任何人形，并获得了瞬间移动的能力。<br>
+            </p>
+            <div class="bar" id="sec_data_2">
+                <h1>丧尸图鉴</h1>
+                <span class="hint">有关丧尸阵营单位的资料</span>
+            </div>
+            <p class="card">
+                <span class="colored big">感染者</span><br>
+                最普通的感染者，以数量取胜。<br>
+                生命值：300<br>
+                移动速度：中
+            </p>
+            <p class="card">
+                <span class="colored big">持枪感染者</span><br>
+                持有武器的感染者，生前拥有持枪证，虽然失去了心智，但还保留着开枪的生前记忆。<br>
+                生命值：300<br>
+                移动速度：中
+            </p>
+            <p class="card">
+                <span class="colored big">爬行感染者</span><br>
+                这种缺胳膊少腿的感染者生前一定被其他感染者咬下去不少肉。<br>
+                生命值：250<br>
+                移动速度：慢
+            </p>
+            <p class="card">
+                <span class="colored big">士兵感染者</span><br>
+                生前曾经是军人，死后作战能力依然没有减退。<br>
+                生命值：300<br>
+                移动速度：中
+            </p>
+            <p class="card">
+                <span class="colored big">矿工感染者</span><br>
+                生前是阿克雷山区矿洞的挖矿工人，可惜他们现在已经对黄金失去了兴趣。<br>
+                生命值：300<br>
+                移动速度：中
+            </p>
+            <p class="card">
+                <span class="colored big">迅捷感染者</span><br>
+                不知是什么原因导致了他们的狂躁，这也使得它们可以更快的冲向敌人。<br>
+                生命值：375<br>
+                移动速度：快
+            </p>
+            <p class="card">
+                <span class="colored big">浮肿感染者</span><br>
+                这些体型较胖的感染者可不是因为生前吃多了，他们的身体充满了丧尸病毒的培养液。一旦这个躯壳破裂，里面的病毒就会喷涌而出，吞噬周围的人。<br>
+                生命值：200<br>
+                移动速度：中<br>
+                特点：会自爆，造成大量伤害。自爆时还会引起周围的正常人变异为丧尸。<br>
+                高度危险，不要让他们接近，请使用远程武器优先解决。
+            </p>
+            <p class="card">
+                <span class="colored big">鲜活感染者</span><br>
+                刚刚尸变的感染者，人类被挠就会变成这种无脑生物，很脆弱。<br>
+                生命值：125<br>
+                移动速度：中
+            </p>
+            <p class="card">
+                <span class="colored big">丧尸犬</span><br>
+                它们简直是人类的噩梦，移动速度极快，伤害极高。<br>
+                生命值：150<br>
+                移动速度：快
+            </p>
+            <p class="card">
+                <span class="colored big">母体丧尸</span><br>
+                这种丧尸是所有感染者的母体，有强大的生命力。在浣熊市，有人曾经看到过中了几十枪的丧尸还在四处疯狂的寻找活人，而芝加哥的那次大规模使用凝固汽油弹的战斗中，身上熊熊火焰燃烧但是仍然能够蹒跚向人类防线逼近的它们简直就是死亡的象征。难道这是传说中的不死之身？<br>
+                生命值：1000<br>
+                移动速度：慢
+            </p>
+            <p class="card">
+                <span class="colored big">复仇者丧尸</span><br>
+                丧尸危机中格斗专家总结出的和丧尸近身格斗的要领中，砍头是排在第一位的。可是面对一种本来就没有头的丧尸，我们该怎么砍头？<br>
+                生命值：500<br>
+                移动速度：快<br>
+                特点：攻击力很高，能对建筑和坦克造成有效伤害。不会成群出现。<br>
+                很危险，对于装甲部队，请优先对付它。
+            </p>
+            <p class="card">
+                <span class="colored big">巨型丧尸</span><br>
+                拥有铜墙铁壁一般的皮肤和强大的破坏力、令人恐惧的巨大怪物。这已经不能用自然的病毒来解释了，一定是有人刻意创造了它们。<br>
+                生命值：550<br>
+                移动速度：中<br>
+                特点：反步兵武器无法对它造成有效伤害，需要使用反坦克武器来对付。<br>
+                海豹突击队和狙击手对这种丧尸束手无策，辐射工兵的污染也无法对它造成有效伤害。相反，天启坦克几炮就能把它轰飞。
+            </p>
+            <p class="card">
+                <span class="colored big">飞龙</span><br>
+               变异出尾翼的丧尸单位，可以飞行，往往集结成群。<br>
+                生命值：125<br>
+                移动速度：快<br>
+            </p>
+            <p class="card">
+                <span class="colored big">海底幽魂</span><br>
+                这只是人类出于对她们的恐惧而如此称呼的，事实上他们的生物学名称是深海丧尸，她们天生会游泳！<br>
+                生命值：300<br>
+                移动速度：中<br>
+            </p>
+            <p class="card">
+                <span class="colored big">坦克丧尸</span><br>
+                你可能会联想到求生之路的Tank，事实上它们只是比巨型丧尸更强壮而已。<br>
+                生命值：600<br>
+                移动速度：中<br>
+                特点：反步兵武器无法对它造成有效伤害，需要使用反坦克武器来对付。<br>
+                海豹突击队和狙击手对这种丧尸束手无策，辐射工兵的污染也无法对它造成有效伤害。相反，天启坦克几炮就能把它轰飞。
+            </p>
+            <p class="card">
+                <span class="colored big">寄生虫</span><br>
+               好像是美国电影里的玩意儿？嘤嘤嘤~<br>
+                生命值：200<br>
+                移动速度：慢<br>
+            </p>
+            <p class="card">
+                <span class="colored big">巨型蚂蚁</span><br>
+               感染了病毒的蚂蚁在美洲这种特殊环境下变得异常巨大。<br>
+                生命值：300<br>
+                移动速度：快<br>
+            </p>
+            <p class="card">
+                <span class="colored big">生化战士</span><br>
+                严格来说他们并不是丧尸，他们是武装到牙齿的人类。他们为拉恩卖命，他们用自己的便携式轨道枪传播丧尸病毒，他们破坏，他们毁灭一切，他们是生化战士。<br>
+                生命值：125<br>
+                移动速度：中<br>
+                射程：5<br>
+                特点：在丧尸阵营中能够进行远程攻击，这已经需要足够重视了。<br>
+                当你集中火力对付他们的时候，他们很脆弱，但是千万不要只专注于打近在眼前的丧尸而忽视了他们。
+            </p>
+            <div class="bar" id="sec_data_3">
+                <h1>单位资料</h1>
+                <span class="hint">有关人类新增普通单位的资料</span>
+            </div>
+            <p class="card">
+                <span class="colored big">镭射车</span><br>
+                丧尸危机爆发初期，人们对于丧尸的攻击手足无措，武器装备很快在突袭中损失殆尽。美国政府不得不征用一些民用越野车装上镭射武器来专门对付丧尸。征用的标准很低：能装上镭射炮，能跑，就合格。这样就生产出了这种速度飞快、被击中就顷刻爆炸的小车。虽然在军团作战中这简直就是开玩笑，但是在对丧尸的作战中，这种简陋的突击车还是创造了很多奇迹。<br>
+                攻击力：35<br>
+                射程：5<br>
+                攻击速度：中等<br>
+                特点：数值上，镭射车的输出伤害能力等同于一个部署的美国大兵，但是它能够快速移动而且移动中攻击。主要用于对丧尸的风筝战术。要注意镭射车很不耐打，尽量避免和敌人硬碰硬，打不过就跑才是它的逻辑。
+            </p>
+            <p class="card">
+                <span class="colored big">粉碎火炮</span><br>
+                美国人从没想过，这种古董武器居然还能够有机会被再次拉上战场。作为早期自行火炮的代表，这种榴弹炮除了射程远几乎没有什么突出特点——但是在丧尸压到家门口的时候，这种低科技的武器体现出了很大的战术价值。<br>
+                攻击力：75<br>
+                射程：11<br>
+                攻击速度：慢<br>
+                特点：粉碎火炮和光棱坦克相比稍微强韧些，但是它的弹道容易受到地形或者围墙的阻碍，转向瞄准也慢半拍，可以说是各有优劣。低科技下不失为远程攻击的一种选择。
+            </p>
+            <p class="card">
+                <span class="colored big">军用推土机</span><br>
+                路过的工程车辆，除了可以用来拆毁各种建筑，还可以碾压丧尸。<br>
+                攻击力：很高（几乎秒杀）<br>
+                射程：近身/碾压<br>
+                特点：专业暴力拆迁……
+            </p>
+            <p class="card">
+                <span class="colored big">闪电链坦克</span><br>
+                这是沃尔科夫对苏军磁暴武器做的革命性改进，经过他改装的磁暴武器，电弧可以形成更多分裂，从而造成大面积破坏。<br>
+                攻击力：120<br>
+                射程：5<br>
+                攻击速度：慢<br>
+                特点：电流在目标之间传递，传递越远威力越大。适合近距离和丧尸缠斗。在树林中战斗时，由于电流大多击中树木，因此威力受限。
+            </p>
+            <p class="card">
+                <span class="colored big">喀秋莎</span><br>
+                这种二战中名声大噪的火箭炮在丧尸危机中被重新拉出来使用。作为一种大范围杀伤性武器，它往往能够在丧尸群中形成一片火海。<br>
+                攻击力：45x8<br>
+                射程：12<br>
+                攻击速度：快（刚开始）/慢（稳定时）<br>
+                特点：装满弹药后能打出猛烈的一波攻击，弹药打光以后攻击速度为较慢的装弹速度。适合打击突然一波集中的敌人，不适合持续输出。注意喀秋莎不能攻击离自己很近的敌人，这是操作难点之一。
+            </p>
+            <p class="card">
+                <span class="colored big">海撬</span><br>
+                虽然雷鸣潜艇有着无与伦比的性能，但是其高造价和较慢的航速让保护伞的海军有点吃不消，他们需要一种简单的快速突击舰艇。于是在拉恩的研发下，就有了这一款装备1具鱼雷发射管的轻型船舰。它们往往集群行动，像蜜蜂一样对盟军形成骚扰。<br>
+                攻击力：100<br>
+                射程：7<br>
+                攻击速度：慢<br>
+                特点：快速廉价，耐用好用，强力的海上骚扰、突击单位。
+            </p>
+            <p class="card">
+                <span class="colored big">卡维利号战列舰</span><br>
+                以卡维利将军的名字命名的战列舰，虽然是上个世纪海战思想的产物，但是代表强大毁灭力量的两门大口径主炮仍然让人不寒而栗。<br>
+                攻击力：150x2<br>
+                射程：15<br>
+                攻击速度：极慢<br>
+                杀伤半径：1.1<br>
+                特点：强大的海上大杀器，超远射程超高威力的重型轰炸舰。其实应该算是英雄单位了。
+            </p>
+            <p class="card">
+                <span class="colored big">莫洛托夫突击车</span><br>
+                装有莫洛托夫鸡尾酒的轻型突击车。虽然也是土法上马，但苏联人的勇敢无畏在面对丧尸时仍然能够表现的淋漓尽致。一旦命中目标，会形成燃烧区域，不分敌我的杀伤步兵。<br>
+                攻击力：80<br>
+                射程：6<br>
+                攻击速度：较慢<br>
+                杀伤半径：0.9<br>
+                特点：和镭射车处于同一科技位的轻型反步兵突击单位。虽然对单体目标的效果不如镭射车，也不能移动中攻击，但是形成燃烧后能造成有效的群体伤害。用于组建防线时请勿和步兵配合，否则容易大量的烧死自己人，请把步兵放到碉堡、步兵车或者战斗要塞中。
+            </p>
+        </section>
+        <section id="sec_tips">
+            <p>
+                丧尸领地<span class="box">通关提示</span>目录：
+            </p>
+            <p>
+                <ul>
+                    <li><a href="#sec_tips_1">丧尸领地第一章通关提示</a></li>
+                    <li><a href="#sec_tips_2">丧尸领地第二章通关提示</a></li>
+                    <li><a href="#sec_tips_3">丧尸领地第三章通关提示</a></li>
+                </ul>
+            </p>
+            <br>
+            <img class="img_big" src="./img/zlandrcity.jpg"/>
+            <br>
+            <div class="bar" id="sec_tips_1">
+                <h1>第一章：生化危机</h1>
+                <span class="hint">丧尸领地第一章各关的通关提示与彩蛋</span>
+            </div>
+            <h1>01-高速灾变</h1>
+            <p>
+                这是我自创的地图，设计大胆，改变了常有的构图方式。刻画了很多细节，例如高速的护栏、瘫痪的交通、塌方的路面、局部的照明、逼真的音效等。地图更接近真实的末世场景。
+            </p>
+            <p>
+               任务有难度分级，不管哪种难度开头都是很容易翻车的，所以一定要多存档，多存档，多存档！重要的事情说三遍。等卡洛斯升到三级能回血之后才能舒口气，但是困难模式依然可能翻车。
+            </p>
+            <p>
+               操作要点：多注意文本提示！按提示要求去做。乱闯乱撞、跑得太快是会被群殴的。遇到大量丧尸打不过时，可以利用海豹的走位逐个歼灭。优先打掉持枪的感染者。获得盖特吉普以后，除了清理路障以外就尽量不要下车了。
+            </p>
+ <p>
+              彩蛋： 出生点往回走，走到尽头，可以拿到升级宝箱。获得炸药后，车库那里会送宝箱。简单模式下，提速和加血，中等模式下只加血。获得IFV后，幸存者家对面的铁丝网里有一个升级宝箱。军方的沦陷基地内，有宝箱可以加攻击和加防弹衣，困难模式只送防弹衣。有一片隐藏的生化污染区域位于幸存者家西边的滑坡悬崖上。
+            </p>
+ <p>通关视频：<a target="_blank" href="http://www.bilibili.com/video/av28733881">http://www.bilibili.com/video/av28733881</a>，请关注B站UP主fhy093，获得更多通关视频。 </p>
+            <h1>02-矿区遇险</h1>
+            <p>
+               这张地图再一次改变了脑洞，活生生地在红警地图里刻画出了地下矿洞，也有一些惊喜和彩蛋。
+            </p>
+            <p>
+                矿洞具有以下特点：矿洞昏暗的环境下，人类的视力有所减弱。矿洞内无法使用雷达信号。在矿石上行走，会减慢移速。
+            </p>
+            <p>
+                大家玩了第一关是不是感觉卡洛斯就是一个普通的海豹呢？卡洛斯本来就是海豹特战队出身，属性上得到略微强化，和谭雅还差了一截。不过三星能回血的卡洛斯，还是可以应付丧尸群的。
+            </p>
+            <p>
+                开局还有军方协助你的两个美国大兵。他们并非一无是处，单凭卡洛斯是无法面对那么多丧尸的。但要注意，只要死一个军方人员就会任务失败的，务必多存档。
+            </p>
+            <p>
+                这关出现了数量可观的士兵感染者和矿工感染者，他们不仅拥有和丧尸一样的血量和护甲，还各自拥有M60和铁铲子作为武器，一定要小心啊。
+            </p>
+            <p>
+                进驻混凝土掩体可以抵挡屁股后面的丧尸。
+            </p>
+            <p>
+                不要招惹矿车，因为不小心惹到那些铁疙瘩是一定会很麻烦的，所以管好你的兵。
+            </p>
+            <p>
+                在矿洞最里面，可以找到军方失踪人员，三个重装大兵。离开矿洞后，用重装大兵清理掉沙袋，原路返回军队营地。
+            </p>
+            <p>
+               彩蛋：一开始的十字路往下走，消灭少量丧尸后可以拿到提速宝箱。遇到第一个混凝土掩体后，继续往西走，灭掉几个鳄鱼后，可以发现史前巨兽——暴龙和腕龙，附赠火力宝箱。矿洞深处入口外的油井处，有钱箱子，拿到需要智慧。矿区深处有水晶矿区，可以拿到数量不少的钱箱子，小心矿车就行。钱在本关没什么卵用，只为满足玩家的金钱欲。
+            </p>
+            <p>
+                通关视频：<a target="_blank" href="http://www.bilibili.com/video/av28741598">http://www.bilibili.com/video/av28741598</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <h1>03-无敌火炮</h1>
+            <p>
+                由于上一关在矿区获得了不少财富，所以这关玩家拥有许多金钱。但是在这个末世里，金钱真的有用吗？
+            </p>
+            <p>
+                这关玩家得到了一辆三星的强化粉碎火炮，炮弹的溅射伤害可以远程打击成群的丧尸，而且还能当作载具（载具功能暂时关闭，正式版推出）。缺点也明显，它有射程盲区，不适合近战。这关难度不大，主要是让玩家体验粉碎火炮的用法，因为在后面防守的关卡，它将大有作为。
+            </p>
+            <p>
+                困难难度，需要玩家多走A，打不过就跑，步坦结合才能发挥最大威力，详见通关视频。
+            </p>
+            <p>
+               彩蛋：开局营地指挥官和玩家对完话后，玩家只要操作一个步骤就可以得到营地里的所有作战单位。由于会降低可玩性，暂不公布方法。地图右下角的小岛上有加火力宝箱。离开小岛回到高速后，在附近可以找到一座混凝土掩体，那里有护甲宝箱，旁边还有油罐车，方便你炸开高速护栏。
+            </p>
+            <p>
+               通关视频：<a target="_blank" href="http://www.bilibili.com/video/av28773847">http://www.bilibili.com/video/av28773847</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <h1>04 - 危险警报</h1>
+            <p>
+                本关地图原型是mo3第一幕苏联第一关，为适应本关剧情做了大量修改。
+            </p>
+            <p>
+                刚开始玩家操控纽约61分队坚守火车站，3个海豹守火车站还是很轻松的，后期出去探险还大量送海豹。美国大兵可以进房子打怪练级。
+
+            </p>
+            <p>
+                任务目标一是要求61分队坚守火车站，这是军令。不要以为守火车站压力小就乱跑探地图，违抗命令是可能被军法处理掉的。
+            </p>
+            <p>
+                收到谭雅靠近纽约市区的信息时（有文本，也有欢呼声提示），立刻把部队调回火车站旁边的停车场。因为等谭雅抵达火车站后是禁止用户输入的，这时如果火车站不安全，谭雅是会被围殴致死的。
+
+            </p>
+            <p>
+               找到卫星基地前，你会先发现纽约守军62分队，用工程师修复桥梁，进入市区北部。这时建议玩家留一部分兵力协助62分队抵挡火车站涌来的尸群，不然后期解锁全图后压力会很大的。
+            </p>
+            <p>
+                随后直接杀到最东侧，获得东侧基地使用权。这时玩家就可以生产造兵了。要注意工程师只给3个，无法建造。是占领电厂、医院、维修商店，还是油井，请玩家自行分配，但必须留一个修桥用来联系卫星基地。与卫星基地取得联系后，就要求玩家修复电力。你可以工程师占领电厂，也可以用扳手自己修。但最简单的办法其实没那么麻烦，只需玩家略施小计即可，老司机懂的！
+            </p>
+            <p>
+                获得地图全图后，就会迎接大量丧尸涌入城市，且有巨型丧尸出没，非常危险。不要指望盟友，他们基本都会挂，感觉驱逐舰全程在打酱油（滑稽~）。需要使用重装大兵或坦克的重武器来对付，灰熊就那么三辆没血的，你还要自己修。这关是玩家第一次体验到丧尸全面爆发，后面的关卡都将持续这种状态。
+            </p>
+            <p>
+               彩蛋：靠近自由女神像，可以获得这里的一星美国大兵。一共三个金钱宝箱：火车站南部军队帐篷后面有一个宝箱；地图左下角，一块被水包围的三角形陆地有一个宝箱；自由女神像，东北方的水里有一个宝箱，只是难拿到比较费事。地图里一共有两个拖船，只要炸掉一个就可以给谭雅或海豹升一级。
+            </p>
+            <p>
+                通关视频：<a target="_blank" href="http://www.bilibili.com/video/av28819292">http://www.bilibili.com/video/av28819292</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <h1>05 - 丧尸围城</h1>
+            <p>
+               又一张经典地图，此图改编自原版红警2苏联第一关红色黎明、盟军第三关为长官欢呼以及盟军第六关自由，使用NEWURBAN地形重新绘制，还原程度接近99%，甚至连树木都是一模一样的，最后设计填补了官方地图其他空缺的部分。
+            </p>
+            <p>
+               典型的防守关卡，死守吧！这关所有丧尸的脚本只有一个：进攻五角大楼并攻击一切阻挡它的人类。而你的盟友非常不靠谱，只是象征性帮你挡挡丧尸。所以这关很容易使玩家焦头烂额。
+            </p>
+            <p>
+                这关资源不少，但是采矿非常费劲，容易被丧尸袭扰。想要稳定地获取资源，就应该占领并保护油井，然后在油井旁边建矿场。缺钱你还可以卖掉所有爱国者、两个电厂。
+            </p>
+            <p>
+                五角大楼只要缺一角，就会任务失败。如果五角大楼被攻陷，那么不好意思，美国就彻底失控了，您将是千古罪人，从此世界变为丧尸领地。
+            </p>
+            <p>
+                本关打法多样，美国大兵进房子，也可以出粉碎火炮或者出要塞装海豹重装，飞行兵也可以辅助防御，不过感觉攻击力好弱。不要试图炸桥，此图所有桥梁都被我加固了。
+            </p>
+            <p>
+                摧毁了传送装置，它就无法传送丧尸了。若能摧毁所有传送装置（共4座），可以提前胜利。但是难度比较大，因为传送装置有10000血。传送装置对重型坦克伤害比较低，可以用灰熊、战斗要塞等掩护海豹的方法炸掉。
+            </p>
+            <p>
+              彩蛋：修复华盛顿纪念碑、林肯纪念堂、杰斐逊纪念馆、史密索尼安城堡，都是可以获得钱箱子的。任意单位打爆任意一个红色电话亭，都可以获得5000经验值。
+            </p>
+            <p>
+               通关视频：请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <p>
+               <a target="_blank" href="https://www.bilibili.com/video/av29269049">https://www.bilibili.com/video/av29269049</a>（简单，摧毁传送装置）
+            </p>
+            <p>
+               <a target="_blank" href="https://www.bilibili.com/video/av30740587">https://www.bilibili.com/video/av30740587</a>（困难，纯防守）
+            </p>
+            <p>
+               <a target="_blank" href="https://www.bilibili.com/video/av38007997">https://www.bilibili.com/video/av38007997</a>（速通攻略，2分49秒）
+            </p>
+            <p>
+               <a target="_blank" href="https://www.bilibili.com/video/av34347706">https://www.bilibili.com/video/av34347706</a>（只造美国大兵）
+            </p>
+            <p>
+               <a target="_blank" href="https://www.bilibili.com/video/av35046151">https://www.bilibili.com/video/av35046151</a>（只造海豹部队）
+            </p>
+            <p>
+               <a target="_blank" href="https://www.bilibili.com/video/av34484279">https://www.bilibili.com/video/av34484279</a>（只造粉碎火炮）
+            </p>
+            <p>
+               <a target="_blank" href="https://www.bilibili.com/video/av35939250">https://www.bilibili.com/video/av35939250</a>（只造多功能步兵车）
+            </p>
+            <h1>06 - 地铁惊魂</h1>
+            <p>
+                作者原创地图，加入了史无前例的地铁脑洞。
+            </p>
+            <p>
+                这关出现了浣熊市特有的母体丧尸。浣熊市是美国丧尸发源地，这些母体丧尸拥有惊人的血量，对人类威胁很大。
+
+            </p>
+            <p>
+               本关难度大于以往的单兵任务，对微操走位要求很高。
+            </p>
+            <p>
+                步步小心，不无脑冲就可以轻松过简单模式。而中等和困难则比较容易翻车，一定要多存档。
+            </p>
+            <p>
+               谭雅往右走可以发现被卡洛斯遗弃的坦克，随后进入地铁站可以见到浣熊市最高指挥官——布莱克将军。
+            </p>
+            <p>
+               营救幸存者黑桃K是一个支线剧情，他可以帮助玩家很好的清理普通丧尸，注意黑桃K是不能死亡的。
+            </p>
+            <p>
+                找到卡洛斯后，一定要尽快逃离生化基地，因为三位英雄很难抵御保护伞防御机制。
+            </p>
+            <p>
+               彩蛋：地铁站台最深处（地图最左边）火车旁有一个护甲宝箱。遭遇5个巨型丧尸后，来到另一个火车旁有一个加血宝箱，宝箱比较明显。
+            </p>
+            <p>
+                通关视频：<a target="_blank" href="https://www.bilibili.com/video/av30375900">https://www.bilibili.com/video/av30375900</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <h1>07-丧尸之城</h1>
+            <p>
+                这是我自创的地图，做任务的主要精力都花费在这个地图上，地面部分延续了第六关的地图。
+            </p>
+            <p>
+                刚开始以防守为主，这关不卡金钱，基地旁边就是矿，地图里也有很多油井，想要富足就要多造矿车和占油井。
+
+            </p>
+            <p>
+               这关有生化塔、酸液塔，都是硬骨头，射程很远，前者可以感染步兵单位，后者直接秒掉步兵且对坦克伤害也很高。当然他们也有弱点，光棱坦克和火箭飞行兵就是他们的克星。
+            </p>
+            <p>
+                这关还有飞龙怪，原型是星际争霸里的飞龙，属于飞行丧尸单位，玩家需要做好防空。
+            </p>
+            <p>
+             彩蛋：进入基地旁边的科技前哨站可以获得超时空突击队。靠近浣熊市郊区（地图西南角，第6关谭雅出生地），可以获得援军。
+            </p>
+            <p>
+               通关视频：<a target="_blank" href="https://www.bilibili.com/video/av31476356">https://www.bilibili.com/video/av31476356</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <p>
+                速通视频：<a target="_blank" href="https://www.bilibili.com/video/av37038620">https://www.bilibili.com/video/av37038620</a>，07丧失之地-速通攻略19分59秒
+            </p>
+            <h1>08-灭犬行动</h1>
+            <p>
+                本关地图改编自原版红警2苏联12关北极风暴，补充了地图南部。
+            </p>
+            <p>
+                开局三个英雄单位分散开防守基地周围，随后小兵进战斗碉堡加强防御。
+            </p>
+            <p>
+               建议不要着急造雷达，先把苏联基地发展好。
+            </p>
+            <p>
+                防守稳固，资源充足后再造雷达。随后玩家可以获得盟军基地车协助保护领导人。注意做好防空就行，盟军基地还是比较好守的。
+            </p>
+            <p>
+              两边的基地都发展起来后，就开始造海军，打好登陆战。到达对岸后，不要忽视防空，然后使用光棱推掉基地就可以了，传送装置不好打，建议派个矿车前顶抗伤害。
+            </p>
+            <p>
+              摧毁了超时空传送仪，敌人就会停止传送丧尸。这时，玩家也离胜利不远了。摧毁保护伞的全部建筑就可以过关了。
+            </p>
+            <p>
+            彩蛋：苏联基地下方坠机地点有三个飞机失事后幸存的工程师和一个火力宝箱。油井和飞机场旁边都各有一个钱箱子。
+            </p>
+            <p>
+              通关视频：<a target="_blank" href="https://www.bilibili.com/video/av31722136">https://www.bilibili.com/video/av31722136</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <h1>09-海底世界</h1>
+            <p>
+               红警海底模式的初创者可能是鹰肉丸子，他制作的《颤抖的最后珊瑚》任务深深启发了我对于在红警里加入海底世界的想法。现在《丧尸领地》海底的新脑洞绝对让你眼前一亮，效果全面超越前人鹰肉丸子。
+            </p>
+            <p>
+                能打到第九关的玩家相信实力已经无需看攻略就能应付此关了。基本思路就是利用镭射兵在地面的射程优势，可以摧毁心灵信标周围的建筑，或者一堆遥控坦克直推心灵信标。获得苏联科技以后，无限出潜艇优先断敌人电，然后给潜艇练级，最后三星潜艇直推传送装置群。
+            </p>
+            <p>
+                这里着重讲讲海底世界，新规则与以往的红警规则大有不同。
+            </p>
+            <p>
+              海底世界如何实现的？沙漠地形的灯光被调为蓝色，声音加入了海底气泡和洋流的声音，潜艇、海豚、乌贼等被改为了空中单位，海豹改为飞行单位并只使用潜水序列帧，所有建筑单位被取消了建筑残血冒火冒烟的特效，奴隶矿场被改为海底采矿机。
+            </p>
+            <p>
+             新增建筑：
+            </p>
+            <p>
+             深海采矿机：奴隶矿场的改版，采矿者改为深海采矿员，矿车被毁后，获得的采矿员可以发射镭射光束。
+            </p>
+            <p>
+             追踪爱国者飞弹：盟军爱国者飞弹的改进版，可以360度无死角攻击任何单位。
+            </p>
+            <p>
+            新增单位：
+            </p>
+            <p>
+             深海突击队：是海豹部队潜水时的状态，由于海水的阻力远大于空气，即使是改进的深海MP5冲锋枪，子弹威力依然减弱不少。
+            </p>
+            <p>
+             深海镭射兵：穿着抗压潜水服的重甲单位，各方面属性非常均衡。
+            </p>
+            <p>
+             两种潜艇：飓风级攻击潜艇和雷鸣攻击潜艇，新改进的鱼雷具备了追踪功能，外壳装甲采用新型吸声材料，免疫海豚攻击。
+            </p>
+            <p>
+             海豚：海豚发出的超声波只能攻击地面部队，对潜艇、飞行单位无可奈何，比较鸡肋，适合探路。
+            </p>
+            <p>
+             咸水鳄与乌贼：很遗憾，深达4000米的深海环境下，这两种生物无法施展拳脚，不过它们的造价低廉，视野极为开阔，用于探路绝对是你的最佳选择。
+            </p>
+            <p>
+             海底幽魂：这只是人类出于对她们的恐惧而如此称呼的，事实上他们的生物学名称是深海丧尸，她们天生会游泳！
+            </p>
+            <p>
+             通关视频：<a target="_blank" href="https://www.bilibili.com/video/av32066425">https://www.bilibili.com/video/av32066425</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <h1>10-穿越时空</h1>
+            <p>
+                新增丧尸单位：坦克丧尸，改编自求生之路，血量和移速均优于巨型丧尸，力量与恐怖的化身。
+            </p>
+            <p>
+                任务目标一比较好实现，谭雅负责C4掉坦克丧尸，黑桃K负责解决楼房驻兵和盖特机炮。
+            </p>
+            <p>
+               难在后面的任务目标，丧尸狂潮让你措手不及。现在发布的版本已经降低了不少难度，守基地出一些粉碎火炮和海豹就差不多了，后期再出一些重装和火箭兵巩固防御。
+            </p>
+            <p>
+                占发电厂之前一定要先把部队拉过去，就像保护基地一样保护发电厂。尤其是电力供应充足时间机器充能后，只要电力不足，时间机器就会自毁任务失败。
+            </p>
+            <p>
+              时间机器充能的最后五分钟是丧尸进攻最猛烈的阶段，一定要保护好发电厂！防止缺电的办法还可以卖掉自家的一些耗电器。
+            </p>
+            <p>
+             彩蛋：命令任意舰船从金门大桥的断桥穿过，可以得到卡维利指挥舰支援。但必须是摧毁心灵信标后才会生效。
+            </p>
+            <p>
+             通关视频：<a target="_blank" href="https://www.bilibili.com/video/av32596465">https://www.bilibili.com/video/av32596465</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <br>
+            <div class="bar" id="sec_tips_2">
+                <h1>第二章：病毒起源</h1>
+                <span class="hint">丧尸领地第二章各关的通关提示与彩蛋</span>
+            </div>
+            <h1>11-古墓探险</h1>
+            <p>
+                本关地图改编自《尤里的复仇》盟军第四关古墓奇袭，金字塔内部的地图是我手绘原创。
+            </p>
+            <p>
+                本关难度适中，解救埃及军方简直就是送分题。本关难点在于如何进入金字塔，直接攻是不可能的，谭雅和鲍里斯都无法越过围墙，但是请不要忘了我们的攻城狮！
+            </p>
+            <p>
+               获得鲍里斯后直接带着工程师占领东边的保护伞小基地，可以获得兵营和油井。然后再拿下东北方向的保护伞基地，一定要占领敌人的战车工厂，没有坦克你是无法攻入金字塔的。
+            </p>
+            <p>
+                不要想着占领埃及军方基地或者炸掉兵营，这些都是设定禁止的，但是保护伞的基地随意。
+            </p>
+            <p>
+              进入金字塔后所遇到的基本都是生化步兵和少量木乃伊，都是属于送人头的敌人。主要是想让玩家走走剧情，了解一下生化病毒的起源。
+            </p>
+            <p>
+              最后在金字塔顶部，玩家遇到保护伞公司量产木乃伊，这时立即乘坐运输船顺着通向尼罗河的地下暗河离开金字塔即可完成本关。
+            </p>
+            <p>
+            彩蛋：刚进入金字塔内部时，在悬崖上有个隐藏入口，上面有敌人的防御，上去需要技巧。进去后可以发现刷木乃伊的坟墓。
+            </p>
+            <p>
+              通关视频：<a target="_blank" href="https://www.bilibili.com/video/av33511386">https://www.bilibili.com/video/av33511386</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <h1>12-失控实验（原“病毒天才”关卡已并入到此关）</h1>
+            <p>
+                本关地图改编自Yugram（郁）的《苏维埃格勒》。
+            </p>
+            <p>
+                本关是剧情关，与市长见面前的任务目标难度都不大，绝大多数都是镜头，意在让玩家了解病毒的起源，了解这场灾变的根本原因。
+
+            </p>
+            <p>
+               简单中等模式与困难模式有差异，表现在拒马能不能炸掉，困难模式，谭雅只能走水路去乌克兰政府。
+            </p>
+            <p>
+                随后任务是营救教授，路上要小心成群的丧尸。
+            </p>
+            <p>
+               进入实验室后，听到实验室警报后要立即寻找门禁卡以便打开会议室。只有会议室的两扇门丧尸是无法通过的，找准刷丧尸的空当，然后离开。
+            </p>
+            <p>
+                去机场没什么难度，多走A就行了。
+            </p>
+            <p>
+            彩蛋：切尔诺贝利核电厂左边的水里有提速宝箱。教授旁边有护甲宝箱。实验室西南角有火力宝箱。
+            </p>
+            <p>
+               通关视频·上：<a target="_blank" href="https://www.bilibili.com/video/av35249685">https://www.bilibili.com/video/av35249685</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <p>
+              通关视频·下：<a target="_blank" href="https://www.bilibili.com/video/av35926915">https://www.bilibili.com/video/av35926915</a>，请关注B站UP主fhy093，获得更多通关视频。    
+            </p>
+            <h1>13-核平世界</h1>
+            <p>
+                本关地图改编自Yugram（郁）的《苏维埃格勒》。
+            </p>
+            <p>
+                谭雅在去往市中心的路上会遇到一个被丧尸围困的金发女警，解救之后谭雅可以得到警车，这个警车简直就是低配版战斗要塞，乘坐警车一路杀到市中心。
+            </p>
+            <p>
+               进入市中心就会获得全市警察的指挥权，这时，把外围的警察调到市民周围，保护市民，离港口近的市民会优先被撤离，平民被撤离后就可以转点保护其他平民了。
+            </p>
+            <p>
+                撤离完平民就开始撤离防暴警察和狙击特警了，同时丧尸的攻击也加强了，这将给玩家带来困难。解决办法自然是抱团在警察局。
+            </p>
+            <p>
+              当鲍里斯赶到后，就可以考虑放弃警察局，撤离到港口附近了。
+            </p>
+            <p>
+              注意！当4艘运输船赶到后，谭雅和鲍里斯是直接被电脑控制进直升机的，一定要保护他们。而其他所有人员则必须在3分钟内都放进运输船里。如果没有都撤进运输船，对此造成的后果由玩家承担。随后就是走剧情了。
+            </p>
+            <p>
+            彩蛋：最开始解救的那个技师可不是按摩的技师，不过他也提供“特殊服务”，他是保护伞公司派来的伪装平民（第14关可知他其实是拉恩），任务是劫持教授。
+            </p>
+            <p>
+              通关视频：<a target="_blank" href="https://www.bilibili.com/video/av38413470">https://www.bilibili.com/video/av38413470</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <h1>14-玛雅遗迹</h1>
+            <p>
+                本关地图由Yugram（郁）帮忙绘制，特别感谢！而为了适应剧情，我做了10%的地形改动。
+            </p>
+            <p>
+                提示：
+            </p>
+            <p>
+               1.一支迷路的被困小队就在地图右上角，他们当中有工程师；
+            </p>
+            <p>
+                2.用工程师修桥并过桥后会下小雨，然后迷雾就会散去；
+            </p>
+            <p>
+              3.小心病毒狙击手和寄生虫；
+            </p>
+            <p>
+             4.对付巨型蚂蚁的办法就是谭雅勾引，然后谭雅进水里；
+            </p>
+            <p>
+              5.找到印第安人后，雨就会停；
+            </p>
+            <p>
+              6.敌人不会攻击部落的马，所以可以探路，那些印第安人则可以用来当炮灰；
+            </p>
+            <p>
+              7.一共有真假两个玛雅神殿，打死假神殿旁的狂兽人会召唤盖特狂兽人打你；
+            </p>
+            <p>
+              8.去真神殿的必经之路上会有玛雅金字塔，极度危险，派工程师占领敌人基地，出飞碟断电，再打掉金字塔。
+            </p>
+            <p>
+              通关视频：<a target="_blank" href="https://www.bilibili.com/video/av56747599">https://www.bilibili.com/video/av56747599</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <h1>15-浣熊危机</h1>
+            <p>
+                这是我自创的地图，在第7关浣熊市地图基础上扩充了北部区域。本关是反派任务，玩家可以充分体验操纵保护伞的乐趣。同时，本关也交代了黑桃K和五个猴子的身世之谜。
+            </p>
+            <p>
+                这关很考验操作，难度还是比较大的。这里给些通关提示：
+            </p>
+            <p>
+                1.靠近浣熊市警察局，可以获得伪装成浣熊市警察的伪装部队，并可获得地图外的丧尸支援。
+            </p>
+            <p>
+                2.摧毁敌人的基地、兵营、和战车工厂后，敌人会卖掉所有建筑与你背水一战。好处是你不用再满世界摧毁那些没用的建筑了。缺点是如果清理太早，敌人的数量可能会让你咋舌！
+            </p>
+            <p>
+                3.敌人破釜沉舟的时候当心敌人的狙击车和航母。
+            </p>
+            <p>
+                彩蛋：摧毁浣熊市北部港口的兵营可以拿到一堆加成箱子。
+            </p>
+            <p>
+              通关视频：<a target="_blank" href="https://www.bilibili.com/video/av89099070">https://www.bilibili.com/video/av56747599</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <h1>16-病毒克星</h1>
+            <p>
+                这是我自创的地图，在浣熊市地图基础上扩充了地下实验室二层区域。
+            </p>
+            <p>
+刷僵尸很爽的一关，按流程打就行了。过桥的时候要小心，别掉水里。实验室的水是受了污染的，人下去会死。实验室的激光门是无敌的，只有打掉能量装置以后才能通过。
+            </p>
+            <p>
+                彩蛋：实验室的三个谭雅复制人是可以解救的，不过这需要另一个彩蛋来启动，多注意鲍里斯的暗示。
+            </p>
+            <p>
+              通关视频：<a target="_blank" href="https://www.bilibili.com/video/BV18D4y1Q7tc">https://www.bilibili.com/video/BV18D4y1Q7tc</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+
+            <h1>17-传送风暴</h1>
+            <p>
+                本关地图改编自原版苏联第十一关红色革命和原版盟军第12关超时空风暴，将两张图合并为一张图，并把SNOW地形修改为NEWURBAN地形，算得上是红色革命的加强版。
+            </p>
+            <p>
+                本关玩家最多会面对敌人铁幕、核弹、突变、心控、传送共5个超级武器，但它们并不是同时建造的。越往后越难，可见玩家如果想使用拖延战术是肯定行不通的。以下为推荐打法：
+            <p>
+                常规打法：造核弹并做好防空，因为敌人会派6个基洛夫打你。然后用核弹摧毁克林姆林宫旁的心灵信标可以解救那里的精英守卫部队，可以帮你直接打掉铁幕、核弹和下面的心控，突变可以用基洛夫解决，美军的援军船队会在丧尸传送启动一刻钟后抵达，摧毁最北部的传送应该不是问题。解决超级武器后，剩下的就很好打了。本关做了优化，告别清理全图的烦恼：本关共有保护伞、苏联前线和苏联主力三方敌人，只要摧毁某一方敌人的建造场、兵营、车厂、超级武器后，该方敌人就会变卖全部建筑和你决一死战，清理掉所有敌人后就完成任务了。
+            </p>
+            <p>
+                非常规打法：造够一定数量的基洛夫和武直后，直接卖掉所有建筑，没错，就是卖掉所有建筑，敌人就基本不会再进攻了。先编号做好分工，基洛夫负责吸引火力及打掉小型传送装置，武直负责协助解决飞碟、天启及拆建筑。然后从右下角向北绕，可以解决第一个苏联基地。贴着东边炸核电东北部的核电，炸完再贴着北边炸掉西北角的核电，此时保护伞一方的敌人会断电，顺带解决丧尸传送和基地。再贴西边解决苏联的两座核电，苏联主力会断电，然后清理苏联和保护伞基地的生产建筑。此时敌人会卖掉所有建筑，剩下的就好打了，清理残敌后过关。
+            </p>
+            <p>
+                彩蛋：和原版苏联第十一关红色革命的彩蛋一样，就那几个箱子。
+            </p>
+            <p>
+              通关视频：<a target="_blank" href="https://www.bilibili.com/video/BV1A54y1m7vG/">https://www.bilibili.com/video/BV1A54y1m7vG/</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <h1>18-绝对防御</h1>
+            <p>
+                顾名思义，防守关卡。本关有很多特色，受地球重力影响的登月火箭员、可以移动部署的战斗碉堡、自主选择的无尽模式、首创的声光警报系统。
+            </p>
+            <p>
+                比较难的防守关卡，海豹、重装、装逼车、榴弹炮、要塞、光棱都是你不错的选择。刚开始不用造重装，援军送的基本就够了，后期才会出现大型丧尸，这时光棱溅射才是王道，有钱就造装逼车用海豹或狙击手练级。月球兵探图后站在高地或水面上防守，注意只能造20个。虽然地图矿产丰富，但是面对尸群矿车也只能偷摸采矿，要保护好矿车。在此感谢作者开局送你们的油井吧。
+            </p>
+                彩蛋：基地左边有一个废弃矿厂，基地下面有一个油井，基地东北有两辆幻影坦克。
+            </p>
+            <p>
+              通关视频：<a target="_blank" href="https://www.bilibili.com/video/BV1DK411P758/">https://www.bilibili.com/video/BV1DK411P758/</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <h1>19-陨坑追击</h1>
+            <p>
+                本关地图改编自《尤里的复仇》苏联第6关，我又扩充了一部分，首次应用到了太空地形，完爆官方地图。
+            </p>
+            <p>
+                这关很难，此图就是给那些喜欢挑战的玩家准备的。获得苏联基地和防守都是难点。
+            </p>
+            <p>
+               提示：
+            </p>
+            <p>
+               1.开局只有那么几个月球兵，不要磨叽，不然敌人的防空会教你做人。
+            </p>
+            <p>
+              2.最开始敌人的仇恨是登月火箭船，利用好这段时间，绕路到苏联基地上面，直接强攻心灵信标，大概率获得苏联基地。
+            </p>
+            <p>
+              3.尽可能多造月球兵，不论什么难度，敌人的进攻都非常猛烈！
+            </p>
+            <p>
+              通关视频：<a target="_blank" href="https://www.bilibili.com/video/av48204400">https://www.bilibili.com/video/av48204400</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <h1>20-太空决战</h1>
+            <p>
+                本关地图作者原创，应用到了太空地形，完爆官方地图。地图后期很大，你会面对敌人三个超武。
+            </p>
+            <p>
+              守超时空传送仪就一个要点，多造防空。启动后，火箭兵探路找到空间站上方的机器维修商店，利用超时空把任意机甲传送过去清理炮台，再用工程师占领，顺便占领左右两个油井，建个矿厂解决资金问题。机甲血厚防心控，利用超时空传送机甲可以轻松清理敌人的超级武器。摧毁敌人的建造厂、兵营、战车工厂和超武后，敌人会开始变卖建筑，并召唤出BOSS与你决战，采用游击战术消灭最后顽抗的敌人。
+            </p>
+            <p>
+              通关视频：<a target="_blank" href="https://space.bilibili.com/95196453">https://space.bilibili.com/95196453</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <br>
+            <div class="bar" id="sec_tips_3">
+                <h1>第三章：额外任务</h1>
+                <span class="hint">丧尸领地第三章各关的通关提示与彩蛋</span>
+            </div>
+            <h1>爆破模式：地下研究所</h1>
+            <p>
+                本任务改编自穿越火线地图地下研究所。作者是个CF迷。
+            </p>
+            <p>
+                比较变态的任务，不吃宝箱你会很难过。一定要利用好高处有利地形。
+            </p>
+            <p>
+               彩蛋：A区二楼有护甲宝箱和炸弹箱，别拿错；B区有火力宝箱，建议一开局就去B区先拿；C区入口对面有堆箱子，打爆可以获得移速宝箱；出生点向上走到尽头，可以发现正在厕所拉屎的病毒研究员，旁边有加血宝箱。打掉病毒研究员旁边的广告牌可以获得升级宝箱。打掉警报广播塔可以关闭烦人的警报声。
+             <p>
+              通关视频：<a target="_blank" href="https://www.bilibili.com/video/av48206995">https://www.bilibili.com/video/av48206995</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <h1>挑战模式：巨人城废墟</h1>
+            <p>
+                本任务改编自穿越火线挑战模式地图巨人城废墟。作者是个CF迷。
+            </p>
+            <p>
+                本任务和穿越火线巨人城废墟出怪点一致，怪物属性也基本一致。多利用高处有利地形，本任务很讲究操作。
+            </p>
+            <p>
+               彩蛋：每个角色死后，简单模式可以复活2次，中等模式可以复活1次，困难模式无法复活。ROUND10简单模式结束送升级宝箱。ROUND19结束奖励护甲宝箱。ROUND25结束奖励移速和升级宝箱。ROUND25结束获得火神加特林使用权。ROUND29结束奖励火力宝箱。最顶层有一个魔法阵(CF里是风机)可以把玩家送到高速隧道口附近。
+            </p>
+            <p>
+              通关视频：<a target="_blank" href="https://www.bilibili.com/video/av48876705">https://www.bilibili.com/video/av48876705</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <h1>孤胆枪手 - 动员兵的逆袭</h1>
+            <p>
+                呕心沥血，年度大作《孤胆枪手1》（1-5关）。本任务基于红警2mod《丧尸领地》，孤胆枪手地形和地图皆为fhy093独家原创，还原了孤胆枪手80%的元素。
+            </p>
+            <p>
+                不要再玩假红警啦！真红警开局动员兵，装备全靠捡！
+            </p>
+            <p>
+              彩蛋：靠近出生点旁的迷彩越野车可以获得M60重机枪。进实验室后可以拾取医疗箱和AWP狙击枪/榴弹枪/高能磁暴枪/加强版AKM各种武器。全程禁止升级...
+            </p>
+            <p>
+              通关视频：<a target="_blank" href="https://www.bilibili.com/video/av52390237">https://www.bilibili.com/video/av52390237</a>，请关注B站UP主fhy093，获得更多通关视频。
+            </p>
+            <h1>孤胆枪手 - 第五号试验品</h1>
+            <p>
+                呕心沥血，年度大作《孤胆枪手1》（6-10关）。本任务基于红警2mod《丧尸领地》，孤胆枪手地形和地图皆为fhy093独家原创，还原了孤胆枪手80%的元素。
+            </p>
+            <p>
+                不要再玩假红警啦！真红警开局动员兵，装备全靠捡！
+            </p>
+        </section>
+        <section id="sec_problem">
+<div class="code">丧尸领地2021年4月7日更新：
+修复WIN XP、WIN 10系统进游戏弹框。
+新关卡20-太空决战（测试）。
+
+更新后未修复的问题：
+1.巨人城废墟关卡只有首次进入才不会弹框，否则会弹框。
+2.偶然的未知弹框。
+
+
+</div>
+            <p>
+                下面是已知问题的问答环节。如果无法正常进行游戏或者疑似任务bug的内容，可以尝试在这里寻找答案。虽然作者已经尽力去测试了，但还有一部分作者也无法解决的已知bug，希望大家谅解！
+            </p>
+            <p>在遇到疑似bug的问题时，请先仔细思考：<span class="colored">是否使用修改器？</span>无法保证在修改器的干扰下游戏流程不会改变<strong>尤其是清除黑幕</strong>，会极大地干扰游戏的运行。
+                </ul>
+            </p>
+
+            <p>
+            <br>
+            <div class="bar">
+                <h1>问：我方单位不主动打敌人的飞龙或深海镭射兵？</h1>
+            </div>
+            <p>
+                答：INI代码部分我已经检查了无数次，应该是游戏平台本身的bug。框选我方单位后，按“G”键可以解决问题。
+            </p>
+            <p>
+            <br>
+            <div class="bar">
+                <h1>问：第03关-无敌火炮和第04关-危险警报为什么会被友军基地的人打？</h1>
+            </div>
+            <p>
+                答：确保没有开修改器，尤其是不要开清除黑幕。重新开始任务，按剧情提示从正门进入友军基地。
+            </p>
+            <p>
+            <br>
+            <div class="bar">
+                <h1>问：丧尸在某个地方屯兵却不攻击？</h1>
+            </div>
+            <p>
+                答：应该是游戏平台本身的bug，我怀疑是ares平台的漏洞。之前YR平台也有这种情况，但是很少见。目前已经通过全部搜索的触发解决了绝大部分关卡的这一情况。
+            </p>
+            <p>
+            <br>
+            <div class="bar">
+                <h1>问：个别关卡突然变得卡顿？</h1>
+            </div>
+            <p>
+                答：主要的原因是单位突然变多或者地图太大，也可能是动画特效太多（如下雨特效）。第14关的卡顿主要来自战争迷雾的刷新，下雨冲散迷雾后就会好很多。
+            </p>
+        </section>
+        <section id="sec_about">
+ <p>
+                丧尸领地<span class="box">关于</span>目录：
+            </p>
+            <p>
+                <ul>
+                    <li><a href="#sec_about_1">游戏更新</a></li>
+                    <li><a href="#sec_about_2">联系作者</a></li>
+                    <li><a href="#sec_about_3">特别鸣谢</a></li>
+                </ul>
+            </p>
+            <br>
+            <div class="bar" id="sec_about_1">
+                <h1>游戏更新</h1>
+                <span class="hint">选择下面的一种更新方式，然后点击前往</span>
+            </div>
+            <p>
+                1.加丧尸领地粉丝QQ群<a target="_blank" href="https://shang.qq.com/wpa/qunwpa?idkey=e47dac4d2827af44af560b60cd56bc651c826a39295a49bdb4a92058e5a19e3d">825398333</a>（QQ群文件）。
+            </p>
+            <p>
+                2.前往作者个人主页<a target="_blank" href="http://fhy093.ys168.com">fhy093.ys168.com</a>（百度网盘）。
+            </p>
+            <br>
+            <div class="bar" id="sec_about_2">
+                <h1>联系作者</h1>
+                <span class="hint">与游戏作者取得联系</span>
+            </div>
+            <p>
+               作者<span class="colored">丰采(B站ID：fhy093)</span>
+            </p>
+            <p>可以加fhy093红警交流群：<a target="_blank" href="https://shang.qq.com/wpa/qunwpa?idkey=e47dac4d2827af44af560b60cd56bc651c826a39295a49bdb4a92058e5a19e3d">825398333</a>，群主就是作者。
+            </p>
+            <p>
+                作者是B站的一名红警UP主<span class="colored">fhy093</span>。作者也在<a target="_blank" href="https://space.bilibili.com/95196453">B站</a>里投稿红警视频。喜爱红警视频的朋友也可以关注一下<a target="_blank" href="https://space.bilibili.com/95196453/video">fhy093的哔哩哔哩投稿</a>。
+            </p>
+            <br>
+            <div class="bar" id="sec_about_3">
+                <h1>特别鸣谢</h1>
+                <span class="hint">参与游戏制作的人员</span>
+            </div>
+<center style="font-size: 1.5em;">《丧尸领地》主要由作者<span class="colored">丰采</span>制作完成，但离不开以下这些朋友的帮助：</center>
+            <ul>
+                <p class="card">
+                <span class="colored">竹蜻蜓</span><br>
+                任务制作指导；基础Rules、Art<br>
+            </p>
+                <p class="card">
+                <span class="colored">戴子玲</span><br>
+                地形制作指导；两个感染者、帝国时代素材提供者<br>
+            </p>
+                <p class="card">
+                <span class="colored">郁</span><br>
+                任务地图编辑；任务第12-14关地图的绘制部分<br>
+            </p>
+                <p class="card">
+                <span class="colored">艾木魁</span><br>
+                教程理论支持；下雨特效、飞龙和巨型丧尸素材提供者<br>
+            </p>
+                <p class="card">
+                <span class="colored">Repeater_c</span><br>
+                丧尸空爆武器应用及孤胆枪手武器切换的理论指导<br>
+            </p>
+                <p class="card">
+                <span class="colored">脱脂脱</span><br>
+                ini、任务指导；公共素材提供者<br>
+            </p>
+                <p class="card">
+                <span class="colored">三国樊哙</span><br>
+                Urban地形，感染者2、丧尸犬、母体丧尸、盖特JEEP、盖特狂兽人、平民建筑等素材<br>
+            </p>
+                <p class="card">
+                <span class="colored">d7y7657</span><br>
+                坦克丧尸素材<br>
+            </p>
+            <p>
+                <center style="font-size: 1.5em;">感谢这些朋友在游戏制作过程中给予的无私帮助！</center>
+            </p>
+            <br>
+            <p>
+                <center style="font-size: 1.5em;">最后，向《丧尸领地》的<span class="colored">粉丝们</span>致以崇高的敬意！你们是我更新的动力！</center>
+            </p>
+ </section>
+        <section id="sec_qt">
+                    <p><strong><center style="font-size: 2.2em;">歧途<span class="box">任务说明</span>总目录</strong></p>
+                    <li><a href="#sec_qt_1">一、歧途任务简报</a></li>
+                    <li><a href="#sec_qt_2">二、歧途单位档案</a></li>
+                    <li><a href="#sec_qt_3">三、歧途通关提示</a></center></li>
+            <br>
+            <div class="bar" id="sec_qt_1">
+                <h1><strong>一、歧途任务简报</h1></strong>
+            </div>
+            <p>
+                <ul>
+                    <li><a href="#sec_qtbrief_1">歧途第一季的任务简报</a></li>
+                    <li><a href="#sec_qtbrief_2">歧途第二季的任务简报</a></li>
+                    <li><a href="#sec_qtbrief_3">歧途第三季的任务简报</a></li>
+                    <li><a href="#sec_qtbrief_4">歧途第四季的任务简报（剧透）</a></li>
+                </ul>
+            </p>
+            <br>
+            <div class="bar" id="sec_qtbrief_1">
+                <h1>第一季：生化实验平台</h1>
+                <span class="hint">歧途第一季的任务简报</span>
+            </div>
+            <h1>01-生化实验平台</h1>
+            <p>地点：美国，浣熊市，生化实验平台</p>
+            <img class="img_big" src="./img/qt01.jpg"/>
+            <p>浣熊市的丧尸已经无法控制！所有飞机一旦起飞就会被不明力量击落。美国军方不得不完全封锁整个浣熊市，尽管一些探员和许多平民仍困在那里。丧尸已经不可避免的冲入生化实验平台......谭雅和鲍里斯已经赶往生化实验平台。他们能否控制局势？这仍是一个悬念。此时布莱克上尉正被困在生化实验平台中心。与外界的通讯完全中断。他会做出怎样的选择？我们还是先会一会布莱克吧。</p>
+            <p>任务目标一：进入生化实验平台的核心区域。</p>
+            <p>任务目标二：与这里的长官对话，接受下一步任务。</p>
+            <h1>02-丧尸城市</h1>
+            <p>地点：美国，浣熊市，市区</p>
+            <img class="img_big" src="./img/qt02.jpg"/>
+            <p>听从布莱克的指挥，谭雅和鲍里斯冒险进入浣熊市营救其中的幸存者并对生化实验设施进行爆破。布莱克相信这样就能中断丧尸的来源。可是这次危机是普普通通的病毒泄露导致的吗？不排除有幕后黑手的可能？这一切尚未定论，只有在冒险中寻找答案了。</p>
+            <p>任务目标一：搜索整个浣熊市，寻找幸存者，并摧毁每一座生化实验设施。</p>
+            <p>任务目标二：搜索浣熊市的北部。</p>
+            <h1>03-向下，再向下</h1>
+            <p>地点：美国，浣熊市，地下试验区域 / 美国，浣熊市，峡谷要塞</p>
+            <img class="img_big" src="./img/qt03.jpg"/>
+            <p>谭雅、鲍里斯和瑞德进入了浣熊市北部的竖井。竖井里隐藏着什么？我们不得而知。或许又是一个圈套。与此同时，在生化实验平台中苦苦支撑的布莱克也有些力不从心了。在大批丧尸的威胁下，他决定全体撤离这个地方。接下来该怎么办？只有凭勇气，才能战胜这一切！</p>
+            <p>任务目标一：搜索浣熊市地下试验区域。</p>
+            <p>任务目标二：打通通往地面的道路。</p>
+            <h1>04-塞博格计划</h1>
+            <p>地点：美国，浣熊市，峡谷要塞</p>
+            <img class="img_big" src="./img/qt04.jpg"/>
+            <p>峡谷要塞虽然有苏军部队帮忙把守，但是这里并不是绝对安全……苏军部队研发出了一种对付丧尸的新武器，但这种武器的应用需要先把瑞德改装成半机械人（Cyborg）。丧尸已经包围了峡谷要塞。希望武器的研究能成功吗？这仍是一个疑问……</p>
+            <p>任务目标一：死守峡谷要塞实验室。</p>
+            <p>任务目标二：消灭残余的丧尸部队。</p>
+            <h1>05-金门的卫兵</h1>
+            <p>地点：美国，加州，旧金山</p>
+            <img class="img_big" src="./img/qt05.jpg"/>
+            <p>丧尸还在蔓延，已经彻底失去了控制。虽然人类一方有新式武器的加入，但仍难以扭转局势，可是还有最后一种方法——时间机器！它还在旧金山！按照原定计划，谭雅和布莱克已经先赶到了旧金山，鲍里斯和布莱克随后赶往。时间机器能正常启动吗？改变过去真的能扭转败局吗？这要等接下来的战役才能告诉我们……</p>
+            <p>任务目标一：为时间机器收集到充足的电力。</p>
+            <p>任务目标二：保证电力供应，直到时间机器充能完毕。</p>
+            <div class="bar" id="sec_qtbrief_2">
+                <h1>第二季：时间穿梭者</h1>
+                <span class="hint">歧途第二季的任务简报</span>
+            </div>
+            <h1>06-时间穿梭者</h1>
+            <p>地点：美国，加州，旧金山</p>
+            <img class="img_big" src="./img/qt06.jpg"/>
+            <p>瑞德回到了过去的旧金山。在这个时间点上，尤里在魔鬼岛的心灵控制器还正在部署，苏联还在试图进攻旧金山北部与南部，三股势力在这个海滨城市混战。根据历史资料，丧尸病毒的第一个感染者，我们称其为“零号病人”，就在旧金山北部的医院里接受治疗，然而这座医院目前掌握在尤里手中。如果我们能在混战中抢出零号病人，对于丧尸病毒的研究一定很有帮助。这便是布莱克给瑞德的第一个任务。</p>
+            <p>任务目标一：抢在苏联炸平旧金山北部之前，占领旧金山北部的医院。</p>
+            <p>任务目标二：护送载有零号病人的救护车到时间机器旁。</p>
+            <h1>07-断头谷</h1>
+            <p>地点：美国，弗吉尼亚州，断头谷</p>
+            <img class="img_big" src="./img/qt07.jpg"/>
+            <p>美国的国土上战火纷飞之时，布莱克意外收到了从弗吉尼亚州断头谷发来的苏联最高级别的求救信号。虽然此时苏联人对于他来说是侵略者，但是他感觉这个信号很可能来自于鲍里斯——他在另一个时间轴的战友。虽然断头谷有很多恐怖的传说，但是他还是希望能去闯一闯。</p>
+            <p>任务目标一：调查求救信号的来源。</p>
+            <p>任务目标二：活着走出断头谷。</p>
+            <h1>08-无法原谅</h1>
+            <p>地点：美国，弗吉尼亚州</p>
+            <img class="img_big" src="./img/qt08.jpg"/>
+            <p>正当盟军和苏军打算共同面对丧尸危机的时候，弗吉尼亚州的苏军却遭到尤里的突袭，差点被赶下水。沃尔科夫已经以他最快的速度赶来，却已经无法挽回滩头阵地的崩溃。这里课是战略要冲，阻止这里的丧尸蔓延非常重要，但是苏军在这里的残兵败将没法同有完善军事设施的尤里相抗衡，因此沃尔科夫打算使用非常规战术……</p>
+            <p>任务目标一：封锁三处谷口和一处桥梁。</p>
+            <p>任务目标二：消灭此地区的尤里势力。</p>
+            <h1>09-似曾相识</h1>
+            <p>地点：美国，浣熊市，市区</p>
+            <img class="img_big" src="./img/qt09.jpg"/>
+            <p>沃尔科夫在弗吉尼亚州的行动有效的拖延了丧尸蔓延的时间，但是该来的总会来的。浣熊市仍然笼罩在灾难的阴影之中。瑞德还是来到了浣熊市，他熟悉的浣熊市。他曾在这里差点落入丧尸口中，如今时光倒流，他有了一次纠正错误的机会。</p>
+            <p>任务目标一：在浣熊市建立防御。</p>
+            <p>任务目标二：掩护平民的撤离，保护每一个平民。</p>
+            <p>任务目标三：搜索浣熊市北部区域。</p>
+            <h1>10-银洞</h1>
+            <p>地点：美国，浣熊市，北部山区</p>
+            <img class="img_big" src="./img/qt10.jpg"/>
+            <p>布莱克不知道瑞德去了哪里——只知道他在鲁莽的一个人搜索浣熊市北部山区的时候失踪了，很可能是中了什么圈套。虽然浣熊市北部山区已经被丧尸踏平，但是为了寻找瑞德，布莱克决定在这里重新建立一座基地，同时呼叫鲍里斯和沃尔科夫带领苏军部队参与搜救。</p>
+            <p>任务目标一：建立一座盟军空指部，联系鲍里斯。</p>
+            <p>任务目标二：寻找失踪的瑞德。</p>
+            <p>任务目标三：把瑞德带到北部基地。</p>
+            <div class="bar" id="sec_qtbrief_3">
+                <h1>第三季：丧尸军团</h1>
+                <span class="hint">歧途第三季的任务简报</span>
+            </div>
+            <h1>11-丧尸军团</h1>
+            <p>地点：美国，浣熊市，地下试验区域 / 美国，密苏里州，圣路易斯市</p>
+            <img class="img_big" src="./img/qt11.jpg"/>
+            <p>拉恩在浣熊市地下区域做好了埋伏，等待前来调查的人们上钩。</p>
+            <p>没想到鲍里斯识破了拉恩的诡计（其实是，他们已经在时光倒流之前经历过了一次[03-向下，再向下]）。作为对策，鲍里斯打算在浣熊市的下水管线中派出大量步兵以人海战术快速解决战斗。然而这里狭窄的环境并不适合大军团的展开，又有多少冤魂要在浣熊市地下长眠呢。 </p>
+            <p>盟军已经在圣路易斯建立了牢固的防御，而拉恩希望攻破这里，让丧尸病毒能够进一步扩散入加拿大。盟军已经严阵以待，但是他们不会想到，这回拉恩会亲自上阵，散播死亡与恐惧……</p>
+            <p>任务目标一：清理浣熊市地下实验区域。</p>
+            <p>任务目标二：与生化基地会合。</p>
+            <p>任务目标三：杀死谭雅和鲍里斯。</p>
+            <p>提示：在把敌方步兵变异为丧尸时，会得到现金奖励。</p>
+            <h1>12-天眼</h1>
+            <p>地点：美国，密苏里州，圣路易斯市</p>
+            <img class="img_big" src="./img/qt12.jpg"/>
+            <p>布莱克得知谭雅和鲍里斯阵亡的消息十分震惊。</p>
+            <p>悲痛之余，布莱克认识到，圣路易斯是非常重要的战略要地，必须被夺回。而且布莱克敏感的发现，圣路易斯的电力尚未中断，电网仍然高负荷的运行着：一定有某种大功率设备在运作着——说不定又是拉恩的诡计。果然，侦查发现，圣路易斯市中心有一座巨大的不明设施……不管它是什么，必须把它拿下！</p>
+            <p>任务目标一：调查飞行器坠毁的原因。</p>
+            <p>警告：布莱克不能阵亡。</p>
+            <p>提示：请使用反坦克武器对付巨型丧尸。海豹部队的突击步枪无法有效杀伤皮糙肉厚的巨型丧尸。</p>
+            <h1>13-燃烧的导火索</h1>
+            <p>地点：美国，康乃狄克州，布里奇波特</p>
+            <img class="img_big" src="./img/qt13.jpg"/>
+            <p>对零号病人的研究取得了阶段性成果，然而布莱克对成果的内容守口如瓶，他决定先把研究资料和科研人员转移到一个更加安全的地方，再来公布研究成果。</p>
+            <p>于是布莱克分配了一列火车把零号病人、生化方面的专家以及大量研究资料通过布里奇波特港转移，并派沃尔科夫全程护送。</p>
+            <p>任务目标一：护送火车安全通过这个区域。</p>
+            <p>警告：火车会碾掉任何挡道的玩意儿，包括自己人。</p>
+            <p>警告：必须至少保留三节车厢。</p>
+            <h1>14-死亡派对</h1>
+            <p>地点：美国，阿巴拉契亚山区</p>
+            <img class="img_big" src="./img/qt14.jpg"/>
+            <p>拉恩偶然发现了阿巴拉契亚山区的各国领导人庇护所，他自然不能错过这个机会。他决定亲自来攻击这个地方。盟苏联合部队被迫仓促回防。双方都赌上了老本，一场恶战在所难免。</p>
+            <p>任务目标一：在原地部署一辆MCV。</p>
+            <p>任务目标二：在庇护所附近部署另一辆MCV。</p>
+            <p>任务目标三：保护庇护所，直到苏联核弹支援到达。</p>
+            <p>提示：阿巴拉契亚山区仍然处于天眼的控制范围之内，所以你仍然无法使用空军。</p>
+            <h1>15-追风行动</h1>
+            <p>地点：加拿大，纽芬兰</p>
+            <img class="img_big" src="./img/qt15.jpg"/>
+            <p>上一战中，拉恩虽然没有被核弹直接命中，仍然受伤严重，正在纽芬兰生化基地中的医院接收治疗。布莱克敏锐的意识到，这是抓捕拉恩的好机会！而且要抓活的！也许这场危机就结束于此了。</p>
+            <p>任务目标一：切断城市的电力供应。</p>
+            <p>任务目标二：摧毁医院，抓捕拉恩。</p>
+            <p>任务目标三：把拉恩带到安全区。</p>
+            <p>提示：可以摧毁城市中的生化实验罐，避免源源不断的丧尸涌出。</p>
+            <br>
+            <div class="bar" id="sec_qtbrief_4">
+                <h1>第四季：咫尺通途</h1>
+                <span class="hint">歧途第四季的任务简报（剧透）</span>
+            </div>
+            <p>以下剧情来自歧途第三季的csf文件以及与歧途作者的聊天记录，并非本人臆想，代表了原作者的真实想法。</p>
+            <p>如果丧尸领地的大坑填完了歧途作者还没有动静，我可能会按照目前掌握的信息来续写歧途第四季-咫尺通途，以满足大家的期待。</p>
+            <h1>16-咫尺通途</h1>
+            <p>地点：美国，纽约州，纽约市</p>
+            <img class="img_big" src="./img/qt16a.jpg"/>
+            <p>任务目标一：与纽约市的基地会合。</p>
+            <p>任务目标二：坚守直到布莱克抵达。</p>
+            <p>任务目标三：清除自由女神像附近的敌人。</p>
+            <p><span class="colored">歧途第三季的CSF文本对话信息：</span></p>
+            <div class="code">纽约市。
+瑞德：“我讨厌和这个人合作，真的……”
+拉恩：“可是你不得不承认，现在我能帮上你大忙。”
+布莱克（无线电）：“所以现在纽约面临着怎样的危险呢？”
+拉恩：“哈泽尔打算在纽约市试验他的新武器。先带我去基地，我会告诉你们怎么做。”
+瑞德：“哦你这个灾星，能不能别用你的轨道枪乱射了，我可不想当着自己的面制造僵尸！”
+拉恩：“我们必须对哈泽尔多加小心。它是个人工智能，为了胜利会不择手段。”
+瑞德：“你之前也不是那样子的吗？”
+拉恩：“是这样：我们需要尽可能的修建防空设施来保证城市的安全。”
+拉恩：“过一会就会有你们从未见过的飞行器来轰平这座城市了。”
+任务目标：与纽约市的基地会合。
+任务目标：防守基地直到布莱克到达。
+布莱克（无线电）：“好吧，那我再去抽调一支舰队来防守这里。”
+拉恩：“哈泽尔觉得我可能会泄密从而追杀我……可是它追杀我恰恰导致了我不得不泄密。”
+==提示：用拉恩的远程轨道枪清理驻军建筑物==
+==提示：拉恩的轨道枪可以对空射击==
+布莱克（无线电）：“好了，基地是你们的了。还有什么需要叮嘱的吗？”
+拉恩：“炸掉那座天眼装置，然后我们就可以在纽约市使用空军了。”
+布莱克（无线电）：“干得漂亮！我可以派出一些伞兵来这里了。”
+瑞德：“那他妈的是什么东西？”
+拉恩：“那是哈泽尔的「聚焦者」。它只能攻击正下方的东西，应该比基洛夫空艇好对付的。”
+瑞德：“那他妈的又是什么东西？？”
+拉恩：“那是哈泽尔的「破坏者」。它可以用舰载轨道炮和生化导弹攻击，小心对付。”
+布莱克（无线电）：“警报！侦测到巨大的不明飞行物正在接近纽约市！”
+拉恩：“这是「起源者」！……哈泽尔还是出动了这艘巨型战舰……”
+瑞德：“所以你的副官就藏了这么多武器不给你用？”
+拉恩：“不知是出了Bug还是怎么，它突然就开始认为所有人类都不可靠，这也是他想消灭我的原因。”
+布莱克（无线电）：“现在没工夫闲聊了，快去想办法把这艘起什么者打下来！”
+拉恩：“我无法确定「起源者」只有一艘。或许哈泽尔建造了更多。”
+布莱克：“不要慌，我来了！让我们并肩作战吧！”
+布莱克：“我的舰队已经到达。尽量把敌人挡在海岸线外吧。”
+布莱克：“那是什么？哈泽尔把磁电武器搭载到了船上？”
+</div>
+            <p><span class="colored">下图为歧途作者提供的最新CSF文件截图，可以看出已经与第三季的CSF剧情有了区别。</span></p>
+            <img class="img_big" src="./img/qt16b.png"/>
+            <p><span class="colored">我与歧途作者弃坑前的聊天记录：</span></p>
+            <img class="img_big" src="./img/qt16c.jpg"/>
+            <img class="img_big" src="./img/qt16d.jpg"/>
+            <img class="img_big" src="./img/qt16e.jpg"/>
+            <h1>17-火凤凰</h1>
+            <p>地点：美国，浣熊市，北部山区</p>
+            <p>尚未开放</p>
+            <p>任务目标一：生产一辆火凤凰防空导弹。</p>
+            <p>任务目标二：使用火凤凰防空导弹击退来犯之敌。</p>
+            <h1>18-无线电死寂</h1>
+            <p>地点：美国，夏威夷，瓦胡岛</p>
+            <p>尚未开放</p>
+            <p>任务目标一：确定瓦胡岛的位置。</p>
+            <p>任务目标二：环绕瓦胡岛一周，侦查情况。</p>
+            <h1>19-决战大气层外</h1>
+            <p>地点：美国，休斯敦，宇航中心 / 外太空</p>
+            <p>尚未开放</p>
+            <p>任务目标一：保护尽可能多的火箭发射。</p>
+            <h1>20-起源狂想</h1>
+            <p>地点：丹麦，格陵兰岛</p>
+            <p>尚未开放</p>
+            <p>任务目标一：摧毁格陵兰岛的天眼装置。</p>
+            <h1>歧途合作任务：僵尸城市2</h1>
+            <p>地点：美国，浣熊市，市区</p>
+            <p>尚未开放</p>
+            <p>任务目标一：</p>
+            <h1>歧途合作任务：燃烧的导火索2</h1>
+            <p>地点：美国，康乃狄格州，布里奇波特</p>
+            <p>康乃狄格州，布里奇波特，铁路调度中心。</p>
+            <p>任务目标一：</p>
+            <h1>歧途合作任务：无线电死寂2</h1>
+            <p>地点：美国，夏威夷，瓦胡岛</p>
+            <p>任务目标一：</p>
+            <h1>歧途合作任务：决战大气层外2</h1>
+            <p>地点：美国，休斯敦，宇航中心 / 外太空</p>
+            <p>任务目标一：</p>
+            <h1>歧途合作任务：起源狂想2</h1>
+            <p>地点：丹麦，格陵兰岛</p>
+            <p>任务目标一：</p>
+            <br>
+            <div class="bar" id="sec_qt_2">
+                <h1><strong>二、歧途单位档案</strong></h1>
+            </div>
+            <p>
+                <ul>
+                    <li><a href="#sec_qtdata_1">有关英雄单位的资料</a></li>
+                    <li><a href="#sec_qtdata_2">有关人类新增普通单位的资料</a></li>
+                    <li><a href="#sec_qtdata_3">有关丧尸阵营单位的资料</a></li>
+                </ul>
+            </p>
+            <br>
+            <div class="bar" id="sec_qtdata_1">
+                <h1>英雄名录</h1>
+                <span class="hint">有关英雄单位的资料</span>
+            </div>
+            <p class="card">
+                <span class="colored big">谭雅</span><br>
+                来自盟军的女突击队员，红色警戒中永远的女主角，象征着智慧与机敏，使用两把光子镭射手枪快速射杀丧尸。<br>
+                攻击力：125<br>
+                射程：8<br>
+                攻击速度：极快（ROF=10）
+            </p>
+            <p class="card">
+                <span class="colored big">鲍里斯</span><br>
+                来自苏联的精英战士，正义与勇气的化身，使用能够对坦克造成威胁的镭射突击步枪。<br>
+                攻击力：250<br>
+                射程：8<br>
+                攻击速度：快（谭雅的1/2）
+            </p>
+            <p class="card">
+                <span class="colored big">瑞德</span><br>
+                布莱克手下的得力助手，热爱使用火箭筒武器的鲁莽突击队员。<br>
+                攻击力：262.5<br>
+                射程：7<br>
+                攻击速度：较慢（谭雅的2/9）<br>
+                杀伤半径：0.9
+            </p>
+            <p class="card">
+                <span class="colored big">瑞德（半机械形态）</span><br>
+                瑞德接受半机械改造以后，使用能造成大范围伤害的中子火箭。<br>
+                攻击力：262.5（虽然攻击伤害相比通常形态没有变，但是杀伤半径大幅度增加了）<br>
+                射程：7<br>
+                攻击速度：较慢（谭雅的2/9）<br>
+                杀伤半径：1.8
+            </p>
+            <p class="card">
+                <span class="colored big">布莱克</span><br>
+                热爱荣誉、富有责任感的将军，在丧尸危机中扮演核心指挥地位。虽然身居高位，但是在公民的安全受到威胁的时候也会拿起机枪，亲自上火线。<br>
+                攻击力：90x4<br>
+                射程：7<br>
+                攻击速度：慢（谭雅的1/5）<br>
+                杀伤半径：0.7
+            </p>
+            <p class="card">
+                <span class="colored big">沃尔科夫</span><br>
+                鲍里斯的副手，科学家，特斯拉线圈的狂热爱好者，或许是苏军磁暴科技的下一代的继承者和开拓者。能够随手磁化身边的金属塔架，把它们变成巨型磁暴线圈。<br>
+                攻击力：390（还有分散电弧攻击）<br>
+                射程：7<br>
+                攻击速度：慢（谭雅的1/5）
+            </p>
+            <p class="card">
+                <span class="colored big">拉恩</span><br>
+                可能是丧尸的领导者，我们对他的资料知之甚少。他持有能把人类变异为丧尸的轨道狙击枪，非常危险。<br>
+                攻击力：150<br>
+                射程：12<br>
+                攻击速度：极慢（谭雅的1/8）
+            </p>
+            <p>
+                Tip：数值上，谭雅、鲍里斯的输出能力相同；沃尔科夫的输出值很高，但是要注意伤害溢出（很高的伤害作用于一个残血的单位导致伤害被浪费）；布莱克的实际输出能力比数值上的高，因为如果4次攻击没用完就杀死了目标，他会马上对另一个目标接上4次攻击（即卡攻速）；瑞德具有范围伤害，虽然对单体目标的输出不如谭雅，但是如果按地上站满了人来计算，瑞德的输出能达到谭雅的2倍还多；拉恩是个狙击型角色。
+            </p>
+            <br>
+            <div class="bar" id="sec_qtdata_2">
+                <h1>丧尸图鉴</h1>
+                <span class="hint">有关丧尸阵营单位的资料</span>
+            </div>
+            <p class="card">
+                <span class="colored big">普通丧尸</span><br>
+                丧尸，不需要解释。<br>
+                生命值：500<br>
+                移动速度：中
+            </p>
+            <p class="card">
+                <span class="colored big">狂怒丧尸</span><br>
+                不知是什么原因导致了他们的暴怒，这也使得它们可以更快的冲向敌人，也使得他们变得更脆弱。<br>
+                生命值：375<br>
+                移动速度：快
+            </p>
+            <p class="card">
+                <span class="colored big">不死丧尸</span><br>
+                这种丧尸有强大的生命力。在纽约，有人曾经看到过中了几十枪的丧尸还在四处疯狂的寻找活人，而芝加哥的那次大规模使用凝固汽油弹的战斗中，身上熊熊火焰燃烧但是仍然能够蹒跚向人类防线逼近的它们简直就是死亡的象征。难道这是传说中的不死之身？<br>
+                生命值：1000<br>
+                移动速度：慢
+            </p>
+            <p class="card">
+                <span class="colored big">胖子丧尸</span><br>
+                这些体型较胖的丧尸可不是因为生前吃多了，他们的身体充满了丧尸病毒的培养液。一旦这个躯壳破裂，里面的病毒就会喷涌而出，吞噬周围的人。<br>
+                生命值：200<br>
+                移动速度：中<br>
+                特点：会自爆，造成大量伤害。自爆时还会引起周围的正常人变异为丧尸。<br>
+                高度危险，不要让他们接近，请使用远程武器优先解决。
+            </p>
+            <p class="card">
+                <span class="colored big">复仇者丧尸</span><br>
+                丧尸危机中格斗专家总结出的和丧尸近身格斗的要领中，砍头是排在第一位的。可是面对一种本来就没有头的丧尸，我们该怎么砍头？<br>
+                生命值：500<br>
+                移动速度：快<br>
+                特点：攻击力很高，能对建筑和坦克造成有效伤害。不会成群出现。<br>
+                很危险，对于装甲部队，请优先对付它。
+            </p>
+            <p class="card">
+                <span class="colored big">巨型丧尸</span><br>
+                拥有铜墙铁壁一般的皮肤和强大的破坏力、令人恐惧的巨大怪物。这已经不能用自然的病毒来解释了，一定是有人刻意创造了它们。<br>
+                生命值：550<br>
+                移动速度：中<br>
+                特点：反步兵武器无法对它造成有效伤害，需要使用反坦克武器来对付。<br>
+                谭雅、海豹突击队和狙击手对这种丧尸束手无策，辐射工兵的污染也无法对它造成有效伤害。相反，天启坦克几炮就能把它轰飞。
+            </p>
+            <p class="card">
+                <span class="colored big">生化战士</span><br>
+                严格来说他们并不是丧尸，他们是武装到牙齿的人类。他们为拉恩卖命，他们用自己的便携式轨道枪传播丧尸病毒，他们破坏，他们毁灭一切，他们是生化战士。<br>
+                生命值：125<br>
+                移动速度：中<br>
+                射程：5<br>
+                特点：在丧尸阵营中能够进行远程攻击，这已经需要足够重视了。<br>
+                当你集中火力对付他们的时候，他们很脆弱，但是千万不要只专注于打近在眼前的丧尸而忽视了他们。
+            </p>
+            <br>
+            <div class="bar" id="sec_qtdata_3">
+                <h1>单位资料</h1>
+                <span class="hint">有关人类新增普通单位的资料</span>
+            </div>
+            <p class="card">
+                <span class="colored big">镭射车</span><br>
+                丧尸危机爆发初期，人们对于丧尸的攻击手足无措，武器装备很快在突袭中损失殆尽。美国政府不得不征用一些民用越野车装上镭射武器来专门对付丧尸。征用的标准很低：能装上镭射炮，能跑，就合格。这样就生产出了这种速度飞快、被击中就顷刻爆炸的小车。虽然在军团作战中这简直就是开玩笑，但是在对丧尸的作战中，这种简陋的突击车还是创造了很多奇迹。<br>
+                攻击力：35<br>
+                射程：5<br>
+                攻击速度：中等<br>
+                特点：数值上，镭射车的输出伤害能力等同于一个部署的美国大兵，但是它能够快速移动而且移动中攻击。主要用于对丧尸的风筝战术。要注意镭射车很不耐打，尽量避免和敌人硬碰硬，打不过就跑才是它的逻辑。
+            </p>
+            <p class="card">
+                <span class="colored big">粉碎火炮</span><br>
+                布莱克都没有想到，这种古董武器居然还能够有机会被再次拉上战场。作为早期自行火炮的代表，这种榴弹炮除了射程远几乎没有什么突出特点——但是在丧尸压到家门口的时候，这种低科技的武器体现出了很大的战术价值。<br>
+                攻击力：75<br>
+                射程：11<br>
+                攻击速度：慢<br>
+                特点：粉碎火炮和光棱坦克相比稍微强韧些，但是它的弹道容易受到地形或者围墙的阻碍，转向瞄准也慢半拍，可以说是各有优劣。低科技下不失为远程攻击的一种选择。
+            </p>
+            <p class="card">
+                <span class="colored big">军用推土机</span><br>
+                路过的工程车辆，除了可以用来拆毁各种建筑，还可以碾压丧尸。<br>
+                攻击力：很高（几乎秒杀）<br>
+                射程：近身/碾压<br>
+                特点：专业暴力拆迁……
+            </p>
+            <p class="card">
+                <span class="colored big">闪电链坦克</span><br>
+                这是沃尔科夫对苏军磁暴武器做的革命性改进，经过他改装的磁暴武器，电弧可以形成更多分裂，从而造成大面积破坏。<br>
+                攻击力：120<br>
+                射程：5<br>
+                攻击速度：慢<br>
+                特点：电流在目标之间传递，传递越远威力越大。适合近距离和丧尸缠斗。在树林中战斗时，由于电流大多击中树木，因此威力受限。
+            </p>
+            <p class="card">
+                <span class="colored big">喀秋莎</span><br>
+                这种二战中名声大噪的火箭炮在丧尸危机中被重新拉出来使用。作为一种大范围杀伤性武器，它往往能够在丧尸群中形成一片火海。<br>
+                攻击力：45x8<br>
+                射程：12<br>
+                攻击速度：快（刚开始）/慢（稳定时）<br>
+                特点：装满弹药后能打出猛烈的一波攻击，弹药打光以后攻击速度为较慢的装弹速度。适合打击突然一波集中的敌人，不适合持续输出。注意喀秋莎不能攻击离自己很近的敌人，这是操作难点之一。
+            </p>
+            <p class="card">
+                <span class="colored big">海撬</span><br>
+                虽然雷鸣潜艇有着无与伦比的性能，但是其高造价和较慢的航速让尤里的海军有点吃不消，他们需要一种简单的快速突击舰艇。于是在拉恩的研发下，就有了这一款装备1具鱼雷发射管的轻型船舰。它们往往集群行动，像蜜蜂一样对盟军形成骚扰。<br>
+                攻击力：100<br>
+                射程：7<br>
+                攻击速度：慢<br>
+                特点：快速廉价，耐用好用，强力的海上骚扰、突击单位。
+            </p>
+            <p class="card">
+                <span class="colored big">布莱克号战列舰</span><br>
+                以布莱克将军的名字命名的战列舰，虽然是上个世纪海战思想的产物，但是代表强大毁灭力量的两门大口径主炮仍然让人不寒而栗。<br>
+                攻击力：150x2<br>
+                射程：15<br>
+                攻击速度：极慢<br>
+                杀伤半径：1.1<br>
+                特点：强大的海上大杀器，超远射程超高威力的重型轰炸舰。其实应该算是英雄单位了。
+            </p>
+            <p class="card">
+                <span class="colored big">莫洛托夫突击车</span><br>
+                装有莫洛托夫鸡尾酒的轻型突击车。虽然也是土法上马，但苏联人的勇敢无畏在面对丧尸时仍然能够表现的淋漓尽致。一旦命中目标，会形成燃烧区域，对步兵造成致命伤害。<br>
+                攻击力：80<br>
+                射程：6<br>
+                攻击速度：较慢<br>
+                杀伤半径：0.9<br>
+                特点：和镭射车处于同一科技位的轻型反步兵突击单位。虽然对单体目标的效果不如镭射车，也不能移动中攻击，但是形成燃烧后能造成有效的群体伤害，最多5倍伤害。另外它是砍树神器……
+            </p>
+            <br>
+            <br>
+            <div class="bar" id="sec_qt_3">
+                <h1><strong>三、歧途通关提示</strong></h1>
+            </div>
+            <br>
+            <img class="img_big" src="./img/qtrcity.jpg"/>
+            <br>
+            <p>歧途通关视频合集：<a target="_blank" href="https://space.bilibili.com/95196453/channel/detail?cid=68702">https://space.bilibili.com/95196453/channel/detail?cid=68702</a>
+            </p>
+            <h1>01-生化实验平台</h1>
+            <p>
+                这是一个教学任务，主要目的是让玩家体验歧途系列的一些与众不同的脑回路。
+            </p>
+            <p>
+                最初的拆路障推进阶段是小队生存的教学。我方部队只要站位集中且反应及时，是能够和丧尸大军正面对抗的，完全不怂。3海豹+2英雄+2狙击，这样的豪华阵容要很久以后才能再次出现。操作要点：重装拆路障，其余步兵都是打丧尸的能手。在看到丧尸后，应当立刻命令部队停止前进（键盘快捷键“S”）马上开火，而不要再与丧尸拉近距离了。
+            </p>
+            <p>
+                到基地以后是一个防守和进攻的教学。左上和右下两个口都使用大兵进行防守，利用路障作为掩护，在初始部队的基础上再添一些，防御就很稳固了。修复基地边上的桥可以得到坦克工厂，但是本关钱很少，要节省着用。进攻时，使用装载英雄或者海豹的多功能步兵车进行快速推进，拆路障拆到洞口即可。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>开始位置的上方，有一个加防御的箱子。</li>
+                    <li>第二个拐弯处有一个明显的箱子。这是一个钱箱子，但是拿起来需要拆路障，比较费事。</li>
+                    <li>堵车处，广告牌旁的箱子是升级箱子。尽量给重装大兵吃，这样后半程拆路障可以更加迅速。</li>
+                    <li>基地中有一个损坏的爱国者飞弹，用工程师维修可以得到升级箱子。</li>
+                    <li>派部队前往港口，可以得到一船粉碎火炮。</li>
+                    <li>拆掉港口左下方的路障，可以得到1个多功能步兵车+1个海豹部队+1个狙击手+2个美国大兵。</li>
+                    <li>靠近洞口附近，有一个损坏的光棱塔，用工程师维修可以得到钱箱子。</li>
+                    <li>光棱塔的下方有一处兵营和矿石精炼厂可以修复。</li>
+                </ul>
+            </p>
+            <h1>02-丧尸城市</h1>
+            <p>
+                这是一个城市搜索任务，要完成任务目标，基本上要探开全部地图。
+            </p>
+            <p>
+                操作要点和上一关的最初阶段类似，发现敌人及时停下开火。只不过这一关的地形更为开放，好在都是小规模作战，没有大队敌人。注意优先锁定会自爆的胖子丧尸，它靠近了就晚了。
+            </p>
+            <p>
+                在搜索的过程中会找到一辆镭射车和新英雄瑞德。镭射车是脆皮的反步兵突击车，可以在移动中攻击，用来探路和遛丧尸都很好用。这是一种操作空间很大的新单位，后面的任务中可以生产，是初期反丧尸的选择之一。瑞德使用火箭筒进行攻击，有一点群体杀伤的效果，但是现阶段不是很强。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>到达浣熊市左上方入口后，会有两辆盟友的幻影坦克来把守门口。</li>
+                    <li>浣熊市右上方入口的军营中有一个升级箱子。</li>
+                    <li>拓展地图后，到达右上方的山口，会有一队盟友的镭射车来清理丧尸。</li>
+                    <li>拓展地图后，到达左上方的斜坡，会有一队盟友的美国大兵+灰熊坦克来把守斜坡。</li>
+                </ul>
+            </p>
+            <h1>03-向下，再向下</h1>
+            <p>
+                这是一个解谜生存任务，有一个地方初见时不太好想到怎么过。
+            </p>
+            <p>
+                三个英雄的组合是很稳的。按照流程走即可。
+            </p>
+            <p>
+                谭雅在清水路段过河后应当向左上沿下水道的边沿走，能发现一辆坦克和一些兵。接下来用坦克堵住左上方的下水道边沿，迎击一波丧尸。接下来用坦克隔着水打破对面的铁丝网，就能继续前进了。
+            </p>
+            <p>
+                注意防空步兵是有友伤的（原版如此），混战中记得把他们拉远。其余都是小队生存任务的要点了。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>如果没有去触碰第一个笼子处的生化病毒机关，直接去找坦克的话，这个机关将不再会被触发，也就是说这个笼子中的步兵可以被解救。</li>
+                    <li>第一个笼子的右下角的弹药箱，炸掉会有升级箱子。</li>
+                    <li>地下洞穴的路障附近有医疗箱子。</li>
+                    <li>获得运输船以后，沿着管道走的时候，右下方有一个支路，进入可以获得3个磁暴步兵。这3个磁暴步兵可以继承到下一阶段任务中。</li>
+                    <li>更换场景后，废弃的军营中，有一个医疗箱子。</li>
+                </ul>
+            </p>
+            <h1>04-塞博格计划</h1>
+            <p>
+                这是一个死守任务，准备面对尸潮的进攻吧。
+            </p>
+            <p>
+                建议基地车原地展开，补1辆矿车，在矿石精炼厂附近建造战斗碉堡与丧尸鏖战。可以使用防空车或者磁暴线圈辅助输出。
+            </p>
+            <p>
+                靠谱的盟友会派美国大兵、坦克顶在前面，也会出一些火炮远程帮忙。对碉堡威胁最大的是自爆的胖子丧尸，如果盟友没能帮你引爆他们，记得派出预备的坦克部队去引爆。
+            </p>
+            <p>
+                玩自爆卡车的时候千万别玩过火把自己炸了……
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>最初矿石精炼厂附近的疯狂伊万，可以进入盟友在谷口的多功能步兵车，在第一波丧尸到来的时候制造一个核爆。</li>
+                    <li>左上方的山脉向右摸索会有一个山谷，在其中能得到3辆莫洛托夫突击车（脆皮群伤反步兵车辆，后续任务中可以建造）。</li>
+                    <li>简单难度，右下角会给一些辐射工兵，辐射工兵部署+战斗碉堡就无敌了……</li>
+                    <li>左下方破口以后，往左下方探路，能得到铁幕装置。</li>
+                </ul>
+            </p>
+            <h1>05-金门的卫兵</h1>
+            <p>
+                这是一个资源采集任务，需要在资源受限的状况下作战。
+            </p>
+            <p>
+                本关可以生产新单位镭射车和粉碎火炮了。镭射车在对付小股丧尸时可以移动攻击的优势显露无疑。
+            </p>
+            <p>
+                主要靠部署美国大兵和驻军楼房配合建立静态防御，灰熊坦克可以用来辅助抗伤害，丧尸对于坦克的伤害很低（但是一辆坦克被丧尸围起来打也是九死一生）。瑞德放到多功能步兵车中，他的新式武器有着高群伤，对付大波丧尸很有效。
+            </p>
+            <p>
+                还是以占领科技电厂为主，因为能建造的发电厂提供的电力太少了。电力充足以后丧尸会最后疯狂一回，一定提前做好准备。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>右下角的停车场处，能得到一辆油罐车。类似自爆卡车。</li>
+                    <li>右下角的喷泉旁有一处钱箱子。</li>
+                    <li>派登陆部队登陆魔鬼岛，在心灵控制器旁，经过一段对话，能得到钱箱子。</li>
+                </ul>
+            </p>
+            <h1>06-时间穿梭者</h1>
+            <p>
+                这是一个限时的抢夺-护送任务，以海战为主。
+            </p>
+            <p>
+                开局补矿车，出4个多功能步兵车，2艘神盾，多点一些驱逐舰，出作战实验室，然后把已有的舰队先拉到心灵控制器附近，消灭苏联舰队，得到布莱克号战列舰。用布莱克战列舰的火炮轰掉心灵控制器。也可以用航母从右侧炸。
+            </p>
+            <p>
+                敌人的进攻很少能够直接把你的基地推掉的，顶多是给推进造成困难。如果觉得舰队生产速度不够可以出双船厂。2神盾+若干海豚+少量航母+若干驱逐的混合舰队是不错的选择。困难难度可以选择走左边捷径直接登陆作战。注意拆掉尤里的防空以后，苏军的基洛夫空艇可能会炸掉医院。
+            </p>
+            <p>
+                获得救护车以后赶紧运回来，然后等着看核平旧金山吧。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>摧毁心灵控制器可以获得钱箱子。</li>
+                </ul>
+            </p>
+            <h1>07-断头谷</h1>
+            <p>
+                这是一个小队生存任务，完全没有难度。
+            </p>
+            <p>
+                完全没有难度那还要什么通关提示（（（
+            </p>
+            <p>
+                尤里的走狗们，感受5英雄战斗要塞的愤怒吧！
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>向右下方探索可以获得2辆推土机，可以快速拆除路障。</li>
+                </ul>
+            </p>
+            <h1>08-无法原谅</h1>
+            <p>
+                这是一个杂技任务，以辐射工兵部署为核心机制。
+            </p>
+            <p>
+                本关的丧尸数量太多，只能使用辐射工兵部署进行大范围杀伤。辐射工兵和矿车作为前队，其余作为后队，之间拉开一定的距离，防止辐射杀伤自己人，慢慢向前推进即可。
+            </p>
+            <p>
+                手残党这关可能会有些难度……多存档。后半部分有基地就轻松了。莫洛托夫突击车在此关可以生产，但是没什么显著的用途。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>左上角可以得到额外的辐射工兵和犀牛坦克。</li>
+                </ul>
+            </p>
+            <h1>09-似曾相识</h1>
+            <p>
+                这是一个多目标死守任务，需要在准备时间内建立完整的防线来顶住丧尸。
+            </p>
+            <p>
+                速出坦克工厂，出大量的美国大兵占据楼房，补矿车，出作战实验室，然后补战斗要塞。第二个基地车就地部署，用于接兵和采矿。瑞德可以用来支援中路或者右边路的防守。战斗要塞足够以后开始补光棱坦克或者粉碎火炮。
+            </p>
+            <p>
+                防线的完整性是关键，任何地方的漏防都有可能导致丧尸冲进来杀死平民。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>地图右下角有额外的油井可以占领。</li>
+                </ul>
+            </p>
+            <h1>10-银洞</h1>
+            <p>
+                这是一个双线生存任务，一线防守，另一线推进。
+            </p>
+            <p>
+                开局爆美国大兵，出镭射车，用操作来弥补伤害。注意把受到攻击的矿车拉回来（关键操作，非常重要）。左边的防御可以依托加油站，右边造几个机枪碉堡。
+            </p>
+            <p>
+                建造空指部以后开南线。南线先不着急推进，因为北边基地还没有得到科技机器商店的情况下南线非常难打。攀高科，补战斗要塞，修复机器商店以后，南线可以推进了。
+            </p>
+            <p>
+                南线中除了鲍里斯以外，喀秋莎和闪电链坦克都能抵抗相当的伤害，尤其是有机器商店以后，放心大胆的让闪电链坦克和丧尸近身缠斗吧。喀秋莎不能攻击很近的丧尸，拉远一点让它远程输出即可。
+            </p>
+            <p>
+                随着南线的推进，北线的进攻会越来越猛烈，注意补防御。南线沿路能拿许多钱箱子，这算是南线支援北线了。
+            </p>
+            <p>
+                北线右侧的断桥初始是没法维修的，在救出罗伯特以后变得可以维修了。这时最好是派一支坦克部队来接罗伯特和鲍里斯。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>南线下斜破前废弃军营处有钱箱子。</li>
+                    <li>南线电厂旁有钱箱子。</li>
+                    <li>南线靶场打掉三个训练靶得到钱箱子。</li>
+                    <li>南线竖井旁有钱箱子。</li>
+                </ul>
+            </p>
+            <h1>11-丧尸军团</h1>
+            <p>
+                这是一个单兵生存任务，多存档即可通关。
+            </p>
+            <p>
+                下水道部分基本是教学+剧情补充，几乎无难度。记得不要拉恩单枪匹马去怼装有磁能坦克的运输艇，先等丧尸来打它，拉恩再跟上即可。
+            </p>
+            <p>
+                地面部分，利用拉恩的射程优势，慢慢推进就行。不过拉恩的射速很慢，最好有一批生化步兵在左右做临时防卫。右边的巨炮用狂怒丧尸拆；左边的巨炮可以暂时不管，攻起来代价比加大，可以放到最后。杀死谭雅和鲍里斯直接用射程即可完成，相当于狙死的……
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>下水道中，左上的生化管子处有钱箱子。</li>
+                    <li>下水道中，右下的磁暴步兵处有钱箱子。</li>
+                    <li>地面，机场中有钱箱子。</li>
+                    <li>地面，地图右上角平民聚集处有钱箱子。</li>
+                </ul>
+            </p>
+            <h1>12-天眼</h1>
+            <p>
+                防守/进攻战役，容错率比较高，前期运营迅速就没有难度。
+            </p>
+            <p>
+                初期防守，快出海豹部队。海豹部队+多功能步兵车极其有效，配合驻军楼房（主要打巨型丧尸）就能挡住大部分丧尸了。有生化步兵出现一定手动点掉，别让他们远程输出。战斗要塞主要进美国大兵，作为移动的房屋使用，可以和海豹多功能步兵车+一种远程单位（光棱/火炮）配合推进。
+            </p>
+            <p>
+                天眼装置爆灰熊干掉就行了。
+            </p>
+            <p>
+                往后面就是陆军守住，空军单方面轰炸了，随便玩吧。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>地图左下方有一辆油罐车。</li>
+                    <li>公路桥右下角的生化塔，摧毁以后有钱箱子。</li>
+                    <li>地图拓展后，左上角有一个辐射工兵。</li>
+                    <li>地图拓展后，右下角会有一波米斯蒂娅的基洛夫部队。</li>
+                </ul>
+            </p>
+            <h1>13-燃烧的导火索</h1>
+            <p>
+                护送任务，而且被护送对象不可被玩家操纵。
+            </p>
+            <p>
+                短小精悍但是非常坑的一个任务，对手残极不友好，场景混乱（盟友丧尸混战），容错率极低，大部分的崩盘开始于自己的坦克被火车碾过去，作者本人测试时都经常翻车。……多存档……
+            </p>
+            <p>
+                喀秋莎火箭炮和沃尔科夫是主要输出，但是火箭炮丢了一个其实也能正常完成任务。火箭炮的另外作用是利用射程优势拆房子，房子的位置是固定的，记住，提前拆掉即可。天启坦克殿后，天启坦克是能和巨型丧尸一对一正面对刚的，如果打巨型丧尸练级岂不是美滋滋。
+            </p>
+            <p>
+                没有彩蛋，别盼了。
+            </p>
+            <h1>14-死亡派对</h1>
+            <p>
+                每季的第四关都是死守任务……所以就死守吧！
+            </p>
+            <p>
+                敌人进攻计时是从游戏刚开始就开始的，不像某些关卡是随着玩家的科技发展开始逐渐解锁，所以丧尸不等人，初期的第一要务是：快！
+            </p>
+            <p>
+                此任务中除了空军海军以外几乎拥有苏军盟军全部科技树，带来了相当多的打法。可以使用海豹部队强行顶住，也可以用辐射工兵部署化解大规模的进攻，也可以自爆卡车流，也可以堆房子……这关是丝毫没有卡钱的意图的，你钱不够是因为你不补矿车（笑）
+            </p>
+            <p>
+                重要的事情是不要漏防。前线基地部署的位置尽量往前顶。大后方的防法，辐射工兵+防御塔是最省事的。拉恩第一次现身以后上方开始刷兵，记得补上方的防御。拉恩可以用狙击手，或者直接用铁幕罩死。
+            </p>
+            <p>
+                这关的进攻还是相当的猛烈的，虽然有几乎全科技，但是万万不可轻敌。余钱太多不是好现象，小心下一波被捅穿。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>地图左下方牛棚有钱箱子。</li>
+                    <li>地图中部的灯塔，修复有钱箱子。</li>
+                    <li>地图的上面水域，用一个海豹部队过去能得到一船闪电链坦克。</li>
+                </ul>
+            </p>
+            <h1>15-追风行动</h1>
+            <p>
+                杂技生存任务，手残不友好。
+            </p>
+            <p>
+                与原版操作的不同之处是：超时空伊万的炸弹可以双击引爆。另外炸弹的爆炸威力增强了（要不然毛都炸不死），但是小心别伤到自己人啊。
+            </p>
+            <p>
+                超时空突击队主要负责杀普通丧尸和狂怒丧尸，巨型丧尸用超时空军团兵手动点。超时空伊万可以在没有仇恨的时候瞬移上去安炸弹然后瞬移回来，满脑子的骚操作……有一个旁边有油桶的电厂伊万操作不好容易自杀（不过自杀了也无所谓，也能炸掉），其余三座电厂都慢慢靠近推掉即可。
+            </p>
+            <p>
+                任务目标基本上是扫地图，除了驻军的楼房和防御塔以外该炸的都炸了，断电以后防御塔也可以炸。多存档即可过关。
+            </p>
+            <p>
+                本关的彩蛋：
+            </p>
+            <p>
+                <ul>
+                    <li>右下角的雕像处有升级箱子。</li>
+                </ul>
+            </p>
+        </section>
+    </main>
+    <footer class="footer">
+        《丧尸领地》玩家手册<br>
+        Powered By fhy093, 2021.4.7<br>
+    </footer>
+</div>
+<div id="top" class="top_button">回到顶部</div>
+<div id="fullscreen" class="fullscreen">
+    <img id="fullscreen_pic" class="fullscreen_pic"/>
+</div>
+</body>
+</html>
